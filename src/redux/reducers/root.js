@@ -1,13 +1,13 @@
 import {
-    ACTION_SET_CONTACTS
-} from '../actions/Actions'
+  ACTION_NETWORK_STATE_CHANGE,
+} from '../actions/Actions';
 
 export interface InitialState {
-
+  isNetworkAvailable : boolean,
 }
 
-const initialState : InitialState = {//the base state is defined here
-    contacts : null
+const initialState : InitialState = {// the base state is defined here
+  isNetworkAvailable: false,
 };
 
 
@@ -19,19 +19,17 @@ const initialState : InitialState = {//the base state is defined here
  * @param state we set default state to initialState
  * @param action
  */
-const reducer = (state = initialState,action: { type: any;payload:any }) =>{
+const reducer = (state = initialState, action: { type: any;payload:any }) => {
+  switch (action.type) {
+    case ACTION_NETWORK_STATE_CHANGE:
+      return {
+        ...state,
+        isNetworkAvailable: action.payload,
+      };
 
-    switch (action.type) {
-
-        case ACTION_SET_CONTACTS:
-            return{
-                ...state,
-                contacts : action.payload
-            };
-
-        default:
-            return state;
-    }
+    default:
+      return state;
+  }
 };
 
 export default reducer;

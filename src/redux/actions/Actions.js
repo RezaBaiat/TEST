@@ -1,20 +1,22 @@
 import store from '../Store';
-import {InitialState} from "../reducers/root";
+import { InitialState } from '../reducers/root';
 
-export const ACTION_SET_CONTACTS = "SET_CONTACTS";
+export const ACTION_NETWORK_STATE_CHANGE = 'ACTION_NETWORK_STATE_CHANGE';
 
 
-export default class Actions{
+export default class Actions {
+  static getRootState() : InitialState {
+    return store.getState().rootReducer;
+  }
 
-    static getRootState() : InitialState{
-        return store.getState().rootReducer;
-    }
+  static setNetworkState(isConnected : boolean) {
+    store.dispatch({
+      type: ACTION_NETWORK_STATE_CHANGE,
+      payload: isConnected,
+    });
+  }
 
-    static setContacts(contacts : any){
-        store.dispatch({
-            type:ACTION_SET_CONTACTS,
-            payload:contacts
-        })
-    }
+  static isNetworkAvailable() : boolean {
+    return this.getRootState().isNetworkAvailable;
+  }
 }
-

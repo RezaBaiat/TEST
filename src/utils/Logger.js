@@ -14,8 +14,8 @@ const logger = winston.createLogger({
     // - Write all logs error (and below) to `error.log`.
     //
     new winston.transports.File({ filename: 'error.log', level: 'error' }),
-    new winston.transports.File({ filename: 'combined.log' })
-  ]
+    new winston.transports.File({ filename: 'combined.log' }),
+  ],
 });
 
 //
@@ -24,34 +24,32 @@ const logger = winston.createLogger({
 //
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
-    format: winston.format.simple()
+    format: winston.format.simple(),
   }));
 }
 
 export default class Logger {
-
-  static error(message : string){
+  static error(message : string) {
     logger.error(message);
   }
 
-  static warn(message : string){
+  static warn(message : string) {
     logger.warn(message);
   }
 
-  static info(message : string){
+  static info(message : string) {
     logger.info(message);
   }
 
-  static verbose(message : string){
+  static verbose(message : string) {
     logger.verbose(message);
   }
 
-  static debug(message : string){
+  static debug(message : string) {
     logger.debug(message);
   }
 
-  static silly(message : string){
+  static silly(message : string) {
     logger.silly(message);
   }
-
 }
