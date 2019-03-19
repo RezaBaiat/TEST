@@ -1,0 +1,2 @@
+# Referenced at E:\Android\Git Projects\react-native-starter\android\app\build\intermediates\manifests\full\debug\AndroidManifest.xml:17
+-keep class com.changemename.MainApplication { <init>(...); }

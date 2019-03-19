@@ -10,20 +10,11 @@ const R = {
     colors,
     drawables,
     fontName : fontName,
-    styles : StyleSheet.create({
-        iranSans:{
-            fontFamily:fontName
-        },btnStyle:{
-            borderWidth:0,
-            borderRadius:0
-        },defaultETTitleTextStyle:{
-            fontFamily:fontName
-        },defaultLabelETTextStyle:{
-            fontFamily:fontName
-        }
-    })
+    defaultStyles : defaultStyles
 };
 
+const defaultStyles = StyleSheet.create({
 
+})
 
 export default R;
