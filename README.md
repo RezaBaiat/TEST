@@ -2,7 +2,7 @@
 This boilerplate is designed with mindset of performance in simplicity and tries to simplify routine tools . we try to wrap things up and staticify the whole project in a way that in order to change logics we have to pay visit to only a few files
 
 ## Tools
-tools used in this project based on nodepack (https://github.com/pixelsandcode/nodepack)
+tools used in this project are based on nodepack (https://github.com/pixelsandcode/nodepack)
 
 What else we are using
 -
@@ -72,7 +72,7 @@ if you want to route , you want to listen to route events, you want to go back ,
 
 logging is also simplified using this class . so you have to only call :
 
-`Logger.info('today is sunny!')`  or `Logger.error('my stomach hurts !')`
+`Logger.info('weather...could be better!')`  or  `Logger.error('my stomach hurts !')` or `Logger.silly('tonight is sunny!')`
 
 - Store.js :
 
@@ -80,7 +80,8 @@ our Redux reducer(s) and its middlewares go here and we create the store inside 
 
 - Actions.js :
 
-Redux is an implementation of Observer pattern , but the way they introduce it is kinda scary!\
+Redux is an implementation of Observer pattern , but the world seems to go crazy when try to introduce it! 
+
 let us simplify it for you:
 
 ```javascript
