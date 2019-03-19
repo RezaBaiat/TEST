@@ -54,6 +54,16 @@ resulting in ease of future changes. lets explore the app content a bit:
 
 by default we only include project settings , screen registrations and workarounds here as this file is the first file will be compiled
 
+registering classes are easy as hell! all you have to do is this:
+
+`Navigation.registerComponentWithRedux('App', () => require('./src/App').default,Provider,store);`
+
+and laters navigate to it by :
+
+`AppNavigator.navigateTo('App')`
+
+seriously piece of cake is an insult !
+
 - AppNavigator.js :
 
 if you want to route , you want to listen to route events, you want to go back , you want to change to stack root , this beautiful lady is who you will want to visit! it smartly simplifies the simplified react-native-navigation even more !

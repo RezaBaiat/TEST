@@ -2,7 +2,7 @@ import { Navigation } from 'react-native-navigation'
 import {I18nManager} from "react-native";
 import {Options} from "react-native-navigation/lib/src/interfaces/Options";
 
-let mOpenScreens : {componentId : string,componentName : string}[] = [];
+const mOpenScreens : {componentId : string,componentName : string}[] = [];
 
 Navigation.events().registerComponentDidDisappearListener((component)=>{
     mOpenScreens.forEach((value,index)=>{
