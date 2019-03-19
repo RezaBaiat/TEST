@@ -1,7 +1,6 @@
 {
   "private": true,
   "scripts": {
-    "test": "node ./node_modules/jest/bin/jest.js --watchAll",
     "start": "react-native start",
     "ios": "react-native run-ios",
     "android": "react-native run-android",
@@ -10,11 +9,9 @@
     "ts": "tsc --watch",
     "run_mocha": "mocha",
     "run_istanbul": "istanbul cover ./node_modules/mocha/bin/_mocha",
+    "flow": "flow",
     "doc": "rd /s /q docs && mkdir docs && docco {src,test}/{**/*,*} README.md misc/tutorials/{**/*,*} -t ./misc/template/docco.jst -c ./misc/template/docco.css && echo d | xcopy /E \"misc/public\" \"docs/public\"",
     "github-pages": "npm run doc && gh-pages-deploy"
-  },
-  "jest": {
-    "preset": "react-native"
   },
   "dependencies": {
     "@babel/preset-flow": "^7.0.0",
@@ -45,7 +42,6 @@
     "eslint-plugin-react": "^7.11.0",
     "flow-bin": "^0.95.1",
     "gh-pages-deploy": "^0.5.1",
-    "jest": "^24.5.0",
     "node-sass": "^4.11.0",
     "prettier": "^1.16.4",
     "react-scripts": "2.1.8"

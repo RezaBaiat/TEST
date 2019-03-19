@@ -1,12 +1,12 @@
 import {
     ACTION_SET_CONTACTS
-} from '../actions/ActionTypes'
+} from '../actions/Actions'
 
-export interface initialStateInterface {
+export interface InitialState {
 
 }
 
-const initialState : initialStateInterface = {//the base state is defined here
+const initialState : InitialState = {//the base state is defined here
     contacts : null
 };
 
