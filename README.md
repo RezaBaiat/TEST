@@ -12,6 +12,8 @@ What else we are using
 - `react-timer-mixin` (https://github.com/reactjs/react-timer-mixin) as default timer pattern
 - `redux` (https://github.com/reduxjs/redux) as our state container
 - `react-native-dev-kit` (https://github.com/pixelsandcode/reactnative-dev-kit) as the pixelandcode's react development kit repo
+- `react-native-fetch-mock` (https://github.com/WhatAKitty/react-native-fetch-mock) as the fetch interceptor , used for mock
+
 
 ## How to use
 
@@ -49,6 +51,7 @@ resulting in ease of future changes. lets explore the app content a bit:
    `/src/configs` contains all app's staging & production configurations
    `/src/models` the containers of APIs models layer \
    `/src/network` responsible folder for all network & API callbacks \
+   `/src/network/mock` contains mock interceptor and mock data \
    `/src/redux` contains and all global state needs \
    `/src/ui` the container of all UI components wrapper , also containing the Views which are made by components \
    `/src/utils` the names tells it all ! :)
@@ -134,3 +137,7 @@ R is shortened word for Resources (Hello Android) , colors.js , drawables.js and
 yes we obviously keep our resources static too , so you can simply call them by:
 
 `<Text>{R.strings.holla}<Text/>`
+
+- MockInterceptor.js
+
+calling `MockInterceptor.Initialize()` - which will only work in debug mode - will replace default fetch with a simulated fetch , allowing network requests be intercepted and return mock data as needed . you can control which urls to intercept and how to responde at `MockData.js`
