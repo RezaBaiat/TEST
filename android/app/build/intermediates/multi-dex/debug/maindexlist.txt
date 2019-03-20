@@ -205,6 +205,7 @@ com/facebook/soloader/DoNotOptimize.class
 com/facebook/soloader/SoLoader.class
 com/facebook/widget/text/span/BetterImageSpan$BetterImageSpanAlignment.class
 com/lugg/ReactNativeConfig/ReactNativeConfigPackage.class
+com/oblador/vectoricons/VectorIconsPackage.class
 com/reactnativenavigation/NavigationApplication.class
 com/reactnativenavigation/react/BundleDownloadListenerProvider.class
 com/reactnativenavigation/react/NavigationReactNativeHost.class

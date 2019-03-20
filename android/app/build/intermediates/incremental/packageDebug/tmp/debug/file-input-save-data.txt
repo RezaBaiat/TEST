@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Mar 20 14:11:51 GMT+03:30 2019
+#Wed Mar 20 14:51:13 GMT+03:30 2019
 5.base=E\:\\Android\\Git Projects\\react-native-starter\\android\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\0
 22.path=lib/armeabi-v7a/libfb.so
 32.set=NATIVE_RESOURCE

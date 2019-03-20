@@ -4,6 +4,7 @@ ADDED from E:\Android\Git Projects\react-native-starter\android\app\src\main\And
 INJECTED from E:\Android\Git Projects\react-native-starter\android\app\src\main\AndroidManifest.xml:1:1-29:12
 INJECTED from E:\Android\Git Projects\react-native-starter\android\app\src\main\AndroidManifest.xml:1:1-29:12
 INJECTED from E:\Android\Git Projects\react-native-starter\android\app\src\main\AndroidManifest.xml:1:1-29:12
+MERGED from [:react-native-vector-icons] E:\Android\Git Projects\react-native-starter\node_modules\react-native-vector-icons\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-config] E:\Android\Git Projects\react-native-starter\node_modules\react-native-config\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-navigation] E:\Android\Git Projects\react-native-starter\node_modules\react-native-navigation\lib\android\app\build\intermediates\manifests\full\reactNative57_5\debug\AndroidManifest.xml:2:1-17:12
 MERGED from [com.facebook.react:react-native:0.57.8] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\ab2c1999979d57141bdcfe7843565e77\AndroidManifest.xml:2:1-15:12
@@ -146,6 +147,8 @@ uses-sdk
 INJECTED from E:\Android\Git Projects\react-native-starter\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from E:\Android\Git Projects\react-native-starter\android\app\src\main\AndroidManifest.xml
 INJECTED from E:\Android\Git Projects\react-native-starter\android\app\src\main\AndroidManifest.xml
+MERGED from [:react-native-vector-icons] E:\Android\Git Projects\react-native-starter\node_modules\react-native-vector-icons\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-vector-icons] E:\Android\Git Projects\react-native-starter\node_modules\react-native-vector-icons\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-config] E:\Android\Git Projects\react-native-starter\node_modules\react-native-config\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-config] E:\Android\Git Projects\react-native-starter\node_modules\react-native-config\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-navigation] E:\Android\Git Projects\react-native-starter\node_modules\react-native-navigation\lib\android\app\build\intermediates\manifests\full\reactNative57_5\debug\AndroidManifest.xml:7:5-9:41

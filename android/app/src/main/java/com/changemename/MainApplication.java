@@ -8,6 +8,7 @@ import com.lugg.ReactNativeConfig.ReactNativeConfigPackage;
 import com.reactnativenavigation.NavigationApplication;
 import com.reactnativenavigation.react.NavigationReactNativeHost;
 import com.reactnativenavigation.react.ReactGateway;
+import com.oblador.vectoricons.VectorIconsPackage;
 
 import java.util.Arrays;
 import java.util.List;
@@ -35,6 +36,7 @@ public class MainApplication extends NavigationApplication  {
     public List<ReactPackage> createAdditionalReactPackages() {
         return Arrays.<ReactPackage>asList(
                 new MainReactPackage(),
+            new VectorIconsPackage(),
             new ReactNativeConfigPackage()
         );
     }

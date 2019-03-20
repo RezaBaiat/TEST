@@ -10,4 +10,7 @@ public final class BuildConfig {
   public static final String FLAVOR = "";
   public static final int VERSION_CODE = 1;
   public static final String VERSION_NAME = "1.0";
+  // Fields from default config.
+  public static final String API_BASE_URL = "http://omg.pixelandcode.wtf";
+  public static final String IS_DEBUG = "true";
 }
