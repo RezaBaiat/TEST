@@ -57,7 +57,7 @@ resulting in ease of future changes. lets explore the app content a bit:
 
 by default we only include pre initializers, screen registrations and workarounds inside this file, as this it is the first file will be compiled
 
-registering classes are easy as very easy! all you have to do is this:
+registering screens are very easy! all you have to do is this:
 
 `Navigation.registerComponentWithRedux('App', () => require('./src/App').default,Provider,store);`
 
@@ -69,7 +69,7 @@ seriously piece of cake is an insult !
 
 - AppNavigator.js :
 
-if you want to route , you want to listen to route events, you want to go back , you want to change the stack root , this beautiful lady is who you will want to visit! it smartly simplifies the simplified react-native-navigation even more !
+if you want to navigate , you want to listen to navigation events, you want to go back , you want to change the stack root , this beautiful lady is who you will want to visit! it smartly simplifies the simplified react-native-navigation even more !
 
 - BuildConfig.js :
 
