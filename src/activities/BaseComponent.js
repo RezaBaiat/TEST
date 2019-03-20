@@ -12,7 +12,6 @@ export interface BaseComponentProps {
     style? : ViewStyle
 }
 export class BaseComponent<P : BaseComponentProps> extends SmartComponent<P> {
-
     appearListener : EmitterSubscription;
 
     disapearListener : EmitterSubscription;

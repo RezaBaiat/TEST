@@ -6,6 +6,8 @@ import BuildConfig from '../configs/BuildConfig';
 import { BaseComponent, createMapStateToProps } from './BaseComponent';
 import Actions from '../redux/actions/Actions';
 
+// Hi , i should be visible as doc in docs/activities/App.html!
+// after you run docco src/activities/App.js
 export class App extends BaseComponent {
   render() {
     alert(`Network state changed , Connected ? ${Actions.isNetworkAvailable()}`);
