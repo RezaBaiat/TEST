@@ -28,7 +28,7 @@ export class App extends BaseComponent {
           }}
         />
         <Button
-          title="TEST MOCK"
+          title="TEST MOCK DATA"
           onPress={() => {
             NetworkWorker.callApi((text) => {
               alert(text);
