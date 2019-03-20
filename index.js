@@ -19,7 +19,7 @@ Navigation.setDefaultOptions({
   },
 });
 
-Navigation.registerComponentWithRedux('App', () => require('./src/App').default, Provider, store);
+Navigation.registerComponentWithRedux('App', () => require('./src/activities/App').default, Provider, store);
 
 
 Navigation.events().registerAppLaunchedListener(() => {

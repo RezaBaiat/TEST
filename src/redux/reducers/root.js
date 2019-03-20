@@ -1,3 +1,4 @@
+import NetUtils from 'react-native-dev-kit/src/utils/NetUtils';
 import {
   ACTION_NETWORK_STATE_CHANGE,
 } from '../actions/Actions';
@@ -7,7 +8,7 @@ export interface InitialState {
 }
 
 const initialState : InitialState = {// the base state is defined here
-  isNetworkAvailable: false,
+  isNetworkAvailable: NetUtils.isConnected(),
 };
 
 
