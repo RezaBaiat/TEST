@@ -66,7 +66,7 @@ seriously piece of cake is an insult !
 
 - AppNavigator.js :
 
-if you want to route , you want to listen to route events, you want to go back , you want to change to stack root , this beautiful lady is who you will want to visit! it smartly simplifies the simplified react-native-navigation even more !
+if you want to route , you want to listen to route events, you want to go back , you want to change the stack root , this beautiful lady is who you will want to visit! it smartly simplifies the simplified react-native-navigation even more !
 
 - Logger.js :
 
@@ -117,4 +117,4 @@ and finally this is our reducer responsible for handling actions dispatched from
 R is shortened word for Resources (Hello Android) , colors.js , drawables.js and strings.js are holders of their names! \
 yes we obviously keep our resources static too , so you can simply call them by:
 
-`<Text style={}>R.strings.holla<Text/>`
+`<Text>{R.strings.holla}<Text/>`

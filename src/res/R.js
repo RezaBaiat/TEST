@@ -5,6 +5,10 @@ import drawables from './drawables';
 
 const fontName = 'W_homa_fixed';
 
+const defaultStyles = StyleSheet.create({
+
+});
+
 const R = {
   strings,
   colors,
@@ -13,8 +17,5 @@ const R = {
   defaultStyles,
 };
 
-const defaultStyles = StyleSheet.create({
-
-});
 
 export default R;

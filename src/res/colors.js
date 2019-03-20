@@ -1,5 +1,6 @@
 
-export default class Colors{
-    static readonly colorPrimary = "#019201";
-    static readonly colorSecondary = "#019201";
+export default class Colors {
+    static colorPrimary = '#019201';
+
+    static colorSecondary = '#019201';
 }

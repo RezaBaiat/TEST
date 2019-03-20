@@ -3,6 +3,7 @@ import {
   AppState, AppStateStatus, EmitterSubscription, ViewStyle,
 } from 'react-native';
 import { Navigation } from 'react-native-navigation';
+import SmartComponent from 'react-native-dev-kit/src/ui/SmartComponent';
 import { getTopScreenId } from '../AppNavigator';
 import { InitialState } from '../redux/reducers/root';
 
@@ -11,20 +12,21 @@ export interface BaseComponentProps {
     style? : ViewStyle
 }
 export class BaseComponent<P : BaseComponentProps> extends SmartComponent<P> {
-    _appearListener : EmitterSubscription;
 
-    _disapearListener : EmitterSubscription;
+    appearListener : EmitterSubscription;
+
+    disapearListener : EmitterSubscription;
 
     mActivityState = 'not-set';
 
     componentDidMount() {
       AppState.addEventListener('change', this._handleAppStateChange);
-      this._appearListener = Navigation.events().registerComponentDidAppearListener((event) => {
+      this.appearListener = Navigation.events().registerComponentDidAppearListener((event) => {
         if (event.componentId === this.props.componentId) {
           this.callResumeIfNeeded();
         }
       });
-      this._disapearListener = Navigation.events().registerComponentDidDisappearListener((event) => {
+      this.disapearListener = Navigation.events().registerComponentDidDisappearListener((event) => {
         if (event.componentId === this.props.componentId) {
           this.callPauseIfNeeded();
         }
@@ -34,10 +36,9 @@ export class BaseComponent<P : BaseComponentProps> extends SmartComponent<P> {
 
     componentWillUnmount() {
       AppState.removeEventListener('change', this._handleAppStateChange);
-      this._appearListener && this._appearListener.remove();
-      this._disapearListener && this._disapearListener.remove();
+      this.appearListener && this.appearListener.remove();
+      this.disapearListener && this.disapearListener.remove();
       this.callPauseIfNeeded();
-      this.onDestroy();
     }
 
     callPauseIfNeeded() {
@@ -56,17 +57,15 @@ export class BaseComponent<P : BaseComponentProps> extends SmartComponent<P> {
       this.onResume();
     }
 
-    onResume() {
-      // console.log("onResume "+this.mc);
-    }
+  /**
+   * called when component first created or has returned from background
+   */
+  onResume() {}
 
-    onPause() {
-      // console.log("onPause "+this.mc);
-    }
-
-    onDestroy() {
-      // console.log("onDestroy "+this.mc);
-    }
+  /**
+   * called when component has gone to background and is not visible 
+   */
+    onPause() {}
 
     _handleAppStateChange = (nextAppState : AppStateStatus) => {
       if (getTopScreenId() == null) {
@@ -88,7 +87,6 @@ export class BaseComponent<P : BaseComponentProps> extends SmartComponent<P> {
 
 
 /**
- *
  *
  * example :
  *

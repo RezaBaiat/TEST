@@ -1,13 +1,16 @@
 /** @format */
 
-import React from 'react';
 import { Provider } from 'react-redux';
 import { Navigation } from 'react-native-navigation';
 import { I18nManager } from 'react-native';
+import NetUtils from 'react-native-dev-kit/src/utils/NetUtils';
 import store from './src/redux/Store';
+import Actions from './src/redux/actions/Actions';
 
 
 I18nManager.allowRTL(false);
+NetUtils.init();
+NetUtils.addListener(Actions.setNetworkState);
 Navigation.setDefaultOptions({
   topBar: {
     visible: false,

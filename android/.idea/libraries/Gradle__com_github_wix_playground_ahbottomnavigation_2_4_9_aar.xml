@@ -1,11 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.wix-playground:ahbottomnavigation:2.4.9@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a79ee2ada4b2102f7b66d72b0428240c/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dd2b182382abaf39eca207d553a79dbc/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a79ee2ada4b2102f7b66d72b0428240c/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a79ee2ada4b2102f7b66d72b0428240c/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dd2b182382abaf39eca207d553a79dbc/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dd2b182382abaf39eca207d553a79dbc/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
