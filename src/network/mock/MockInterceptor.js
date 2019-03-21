@@ -6,6 +6,7 @@ import BuildConfig from '../../configs/BuildConfig';
 
 // check out https://github.com/nock/nock for usages
 export default class MockInterceptor {
+
   static initialize() {
     if (!BuildConfig.IS_DEBUG) {
       return;

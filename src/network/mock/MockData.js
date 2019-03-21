@@ -2,10 +2,10 @@
 // @flow
 
 export default {
-  'http://www.pixelandcode.ir': ({ params }) => {
+  'http://www.pixelsandcode.ir': ({ params }) => {
     return {
       status: 200,
-      data: "Hi im a mock data !",
+      data: "Hi im a mock data!",
     };
   }
 }
