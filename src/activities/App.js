@@ -8,7 +8,7 @@ import Actions from '../redux/actions/Actions';
 import NetworkWorker from '../network/NetworkWorker';
 import MockInterceptor from '../network/mock/MockInterceptor';
 
-// Hi , i should be visible as doc in docs/activities/App.html!
+// i should be visible as doc in docs/activities/App.html
 // after you run docco src/activities/App.js
 export class App extends BaseComponent {
 
