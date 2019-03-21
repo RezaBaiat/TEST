@@ -56,13 +56,13 @@ export class BaseComponent<P : BaseComponentProps> extends SmartComponent<P> {
       this.onResume();
     }
 
-  /**
+    /**
    * called when component first created or has returned from background
    */
-  onResume() {}
+    onResume() {}
 
-  /**
-   * called when component has gone to background and is not visible 
+    /**
+   * called when component has gone to background and is not visible
    */
     onPause() {}
 

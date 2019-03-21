@@ -7,6 +7,10 @@
     }
   },
   "rules": {
+    "max-len": "off",
+    "no-restricted-syntax": [0, "ForInStatement", "ForOfStatement"],
+    "class-methods-use-this": "off",
+    "no-unused-expressions": "off",
     "padded-blocks": "off",
     "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
     "global-require": "off",

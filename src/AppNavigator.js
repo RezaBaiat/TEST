@@ -1,6 +1,4 @@
 import { Navigation } from 'react-native-navigation';
-import { I18nManager } from 'react-native';
-import { Options } from 'react-native-navigation/lib/src/interfaces/Options';
 
 const mOpenScreens : {componentId : string, componentName : string}[] = [];
 
@@ -18,6 +16,15 @@ Navigation.events().registerComponentDidAppearListener((component) => {
     componentName: component.componentName,
   });
 });
+
+export function getTopScreenName() : string {
+  return mOpenScreens[mOpenScreens.length - 1].componentName;
+}
+
+export function getTopScreenId() : string {
+  return mOpenScreens[mOpenScreens.length - 1].componentId;
+}
+
 
 export function navigateTo(component : string, props? : {}) {
   Navigation.push(getTopScreenId(), {
@@ -58,12 +65,4 @@ export function getActiveScreenByName(componentName : string) : {componentId : s
 
 export function goBack(componentId : string) : Promise<any> {
   return Navigation.pop(componentId);
-}
-
-export function getTopScreenName() : string {
-  return mOpenScreens[mOpenScreens.length - 1].componentName;
-}
-
-export function getTopScreenId() : string {
-  return mOpenScreens[mOpenScreens.length - 1].componentId;
 }
