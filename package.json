@@ -7,6 +7,8 @@
     "android": "SET ENVFILE=.env.staging && react-native run-android",
     "android:prod": "SET ENVFILE=.env.production && react-native run-android",
     "android:release": "cd android && ENVFILE=.env.production ./gradlew assembleRelease",
+    "installDebug": "cd android && gradlew installDebug",
+    "bundle": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res",
     "installNoDev": "yarn bundle & yarn installDebug",
     "upgradeLatest": "yarn upgrade-interactive --latest",
     "ts": "tsc --watch",
