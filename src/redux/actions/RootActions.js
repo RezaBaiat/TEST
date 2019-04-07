@@ -1,0 +1,5 @@
+export default class RootActions {
+  static ACTION_NETWORK_STATE_CHANGE = 'ACTION_NETWORK_STATE_CHANGE';
+
+  static ACTION_DATA_UPDATE = 'ACTION_DATA_UPDATE';
+}
