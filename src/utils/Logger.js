@@ -1,5 +1,18 @@
+import { Rollbar } from 'winston-transport-rollbar';
+
 const winston = require('winston');
 
+const rollbar = new Client(new Configuration('5990ddd7156e4fa58287271bbfa59ca6', {
+  payload: {
+    client: {
+      JavaScript: {
+        // source_map_enabled: true,
+        // code_version: '1234566.android',
+        environment: '',
+      },
+    },
+  },
+}));
 
 /**
  @see https://github.com/winstonjs/winston
@@ -23,11 +36,19 @@ const logger = winston.createLogger({
 // `${info.level}: ${info.message} JSON.stringify({ ...rest }) `
 //
 if (process.env.NODE_ENV !== 'production') {
+
   logger.add(new winston.transports.Console({
     format: winston.format.simple(),
   }));
+} else {
+  const options = {
+    accessToken: '5990ddd7156e4fa58287271bbfa59ca6',
+    environment: 'production',
+    reportLevel: 'error',
+  };
+  winston.add(winston.transports.Rollbar, options);
 }
-
+// which to send with rollbar?
 export default class Logger {
   static error(message : string) {
     logger.error(message);

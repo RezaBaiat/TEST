@@ -21,11 +21,12 @@ export function getTopScreenName() : string {
   return mOpenScreens[mOpenScreens.length - 1].componentName;
 }
 
+// returns componentId of the top screen
 export function getTopScreenId() : string {
   return mOpenScreens[mOpenScreens.length - 1].componentId;
 }
 
-
+// pushes a screen to the stack
 export function navigateTo(component : string, props? : {}) {
   Navigation.push(getTopScreenId(), {
     component: {
@@ -35,6 +36,7 @@ export function navigateTo(component : string, props? : {}) {
   });
 }
 
+// clears stack and sets the root
 export function setRoot(component : string, props? : {}) {
   Navigation.setRoot({
     root: {

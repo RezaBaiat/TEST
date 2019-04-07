@@ -14,6 +14,8 @@ What else we are using
 - `react-native-dev-kit` (https://github.com/pixelsandcode/reactnative-dev-kit) as the pixelandcode's react development kit repo
 - `react-native-fetch-mock` (https://github.com/WhatAKitty/react-native-fetch-mock) as the fetch interceptor , used for mock
 
+## Diagram
+https://drive.google.com/open?id=192AEg8PoTkee_IEmWXXbRHOHNjQ0YeMP
 
 ## How to use
 
@@ -86,51 +88,6 @@ logging is also simplified using this class . so you have to only call :
 
 `Logger.info('weather...could be better!')`  or  `Logger.error('my stomach hurts !')` or `Logger.silly('tonight is sunny!')`
 
-- Store.js :
-
-our Redux reducer(s) and its middlewares go here and we create the store inside it . the default root reducer is named `rootReducer`
-
-- Actions.js :
-
-Redux is an implementation of Observer pattern , but the world seems to go crazy when try to introduce it! 
-
-let us simplify it for you:
-
-```javascript
-import store from '../Store';
-
-/**
-* this is how we can get our rootReducer's state (statically)
-*/
- static getRootState() : InitialState{
-     return store.getState().rootReducer;
- }
- 
- /**
- * and this is how we dispatch an action (statically)
-*/
-static setNetworkState(isConnected : boolean) {
-    store.dispatch({
-      type: ACTION_NETWORK_STATE_CHANGE,
-      payload: isConnected,
-    });
-  }
-
-  /**
-  * in addition to the component state, these props are also available statically! 
-*/
-  static isNetworkAvailable() : boolean {
-    return this.getRootState().isNetworkAvailable;
-  }
- 
-```
-
-that would be all!
-
-- root.js
-
-and finally this is our reducer responsible for handling actions dispatched from Actions.js
-
 - colors.js , drawables.js , strings.js & R.js
 
 R is shortened word for Resources (Hello Android) , colors.js , drawables.js and strings.js are holders of their names! \
@@ -141,3 +98,6 @@ yes we obviously keep our resources static too , so you can simply call them by:
 - MockInterceptor.js
 
 calling `MockInterceptor.Initialize()` - which will only work in debug mode - will replace default fetch with a simulated fetch , allowing network requests be intercepted and return mock data as needed . you can control which urls to intercept and how to responde at `MockData.js`
+
+# Resources
+https://github.com/pixelsandcode/ReactNative-Boilerplate/tree/master/docs/index.html

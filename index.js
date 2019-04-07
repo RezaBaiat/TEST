@@ -4,13 +4,19 @@ import { Provider } from 'react-redux';
 import { Navigation } from 'react-native-navigation';
 import { I18nManager } from 'react-native';
 import NetUtils from 'react-native-dev-kit/src/utils/NetUtils';
-import store from './src/redux/Store';
-import Actions from './src/redux/actions/Actions';
+import rootStore from './src/redux/stores/RootStore';
+import NetworkWorker from './src/network/NetworkWorker';
+import RootDispatcher from './src/redux/dispatchers/RootDispatcher';
+import DataSource from './src/storages/DataSource';
 
-
+// this method changes language's RTL & LTR behavior
 I18nManager.allowRTL(false);
+// initializer for NetUtils , allow for static call of NetWorkUtils.isConnected()
 NetUtils.init();
-NetUtils.addListener(Actions.setNetworkState);
+// listen for network state changes
+NetUtils.addListener(RootDispatcher.setNetworkState);
+DataSource.initialize();
+// default options for react-native-navigation-v2
 Navigation.setDefaultOptions({
   topBar: {
     visible: false,
@@ -19,9 +25,10 @@ Navigation.setDefaultOptions({
   },
 });
 
-Navigation.registerComponentWithRedux('App', () => require('./src/activities/App').default, Provider, store);
+// registers a screen with redux included
+Navigation.registerComponentWithRedux('App', () => require('./src/activities/App').default, Provider, rootStore);
 
-
+// identifies which screen to run first when application launched
 Navigation.events().registerAppLaunchedListener(() => {
   Navigation.setRoot({
     root: {

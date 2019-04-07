@@ -5,12 +5,13 @@ import {
 import { Navigation } from 'react-native-navigation';
 import SmartComponent from 'react-native-dev-kit/src/ui/SmartComponent';
 import { getTopScreenId } from '../AppNavigator';
-import { InitialState } from '../redux/reducers/root';
+import { InitialState } from '../redux/reducers/RootReducer';
 
 export interface BaseComponentProps {
     componentId? : string,
     style? : ViewStyle
 }
+//every screen should extend this class
 export class BaseComponent<P : BaseComponentProps> extends SmartComponent<P> {
     appearListener : EmitterSubscription;
 
@@ -56,14 +57,11 @@ export class BaseComponent<P : BaseComponentProps> extends SmartComponent<P> {
       this.onResume();
     }
 
-    /**
-   * called when component first created or has returned from background
-   */
+
+   //called when component first created or has returned from background
     onResume() {}
 
-    /**
-   * called when component has gone to background and is not visible
-   */
+   //called when component has gone to background and is not visible
     onPause() {}
 
     _handleAppStateChange = (nextAppState : AppStateStatus) => {
@@ -86,8 +84,7 @@ export class BaseComponent<P : BaseComponentProps> extends SmartComponent<P> {
 
 
 /**
- *
- * example :
+ * ```javascript
  *
  * export default connect(createMapStateToProps((state)=>{
   const {isNetworkAvailable} = state.rootReducer;
@@ -95,24 +92,11 @@ export class BaseComponent<P : BaseComponentProps> extends SmartComponent<P> {
     isNetworkAvailable
   }
   }))(App)
+
+ ```
  *
  * this enables IDE to detect state types , preventing typo and enabled code completion
- * @param func
  */
 export function createMapStateToProps(func : (state : {rootReducer : InitialState})=>{}) {
   return func;
 }
-
-/*
-export const mapStateToProps = (state : {rootReducer : initialStateInterface}) =>{
-
-    return{
-        contacts : state.rootReducer.contacts
-    }
-};
-
-export const mapDispatchToProps = (dispatch: any) =>{
-    return{
-
-    }
-} */
