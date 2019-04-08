@@ -100,7 +100,7 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
-        applicationId "com.changemename"
+        applicationId project.env.get("APP_ID")
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         missingDimensionStrategy "RNN.reactNativeVersion", "reactNative57_5"
@@ -171,6 +171,9 @@ subprojects { subproject ->
 }
 
 dependencies {
+    compile project(':react-native-push-notification')
+    compile project(':rn-fetch-blob')
+    compile project(':react-native-fast-image')
     compile project(':react-native-vector-icons')
     compile project(':react-native-config')
     compile fileTree(dir: "libs", include: ["*.jar"])

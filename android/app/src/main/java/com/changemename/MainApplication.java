@@ -9,6 +9,10 @@ import com.oblador.vectoricons.VectorIconsPackage;
 import com.reactnativenavigation.NavigationApplication;
 import com.reactnativenavigation.react.NavigationReactNativeHost;
 import com.reactnativenavigation.react.ReactGateway;
+import com.dylanvann.fastimage.FastImageViewPackage;
+import com.RNFetchBlob.RNFetchBlobPackage;
+import com.dieam.reactnativepushnotification.ReactNativePushNotificationPackage;
+
 
 import java.util.Arrays;
 import java.util.List;
@@ -36,6 +40,9 @@ public class MainApplication extends NavigationApplication  {
     public List<ReactPackage> createAdditionalReactPackages() {
         return Arrays.<ReactPackage>asList(
                 new MainReactPackage(),
+            new ReactNativePushNotificationPackage(),
+            new RNFetchBlobPackage(),
+            new FastImageViewPackage(),
             new VectorIconsPackage(),
             new ReactNativeConfigPackage()
         );

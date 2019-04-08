@@ -9,14 +9,18 @@ import MockInterceptor from '../network/mock/MockInterceptor';
 import RootState from '../redux/states/RootState';
 import DataSource from '../storages/DataSource';
 import { InitialState } from '../redux/reducers/RootReducer';
-import AppPermissionManager from '../managers/AppPermissionManager';
+import AppPermissionManager from '../handlers/AppPermissionManager';
+import AppButton from '../ui/AppButton';
+import AppTextView from '../ui/AppTextView';
+import AppImageView, { createUrl } from '../ui/AppImageView';
+import R from '../res/R';
 
 // i should be visible as doc in docs/activities/App.html
 // after you run docco src/activities/App.js
 export class App extends BaseComponent {
 
   componentDidMount() {
-    // MockInterceptor.initialize();
+
     AppPermissionManager.checkPermissions().then((granted : boolean) => {
 
     });
@@ -29,13 +33,15 @@ export class App extends BaseComponent {
 
     return (
       <View style={{ flexDirection: 'column' }}>
-        <Button
-          title="CHECK DEBUG MODE"
+        <AppButton
           onPress={() => {
             alert(`DEBUG MODE ENABLED ? ${BuildConfig.IS_DEBUG}`);
           }}
+          textColor="black"
+          text="CHECK DEBUG MODE"
         />
-        <Text>{DataSource.getData()}</Text>
+        <AppImageView style={{ width: 250, height: 250, backgroundColor: 'black' }} src={createUrl('http://hdwpro.com/wp-content/uploads/2018/12/hd-wallpapers-1.jpg')} />
+        <AppTextView text={DataSource.getData()} />
       </View>
     );
   }

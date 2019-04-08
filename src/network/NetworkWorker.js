@@ -6,7 +6,7 @@ import RootDispatcher from '../redux/dispatchers/RootDispatcher';
 import RootState from '../redux/states/RootState';
 import { AxiosResponse } from 'axios';
 
-const axios = require('axios');
+export const axios = require('axios');
 
 export default class NetworkWorker {
 
@@ -27,6 +27,7 @@ export default class NetworkWorker {
     axios.get(url)
       .then(res => res.data)
       .then((resString) => {
+        console.log('response = '+resString);
         OfflineStorage.store(url,resString);
         onSuccess(resString);
       }).catch((err)=>{
