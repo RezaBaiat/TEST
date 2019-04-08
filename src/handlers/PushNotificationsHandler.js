@@ -1,4 +1,4 @@
-import { PushNotificationIOSStatic as PushNotificationIOS } from 'react-native';
+import { PushNotificationIOS } from 'react-native';
 
 const PushNotification = require('react-native-push-notification');
 
