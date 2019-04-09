@@ -98,5 +98,5 @@ yes we obviously keep our resources static too , so you can simply call them by:
 calling `MockInterceptor.Initialize()` - which will only work in debug mode - will replace default fetch with a simulated fetch , allowing network requests be intercepted and return mock data as needed . you can control which urls to intercept and how to responde at `MockData.js`
 
 # Resources
-https://github.com/pixelsandcode/ReactNative-Boilerplate/tree/master/docs/index.html
+https://github.com/pixelsandcode/ReactNative-Boilerplate/tree/master/docs/index.html  \
 https://drive.google.com/open?id=192AEg8PoTkee_IEmWXXbRHOHNjQ0YeMP
