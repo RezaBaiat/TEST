@@ -17,6 +17,7 @@ export interface ManagerOptions{
   forceNew? : boolean, // whether to reuse an existing connection
 }
 // please see @https://github.com/socketio/socket.io-client/blob/master/docs/API.md#initialization-examples for more informations
+// and docs at @https://socket.io/docs
 export default class AbstractSocket {
 
   socket : Socket;
@@ -34,6 +35,14 @@ export default class AbstractSocket {
 
   onConnect = (cb : ()=>void) => {
     this.socket.on('connect', cb);
+  };
+
+  joinRoom = (roomName : string) => {
+    this.socket.join(roomName);
+  };
+
+  leaveRoom = (roomName : string) => {
+    this.socket.leave(roomName);
   };
 
   // Fired upon a successful reconnection
@@ -92,7 +101,12 @@ export default class AbstractSocket {
 
   emit = (eventName : string, args : any, ackcb : ()=>void) => {
     this.socket.emit(eventName, args, ackcb);
+  };
+
+  emitToRoom = (roomName : string, message : string) => {
+    io.to(roomName).emit(message);
   }
+
 
   on = (eventName : string, cb : (data : any)=>void) => {
     this.socket.on(eventName, cb);
