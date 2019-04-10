@@ -27,7 +27,6 @@ export default class NetworkWorker {
     axios.get(url)
       .then(res => res.data)
       .then((resString) => {
-        console.log('response = '+resString);
         OfflineStorage.store(url,resString);
         onSuccess(resString);
       }).catch((err)=>{

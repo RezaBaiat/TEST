@@ -7,11 +7,12 @@ import SmartComponent from 'react-native-dev-kit/src/ui/SmartComponent';
 import { getTopScreenId } from '../AppNavigator';
 import { InitialState } from '../redux/reducers/RootReducer';
 
+
 export interface BaseComponentProps {
     componentId? : string,
     style? : ViewStyle
 }
-//every screen should extend this class
+// every screen should extend this class
 export class BaseComponent<P : BaseComponentProps> extends SmartComponent<P> {
     appearListener : EmitterSubscription;
 
@@ -58,10 +59,10 @@ export class BaseComponent<P : BaseComponentProps> extends SmartComponent<P> {
     }
 
 
-   //called when component first created or has returned from background
+    // called when component first created or has returned from background
     onResume() {}
 
-   //called when component has gone to background and is not visible
+    // called when component has gone to background and is not visible
     onPause() {}
 
     _handleAppStateChange = (nextAppState : AppStateStatus) => {

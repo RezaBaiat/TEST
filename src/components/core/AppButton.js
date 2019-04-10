@@ -1,8 +1,8 @@
 import React, { Component, PureComponent } from 'react';
-import { Container, Button, Text } from 'native-base';
+import { Container, Button, Text } from 'native-base/index';
 import { View, ViewStyle } from 'react-native';
 import SmartComponent from 'react-native-dev-kit/src/ui/SmartComponent';
-import R from '../res/R';
+import R from '../../resources/R';
 import AppImageView from './AppImageView';
 
 interface Props {

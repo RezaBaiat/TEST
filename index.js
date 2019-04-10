@@ -20,7 +20,6 @@ require('core-js/fn/array/find');
 
 // initializes mock interceptor if enabled in .env.staging file
 if (BuildConfig.MOCK_ENABLED) {
-  console.log('enabled');
   MockInterceptor.initialize();
 }
 // this method changes language's RTL & LTR behavior
@@ -41,7 +40,7 @@ Navigation.setDefaultOptions({
 });
 
 // registers a screen with redux included
-Navigation.registerComponentWithRedux('App', () => require('./src/activities/App').default, Provider, rootStore);
+Navigation.registerComponentWithRedux('App', () => require('./src/screens/App').default, Provider, rootStore);
 
 // identifies which screen to run first when application launched
 Navigation.events().registerAppLaunchedListener(() => {

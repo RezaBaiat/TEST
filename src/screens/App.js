@@ -10,10 +10,10 @@ import RootState from '../redux/states/RootState';
 import DataSource from '../storages/DataSource';
 import { InitialState } from '../redux/reducers/RootReducer';
 import AppPermissionManager from '../handlers/AppPermissionManager';
-import AppButton from '../ui/AppButton';
-import AppTextView from '../ui/AppTextView';
-import AppImageView, { createUrl } from '../ui/AppImageView';
-import R from '../res/R';
+import AppButton from '../components/core/AppButton';
+import AppTextView from '../components/core/AppTextView';
+import AppImageView, { createUrl } from '../components/core/AppImageView';
+import R from '../resources/R';
 
 // i should be visible as doc in docs/activities/App.html
 // after you run docco src/activities/App.js

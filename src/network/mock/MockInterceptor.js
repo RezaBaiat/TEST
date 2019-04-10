@@ -2,8 +2,6 @@
 import BuildConfig from '../../configs/BuildConfig';
 import { axios } from '../NetworkWorker';
 
-
-
 // check out https://github.com/ctimmerm/axios-mock-adapter for more info
 export default class MockInterceptor {
 

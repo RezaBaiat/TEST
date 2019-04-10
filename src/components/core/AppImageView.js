@@ -3,7 +3,7 @@ import { ViewStyle } from 'react-native';
 import SmartImageView, { SmartImageViewState } from 'react-native-dev-kit/src/cachers/imagecachers/SmartImageView';
 import SmartComponent from 'react-native-dev-kit/src/ui/SmartComponent';
 import ArrayList from 'react-native-dev-kit/src/objects/ArrayList';
-import R from '../res/R';
+import R from '../../resources/R';
 
 
 interface Props{
