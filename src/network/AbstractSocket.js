@@ -89,7 +89,7 @@ export default class AbstractSocket {
   // else the socket will automatically try to reconnect
   onDisconnect = (cb : (reason : string)=>void) => {
     this.socket.on('disconnect', cb);
-  }
+  };
 
   forceConnect = () => {
     this.socket.connect();
@@ -99,17 +99,16 @@ export default class AbstractSocket {
     this.socket.close();
   };
 
-  emit = (eventName : string, args : any, ackcb : ()=>void) => {
-    this.socket.emit(eventName, args, ackcb);
+  emit = (eventName : string, args : any, ackCallback : ()=>void) => {
+    this.socket.emit(eventName, args, ackCallback);
   };
 
   emitToRoom = (roomName : string, message : string) => {
     io.to(roomName).emit(message);
-  }
-
+  };
 
   on = (eventName : string, cb : (data : any)=>void) => {
     this.socket.on(eventName, cb);
-  }
+  };
 
 }

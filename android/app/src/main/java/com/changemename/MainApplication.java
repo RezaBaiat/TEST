@@ -1,7 +1,6 @@
 package com.changemename;
 
 import com.RNFetchBlob.RNFetchBlobPackage;
-import com.dieam.reactnativepushnotification.ReactNativePushNotificationPackage;
 import com.dylanvann.fastimage.FastImageViewPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
@@ -39,7 +38,7 @@ public class MainApplication extends NavigationApplication  {
     public List<ReactPackage> createAdditionalReactPackages() {
         return Arrays.<ReactPackage>asList(
                 new MainReactPackage(),
-            new ReactNativePushNotificationPackage(),
+            new RNFirebasePackage(),
             new RNFetchBlobPackage(),
             new FastImageViewPackage(),
             new VectorIconsPackage(),

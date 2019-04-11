@@ -10,6 +10,7 @@ import RootDispatcher from './src/redux/dispatchers/RootDispatcher';
 import DataSource from './src/storages/DataSource';
 import BuildConfig from './src/configs/BuildConfig';
 import MockInterceptor from './src/network/mock/MockInterceptor';
+import PushNotificationsHandler from './src/handlers/PushNotificationsHandler';
 
 // fix for god damn Symbol!
 global.Symbol = require('core-js/es6/symbol');
@@ -30,6 +31,8 @@ NetUtils.init();
 NetUtils.addListener(RootDispatcher.setNetworkState);
 // datasource is where every component should ask for data. basically datasource handles data changes upon network state changes
 DataSource.initialize();
+// initializes Push Notifications listener
+PushNotificationsHandler.initialize();
 // default options for react-native-navigation-v2
 Navigation.setDefaultOptions({
   topBar: {
