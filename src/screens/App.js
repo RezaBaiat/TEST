@@ -14,6 +14,8 @@ import AppButton from '../components/core/AppButton';
 import AppTextView from '../components/core/AppTextView';
 import AppImageView, { createUrl } from '../components/core/AppImageView';
 import R from '../resources/R';
+import { navigateTo } from '../AppNavigator';
+import Screen2 from './Screen2';
 
 // i should be visible as doc in docs/activities/App.html
 // after you run docco src/activities/App.js
@@ -38,7 +40,14 @@ export class App extends BaseComponent {
             alert(`DEBUG MODE ENABLED ? ${BuildConfig.IS_DEBUG}`);
           }}
           textColor="black"
-          text="CHECK DEBUG MODE"
+          text="Check debug mode"
+        />
+        <AppButton
+          onPress={() => {
+            navigateTo(Screen2.className);
+          }}
+          textColor="black"
+          text="Go to next page"
         />
         <AppImageView style={{ width: 250, height: 250, backgroundColor: 'black' }} src={createUrl('http://hdwpro.com/wp-content/uploads/2018/12/hd-wallpapers-1.jpg')} />
         <AppTextView text={DataSource.getData()} />
