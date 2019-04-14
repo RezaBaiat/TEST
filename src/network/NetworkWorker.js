@@ -24,9 +24,7 @@ export default class NetworkWorker {
     axios.get(url)
       .then((res) => {
         if (res.ok) {
-          if (res.data) {
-            OfflineStorage.store(url, res.data);
-          }
+          res.data && OfflineStorage.store(url, res.data);
           onSuccess(res.data);
         } else {
           onError && onError(null);
