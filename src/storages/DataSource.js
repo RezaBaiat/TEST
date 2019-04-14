@@ -8,7 +8,9 @@ export default class DataSource {
 
   static initialize() {
     NetUtils.addListener(() => {
-      this.updateData();
+      if (NetUtils.isConnected()) {
+        this.updateData();
+      }
     });
     this.updateData();
   }
