@@ -11,6 +11,7 @@ import DataSource from './src/storages/DataSource';
 import BuildConfig from './src/configs/BuildConfig';
 import MockInterceptor from './src/network/mock/MockInterceptor';
 import PushNotificationsHandler from './src/handlers/PushNotificationsHandler';
+import strings from './src/resources/strings';
 
 // fix for god damn Symbol!
 global.Symbol = require('core-js/es6/symbol');
@@ -41,6 +42,8 @@ Navigation.setDefaultOptions({
     animate: false,
   },
 });
+
+strings.setLang('fa');
 
 // registers a screen with redux included
 Navigation.registerComponentWithRedux('App', () => require('./src/screens/App').default, Provider, rootStore);

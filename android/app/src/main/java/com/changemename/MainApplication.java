@@ -15,6 +15,8 @@ import com.reactnativenavigation.react.ReactGateway;
 import java.util.Arrays;
 import java.util.List;
 
+import io.invertase.firebase.RNFirebasePackage;
+
 
 public class MainApplication extends NavigationApplication  {
 

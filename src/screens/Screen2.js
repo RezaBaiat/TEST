@@ -1,6 +1,5 @@
 import React from 'react';
 import { View } from 'react-native';
-import SmartComponent from 'smart_managers/src/ui/SmartComponent';
 import { BaseComponent } from './BaseComponent';
 import AppTextView from '../components/core/AppTextView';
 import AppTouchable from '../components/core/AppTouchable';

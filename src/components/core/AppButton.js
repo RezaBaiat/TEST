@@ -1,5 +1,5 @@
 import React, { Component, PureComponent } from 'react';
-import { Container, Button, Text } from 'native-base/index';
+import { Container, Button, Text } from 'native-base';
 import { View, ViewStyle } from 'react-native';
 import SmartComponent from 'react-native-dev-kit/src/ui/SmartComponent';
 import R from '../../resources/R';

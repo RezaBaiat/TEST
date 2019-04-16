@@ -1,6 +1,6 @@
 import React, { Component, PureComponent } from 'react';
 import { View, ViewStyle, TouchableOpacity } from 'react-native';
-import SmartComponent from 'smart_managers/src/ui/SmartComponent';
+import SmartComponent from 'react-native-dev-kit/src/ui/SmartComponent';
 
 interface Props {
   style? : ViewStyle,

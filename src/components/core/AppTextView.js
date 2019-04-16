@@ -1,5 +1,5 @@
 import React, { Component, PureComponent } from 'react';
-import { Text } from 'native-base/index';
+import { Text } from 'native-base';
 import LangUtils from 'react-native-dev-kit/src/utils/LangUtils';
 import { TextProps, TextStyle } from 'react-native';
 import SmartComponent from 'react-native-dev-kit/src/ui/SmartComponent';
