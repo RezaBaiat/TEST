@@ -15,7 +15,7 @@ What else we are using
 - `axios-mock-adapter` https://github.com/ctimmerm/axios-mock-adapter as the axios interceptor , used for mock
 - `axios` https://github.com/axios/axios in replacement of fetch
 - `rnfirebase` https://rnfirebase.io responsible for FCM push notifications
-
+- `chai,sinon,mocha,istanbul,enzyme` as the prefered testing kit
 
 
 ## How to use
