@@ -26,6 +26,8 @@ if (BuildConfig.MOCK_ENABLED) {
 }
 // this method changes language's RTL & LTR behavior
 I18nManager.allowRTL(false);
+// selects app's language
+strings.setLang('fa');
 // initializer for NetUtils , allow for static call of NetWorkUtils.isConnected()
 NetUtils.init();
 // listen for network state changes
@@ -43,7 +45,6 @@ Navigation.setDefaultOptions({
   },
 });
 
-strings.setLang('fa');
 
 // registers a screen with redux included
 Navigation.registerComponentWithRedux('App', () => require('./src/screens/App').default, Provider, rootStore);
