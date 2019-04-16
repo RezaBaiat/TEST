@@ -1,3 +1,8 @@
+examples:  
+https://www.tangentsolutions.co.za/2017/07/03/unit-testing-react-native-with-mocha-chai-sinon-enzyme-and-istanbul/
+http://www.darrenbeck.co.uk/react/testing/testing-part1/
+
+
 https://codeburst.io/javascript-unit-testing-using-mocha-and-chai-1d97d9f18e71
 https://medium.com/the-web-tub/mocha-chai-js-unit-testing-for-es6-with-istanbul-code-coverage-11b2a141a446
 
