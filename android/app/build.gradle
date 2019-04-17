@@ -75,7 +75,7 @@ import com.android.build.OutputFile
  */
 
 project.ext.react = [
-    entryFile: "index.js"
+        entryFile: "index.js"
 ]
 
 apply from: "../../node_modules/react-native/react.gradle"
@@ -171,6 +171,7 @@ subprojects { subproject ->
 }
 
 dependencies {
+    compile project(':react-native-push-notification')
     implementation project(':react-native-firebase')
     implementation project(':rn-fetch-blob')
     implementation project(':react-native-fast-image')
@@ -183,6 +184,8 @@ dependencies {
     implementation 'com.android.support:multidex:1.0.3'
     implementation "com.google.android.gms:play-services-base:16.1.0"
     implementation "com.google.firebase:firebase-core:16.0.8"
+    implementation "com.google.firebase:firebase-messaging:17.6.0"
+    implementation 'me.leolin:ShortcutBadger:1.1.21@aar' // <-- Add this line if you wish to use badge on Android
 }
 
 // Run this once to be able to run the application with BUCK
@@ -193,3 +196,4 @@ task copyDownloadableDepsToLibs(type: Copy) {
 }
 
 
+apply plugin: 'com.google.gms.google-services'

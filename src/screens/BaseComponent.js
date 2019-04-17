@@ -4,83 +4,85 @@ import {
 } from 'react-native';
 import { Navigation } from 'react-native-navigation';
 import SmartComponent from 'react-native-dev-kit/src/ui/SmartComponent';
-import { getTopScreenId } from '../AppNavigator';
+import * as JSX from 'react';
 import { InitialState } from '../redux/reducers/RootReducer';
+import AppNavigator from '../AppNavigator';
 
 
 export interface BaseComponentProps {
-    componentId? : string,
-    style? : ViewStyle
+  componentId? : string,
+  style? : ViewStyle
 }
 // every screen should extend this class
 export class BaseComponent<P : BaseComponentProps> extends SmartComponent<P> {
-    appearListener : EmitterSubscription;
+  appearListener : EmitterSubscription;
 
-    disapearListener : EmitterSubscription;
+  disapearListener : EmitterSubscription;
 
-    mActivityState = 'not-set';
+  mActivityState = 'not-set';
 
-    componentDidMount() {
-      AppState.addEventListener('change', this._handleAppStateChange);
-      this.appearListener = Navigation.events().registerComponentDidAppearListener((event) => {
-        if (event.componentId === this.props.componentId) {
-          this.callResumeIfNeeded();
-        }
-      });
-      this.disapearListener = Navigation.events().registerComponentDidDisappearListener((event) => {
-        if (event.componentId === this.props.componentId) {
-          this.callPauseIfNeeded();
-        }
-      });
-      this.callResumeIfNeeded();
-    }
-
-    componentWillUnmount() {
-      AppState.removeEventListener('change', this._handleAppStateChange);
-      this.appearListener && this.appearListener.remove();
-      this.disapearListener && this.disapearListener.remove();
-      this.callPauseIfNeeded();
-    }
-
-    callPauseIfNeeded() {
-      if (this.mActivityState === 'paused') {
-        return;
+  componentDidMount() {
+    AppState.addEventListener('change', this._handleAppStateChange);
+    this.appearListener = Navigation.events().registerComponentDidAppearListener((event) => {
+      if (event.componentId === this.props.componentId) {
+        this.callResumeIfNeeded();
       }
-      this.mActivityState = 'paused';
-      this.onPause();
-    }
-
-    callResumeIfNeeded() {
-      if (this.mActivityState === 'resumed') {
-        return;
+    });
+    this.disapearListener = Navigation.events().registerComponentDidDisappearListener((event) => {
+      if (event.componentId === this.props.componentId) {
+        this.callPauseIfNeeded();
       }
-      this.mActivityState = 'resumed';
-      this.onResume();
+    });
+    this.callResumeIfNeeded();
+  }
+
+  componentWillUnmount() {
+    AppState.removeEventListener('change', this._handleAppStateChange);
+    this.appearListener && this.appearListener.remove();
+    this.disapearListener && this.disapearListener.remove();
+    this.callPauseIfNeeded();
+  }
+
+  callPauseIfNeeded() {
+    if (this.mActivityState === 'paused') {
+      return;
     }
+    this.mActivityState = 'paused';
+    this.onPause();
+  }
 
-
-    // called when component first created or has returned from background
-    onResume() {}
-
-    // called when component has gone to background and is not visible
-    onPause() {}
-
-    _handleAppStateChange = (nextAppState : AppStateStatus) => {
-      if (getTopScreenId() == null) {
-        return;
-      }
-      if (nextAppState === 'active') {
-        if (getTopScreenId() === this.props.componentId) {
-          this.callResumeIfNeeded();
-        }
-      } else if (nextAppState === 'background') {
-        if (getTopScreenId() === this.props.componentId) {
-          this.callPauseIfNeeded();
-        }
-      } else {
-        alert(`EVENT = ${nextAppState}`);
-      }
+  callResumeIfNeeded() {
+    if (this.mActivityState === 'resumed') {
+      return;
     }
+    this.mActivityState = 'resumed';
+    this.onResume();
+  }
+
+
+  // called when component first created or has returned from background
+  onResume() {}
+
+  // called when component has gone to background and is not visible
+  onPause() {}
+
+  _handleAppStateChange = (nextAppState : AppStateStatus) => {
+    if (AppNavigator.getTopScreenId() == null) {
+      return;
+    }
+    if (nextAppState === 'active') {
+      if (AppNavigator.getTopScreenId() === this.props.componentId) {
+        this.callResumeIfNeeded();
+      }
+    } else if (nextAppState === 'background') {
+      if (AppNavigator.getTopScreenId() === this.props.componentId) {
+        this.callPauseIfNeeded();
+      }
+    } else {
+      alert(`EVENT = ${nextAppState}`);
+    }
+  }
+
 }
 
 

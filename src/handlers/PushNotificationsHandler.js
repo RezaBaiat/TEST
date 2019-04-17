@@ -24,7 +24,7 @@ export default class PushNotificationsHandler {
 
   static messageListener;
 
-  // checkout @https://rnfirebase.io/docs/v4.3.x/notifications/receiving-notifications
+  // checkout @https://rnfirebase.io/docs/v5.x.x/notifications/android
   // also checkout @https://medium.com/@anum.amin/react-native-integrating-push-notifications-using-fcm-349fff071591
   // even checkout @https://medium.com/@yangnana11/how-to-set-up-firebase-notification-in-react-native-app-android-only-4920eb875eae
   static initialize() {

@@ -11,11 +11,15 @@ import com.oblador.vectoricons.VectorIconsPackage;
 import com.reactnativenavigation.NavigationApplication;
 import com.reactnativenavigation.react.NavigationReactNativeHost;
 import com.reactnativenavigation.react.ReactGateway;
+import com.dieam.reactnativepushnotification.ReactNativePushNotificationPackage;
 
 import java.util.Arrays;
 import java.util.List;
 
 import io.invertase.firebase.RNFirebasePackage;
+import io.invertase.firebase.notifications.RNFirebaseNotificationsPackage;
+import io.invertase.firebase.messaging.RNFirebaseMessagingPackage;
+
 
 
 public class MainApplication extends NavigationApplication  {
@@ -40,11 +44,14 @@ public class MainApplication extends NavigationApplication  {
     public List<ReactPackage> createAdditionalReactPackages() {
         return Arrays.<ReactPackage>asList(
                 new MainReactPackage(),
-            new RNFirebasePackage(),
-            new RNFetchBlobPackage(),
-            new FastImageViewPackage(),
-            new VectorIconsPackage(),
-            new ReactNativeConfigPackage()
+                new ReactNativePushNotificationPackage(),
+                new RNFirebasePackage(),
+                new RNFirebaseMessagingPackage(),
+                new RNFetchBlobPackage(),
+                new FastImageViewPackage(),
+                new VectorIconsPackage(),
+                new ReactNativeConfigPackage(),
+                new RNFirebaseNotificationsPackage()
         );
     }
 
