@@ -47,7 +47,7 @@ Navigation.setDefaultOptions({
 
 
 // registers a screen with redux included
-Navigation.registerComponentWithRedux('App', () => require('./src/screens/App').default, Provider, rootStore);
+Navigation.registerComponentWithRedux('App', () => require('./src/scenes/App').default, Provider, rootStore);
 
 // identifies which screen to run first when application launched
 Navigation.events().registerAppLaunchedListener(() => {
