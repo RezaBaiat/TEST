@@ -2,14 +2,14 @@
 import React from 'react';
 import { Button, Text, View } from 'react-native';
 import { connect } from 'react-redux';
-import BuildConfig from '../configs/BuildConfig';
+import Config from '../configs/Config';
 import { BaseComponent, createMapStateToProps } from './BaseComponent';
 import NetworkWorker from '../network/NetworkWorker';
 import MockInterceptor from '../network/mock/MockInterceptor';
 import RootState from '../redux/states/RootState';
 import DataSource from '../storages/DataSource';
 import { InitialState } from '../redux/reducers/RootReducer';
-import AppPermissionManager from '../handlers/AppPermissionManager';
+import AppPermissionManager from '../handlers/PermissionsHandler';
 import AppButton from '../components/core/AppButton';
 import AppTextView from '../components/core/AppTextView';
 import AppImageView, { createUrl } from '../components/core/AppImageView';
@@ -37,7 +37,7 @@ export class App extends BaseComponent {
       <View style={{ flexDirection: 'column' }}>
         <AppButton
           onPress={() => {
-            alert(`DEBUG MODE ENABLED ? ${BuildConfig.IS_DEBUG}`);
+            alert(`DEBUG MODE ENABLED ? ${Config.IS_DEBUG}`);
           }}
           textColor="black"
           text="Check debug mode"

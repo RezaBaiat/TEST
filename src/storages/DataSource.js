@@ -1,6 +1,6 @@
 import NetUtils from 'react-native-dev-kit/src/utils/NetUtils';
 import RootState from '../redux/states/RootState';
-import BuildConfig from '../configs/BuildConfig';
+import Configs from '../configs/Configs';
 import RootDispatcher from '../redux/dispatchers/RootDispatcher';
 import NetworkWorker from '../network/NetworkWorker';
 

@@ -1,6 +1,6 @@
 import Config from 'react-native-config';
 
-export default class BuildConfig {
+export default class Config {
 
   static API_BASE_URL = Config.API_BASE_URL;
 

@@ -8,7 +8,7 @@ import rootStore from './src/redux/stores/RootStore';
 import NetworkWorker from './src/network/NetworkWorker';
 import RootDispatcher from './src/redux/dispatchers/RootDispatcher';
 import DataSource from './src/storages/DataSource';
-import BuildConfig from './src/configs/BuildConfig';
+import Config from './src/configs/Config';
 import MockInterceptor from './src/network/mock/MockInterceptor';
 import PushNotificationsHandler from './src/handlers/PushNotificationsHandler';
 import strings from './src/resources/strings';
@@ -21,7 +21,7 @@ require('core-js/fn/set');
 require('core-js/fn/array/find');
 
 // initializes mock interceptor if enabled in .env.staging file
-if (BuildConfig.MOCK_ENABLED) {
+if (Config.MOCK_ENABLED) {
   MockInterceptor.initialize();
 }
 // this method changes language's RTL & LTR behavior

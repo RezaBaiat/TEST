@@ -1,20 +1,33 @@
-// @flow
-import HashMap from 'react-native-dev-kit/src/objects/HashMap';
+import { AsyncStorage } from 'react-native';
+import NetUtils from 'react-native-dev-kit/src/utils/NetUtils';
+import { AxiosResponse } from 'axios';
 
-export default class OfflineStorage {
-
-  static map = new HashMap<string, any>();
-
-  static store(url : string, data : any) {
-    this.map.put(url, data);
-  }
-
-  static get(url : string) : any {
-    return this.map.get(url);
-  }
-
-  static contains(url : string) : boolean {
-    return this.map.containsKey(url);
-  }
-
+export function getOfflineData(url : string) : Promise<AxiosResponse> {
+  const key = encodeURI(url);
+  return AsyncStorage.getItem(key).then(data => (data ? JSON.parse(data) : null));
 }
+
+module.exports = (options) => {
+  const { adapter } = options;
+  return (config) => {
+    const { url } = config;
+    const key = encodeURI(url);
+    return adapter(config)
+      .then((ret) => {
+        AsyncStorage.setItem(key, JSON.stringify(ret));
+        return ret;
+      })
+      .catch((err) => {
+        const { code, message, response } = err;
+
+        if (
+          response === undefined
+          && (code === 'ECONNABORTED' || message === 'Network Error')
+        ) {
+          return getOfflineData(url);
+        }
+
+        return Promise.reject(err);
+      });
+  };
+};

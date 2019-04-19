@@ -1,30 +1,29 @@
-import { AxiosResponse } from 'axios';
-import BuildConfig from '../configs/BuildConfig';
-import OfflineStorage from '../storages/OfflineStorage';
-import RootDispatcher from '../redux/dispatchers/RootDispatcher';
-import RootState from '../redux/states/RootState';
+import NetUtils from 'react-native-dev-kit/src/utils/NetUtils';
+import Configs from '../configs/Config';
+import OfflineStorage, { getOfflineData } from '../storages/OfflineStorage';
 
 export const axios = require('axios');
+
+const offline = OfflineStorage({
+  name: 'axios-offline',
+  adapter: axios.defaults.adapter,
+});
+
+export const cacherAxios = axios.create({
+  adapter: offline,
+});
 
 export default class NetworkWorker {
 
   static readData(callBack : (text : string)=>void) {
-    return this.get(BuildConfig.API_BASE_URL, callBack);
+    return this.get(Configs.API_BASE_URL, callBack);
   }
 
   static get(url : string, onSuccess : (Database : string)=>void, onError? : (err : Error)=>void) {
-    if (!RootState.isNetworkAvailable()) {
-      if (OfflineStorage.contains(url)) {
-        onSuccess(OfflineStorage.get(url));
-      } else {
-        onError && onError(null);
-      }
-      return;
-    }
-    axios.get(url)
+    cacherAxios.get(url)
       .then((res) => {
+
         if (res.status === 200) {
-          res.data && OfflineStorage.store(url, res.data);
           onSuccess(res.data);
         } else {
           onError && onError(null);
