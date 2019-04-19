@@ -20,8 +20,11 @@ export default class DataSource {
   }
 
   static updateData() {
-    NetworkWorker.readData((resString : string) => {
-      RootDispatcher.setData(resString);
+    NetworkWorker.readData().then((res) => {
+      alert(`data updated ${res}`);
+      RootDispatcher.setData(res);
+    }).catch((err) => {
+      RootDispatcher.setData('Error loading data');
     });
   }
 }

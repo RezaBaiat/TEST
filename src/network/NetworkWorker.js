@@ -1,5 +1,5 @@
 import NetUtils from 'react-native-dev-kit/src/utils/NetUtils';
-import Configs from '../configs/Config';
+import Configs from '../configs/Configs';
 import OfflineStorage, { getOfflineData } from '../storages/OfflineStorage';
 
 export const axios = require('axios');
@@ -15,23 +15,13 @@ export const cacherAxios = axios.create({
 
 export default class NetworkWorker {
 
-  static readData(callBack : (text : string)=>void) {
-    return this.get(Configs.API_BASE_URL, callBack);
+  static readData() : Promise<string> {
+    return this.get(Configs.API_BASE_URL);
   }
 
-  static get(url : string, onSuccess : (Database : string)=>void, onError? : (err : Error)=>void) {
-    cacherAxios.get(url)
-      .then((res) => {
-
-        if (res.status === 200) {
-          onSuccess(res.data);
-        } else {
-          onError && onError(null);
-        }
-      }).catch((err) => {
-        console.log(err);
-        onError && onError(err);
-      });
+  static get(url : string) {
+    return cacherAxios.get(url)
+      .then(res => res.data);
   }
 
 }
