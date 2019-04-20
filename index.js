@@ -11,7 +11,7 @@ import DataSource from './src/storages/DataSource';
 import Config from './src/configs/Config';
 import MockInterceptor from './src/network/mock/MockInterceptor';
 import PushNotificationsHandler from './src/handlers/PushNotificationsHandler';
-import strings from './src/resources/strings';
+import strings from './src/resources/Strings';
 
 // fix for god damn Symbol!
 global.Symbol = require('core-js/es6/symbol');

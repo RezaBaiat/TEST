@@ -1,7 +1,8 @@
-import strings from './strings';
-import colors from './colors';
-import drawables from './drawables';
-import styles from './styles';
+import strings from './Strings';
+import colors from './Colors';
+import drawables from './Drawables';
+import styles from './Styles';
+import animations from './Animations';
 
 
 const R = {
@@ -9,6 +10,7 @@ const R = {
   colors,
   drawables,
   styles,
+  animations,
 };
 
 export default R;

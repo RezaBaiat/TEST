@@ -1,6 +1,6 @@
 /* eslint-disable */
-import EN from './translations/EN';
-import FA from './translations/FA';
+import EN from '../../assets/translations/EN';
+import FA from '../../assets/translations/FA';
 
 export default class Strings {
 
