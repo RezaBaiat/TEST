@@ -171,6 +171,11 @@ subprojects { subproject ->
 }
 
 dependencies {
+    compile project(':rn-fetch-blob')
+    compile project(':react-native-vector-icons')
+    compile project(':react-native-firebase')
+    compile project(':react-native-fast-image')
+    compile project(':react-native-config')
     compile project(':react-native-push-notification')
     implementation project(':react-native-firebase')
     implementation project(':rn-fetch-blob')

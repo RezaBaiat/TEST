@@ -1,8 +1,10 @@
 import Config from 'react-native-config';
 
-export default class Config {
+export default class Configs {
 
   static API_BASE_URL = Config.API_BASE_URL;
+
+  static GET_USERS_URL = `${Config.API_BASE_URL}/users/all`;
 
   static IS_DEBUG = Config.IS_DEBUG === 'true';
 

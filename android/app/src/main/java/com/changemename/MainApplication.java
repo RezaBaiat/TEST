@@ -44,6 +44,10 @@ public class MainApplication extends NavigationApplication  {
     public List<ReactPackage> createAdditionalReactPackages() {
         return Arrays.<ReactPackage>asList(
                 new MainReactPackage(),
+            new RNFetchBlobPackage(),
+            new VectorIconsPackage(),
+            new FastImageViewPackage(),
+            new ReactNativeConfigPackage(),
                 new ReactNativePushNotificationPackage(),
                 new RNFirebasePackage(),
                 new RNFirebaseMessagingPackage(),

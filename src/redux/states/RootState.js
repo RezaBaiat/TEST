@@ -1,10 +1,12 @@
 import type { InitialState } from '../reducers/RootReducer';
-import rootStore from '../stores/RootStore';
+import store from '../../configs/redux/Store';
 
+// this class grants immutable access to the state variables statically for easier use
+// and cleaner code
 export default class {
 
   static getRootState() : InitialState {
-    return rootStore.getState().rootReducer;
+    return store.getState().rootReducer;
   }
 
   static isNetworkAvailable() : boolean {

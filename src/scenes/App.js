@@ -1,25 +1,23 @@
 // @flow
 import React from 'react';
-import { Button, Text, View } from 'react-native';
+import { View } from 'react-native';
 import { connect } from 'react-redux';
-import Config from '../configs/Config';
+import Configs from '../configs/Configs';
 import { BaseComponent, createMapStateToProps } from './BaseComponent';
-import NetworkWorker from '../network/NetworkWorker';
-import MockInterceptor from '../network/mock/MockInterceptor';
 import RootState from '../redux/states/RootState';
 import DataSource from '../storages/DataSource';
-import { InitialState } from '../redux/reducers/RootReducer';
 import AppPermissionManager from '../handlers/PermissionsHandler';
 import AppButton from '../components/core/AppButton';
 import AppTextView from '../components/core/AppTextView';
 import AppImageView, { createUrl } from '../components/core/AppImageView';
-import R from '../resources/R';
-import { navigateTo } from '../AppNavigator';
 import Screen2 from './Screen2';
+import AppNavigator from '../routes/AppNavigator';
 
 // i should be visible as doc in docs/activities/App.html
 // after you run docco src/activities/App.js
 export class App extends BaseComponent {
+
+  static className = 'App';
 
   componentDidMount() {
 
@@ -37,14 +35,14 @@ export class App extends BaseComponent {
       <View style={{ flexDirection: 'column' }}>
         <AppButton
           onPress={() => {
-            alert(`DEBUG MODE ENABLED ? ${Config.IS_DEBUG}`);
+            alert(`DEBUG MODE ENABLED ? ${Configs.IS_DEBUG}`);
           }}
           textColor="black"
           text="Check debug mode"
         />
         <AppButton
           onPress={() => {
-            navigateTo(Screen2.className);
+            AppNavigator.navigateTo(Screen2.className);
           }}
           textColor="black"
           text="Go to next page"

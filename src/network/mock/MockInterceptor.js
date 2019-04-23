@@ -1,12 +1,12 @@
 // @flow
-import Config from '../../configs/Config';
+import Configs from '../../configs/Configs';
 import { axios } from '../NetworkWorker';
 
 // check out https://github.com/ctimmerm/axios-mock-adapter for more info
 export default class MockInterceptor {
 
   static initialize() {
-    if (!Config.IS_DEBUG) {
+    if (!Configs.IS_DEBUG) {
       return;
     }
 
@@ -14,6 +14,6 @@ export default class MockInterceptor {
     // This sets the mock adapter on the default instance
     const mock = new MockAdapter(axios);
 
-    mock.onGet(Config.API_BASE_URL).reply(200, 'hello im a mocked response!');
+    mock.onGet(Configs.API_BASE_URL).reply(200, 'hello im a mocked response!');
   }
 }

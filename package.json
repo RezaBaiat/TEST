@@ -15,7 +15,7 @@
     "run_mocha": "mocha",
     "run_istanbul": "istanbul cover ./node_modules/mocha/bin/_mocha",
     "flow": "flow",
-    "doc": "rm -fr ./docs && node_modules/.bin/docco {src,test}/{**/*,*} README.md index.js misc/tutorials/{**/*,*} -t ./misc/template/docco.jst -c ./misc/template/docco.css && cp -r ./misc/template/public ./docs",
+    "doc": "rm -fr ./docs && node_modules/.bin/docco {src,test}/{**/*/*,*} index.js misc/tutorials/{**/*,*} -t ./misc/template/docco.jst -c ./misc/template/docco.css && cp -r ./misc/template/public ./docs",
     "reload": "adb shell input text RR",
     "menu": "adb shell input keyevent 82"
   },
@@ -30,7 +30,6 @@
     "chai": "^4.2.0",
     "docco": "^0.8.0",
     "es6-symbol": "^3.1.1",
-    "i18next": "^15.0.9",
     "invariant": "^2.2.4",
     "lodash": "^4.17.11",
     "metro-react-native-babel-preset": "^0.53.1",
@@ -48,6 +47,7 @@
     "react-redux": "^6.0.0",
     "react-timer-mixin": "^0.13.4",
     "redux": "^4.0.1",
+    "redux-persist": "^5.10.0",
     "rn-fetch-blob": "^0.10.15",
     "sinon": "^7.3.1",
     "socket.io-client": "^2.2.0",
@@ -70,7 +70,7 @@
   },
   "rnpm": {
     "assets": [
-      "./assets/fonts"
+      "./src/assets/fonts"
     ]
   }
 }

@@ -4,9 +4,8 @@ import {
 } from 'react-native';
 import { Navigation } from 'react-native-navigation';
 import SmartComponent from 'react-native-dev-kit/src/ui/SmartComponent';
-import * as JSX from 'react';
 import { InitialState } from '../redux/reducers/RootReducer';
-import AppNavigator from '../AppNavigator';
+import AppNavigator from '../routes/AppNavigator';
 
 
 export interface BaseComponentProps {

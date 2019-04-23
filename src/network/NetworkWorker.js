@@ -1,11 +1,9 @@
-import NetUtils from 'react-native-dev-kit/src/utils/NetUtils';
+import { AxiosInstance } from 'axios';
 import Configs from '../configs/Configs';
-import OfflineStorage, { getOfflineData } from '../storages/OfflineStorage';
 
-// default non-cacher axios
-export const axios = require('axios');
+export const axios : AxiosInstance = require('axios');
 
-const offline = OfflineStorage({
+/* const offline = OfflineStorage({
   name: 'axios-offline',
   adapter: axios.defaults.adapter,
 });
@@ -13,7 +11,7 @@ const offline = OfflineStorage({
 // cacher axios which will cache all responses in disk
 export const cacherAxios = axios.create({
   adapter: offline,
-});
+}); */
 
 export default class NetworkWorker {
 
@@ -21,9 +19,12 @@ export default class NetworkWorker {
     return this.get(Configs.API_BASE_URL);
   }
 
+  static getUsers() : Promise<string[]> {
+    return this.get(Configs.GET_USERS_URL);
+  }
+
   static get(url : string) {
-    return cacherAxios.get(url)
-      .then(res => res.data);
+    return axios.get(url).then(res => res.data);
   }
 
 }
