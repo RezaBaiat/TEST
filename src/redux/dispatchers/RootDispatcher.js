@@ -1,4 +1,4 @@
-// This class combines usages of Redux Actions & Dispatchers of [RootReducer](../reduce/RootReducer.html) and also
+// Calling each method in this class will result to the related action to be executed in store of [RootReducer](../reduce/RootReducer.html) and also
 // grants possibility to call them statically without any need to import functions upon every usage
 // providing a lot of benefits including cleaner code , easier future patches , IDE code completion and ...
 
