@@ -1,19 +1,22 @@
+// In case of using multiple reducers , this reducer should contain only general and global
+// states which dont fit in any other, like networkState, otherwise it will contain all redux states
+
 import NetUtils from 'react-native-dev-kit/src/utils/NetUtils';
 import RootActions from '../actions/RootActions';
 
-// interface to just describe our variables types
+// Interface to just describe our variables types
 export interface InitialState {
   isNetworkAvailable : boolean,
   data : boolean
 }
 
-// the name tells it all , before any changes this is the default value of our state variables
+// The name tells it all , before any changes this is the default value of our state variables
 const initialState : InitialState = {
   isNetworkAvailable: NetUtils.isConnected(),
   data: 'fetching data',
 };
 
-// a reducer is the place which returns the new state , based on the type of action who has just dispatched
+// A reducer is the place which returns the new state , based on the type of action who has just dispatched
 // note that this should be a copy , never return the previous state
 const reducer = (state = initialState, action: { type: any;payload:any }) => {
   switch (action.type) {

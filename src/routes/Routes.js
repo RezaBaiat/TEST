@@ -1,3 +1,6 @@
+// Class which registers all screens and identifies which screen to run first when app started
+// it also sets default options for navigates
+
 import { Navigation } from 'react-native-navigation';
 import { Provider } from 'react-redux';
 import store from '../configs/redux/Store';

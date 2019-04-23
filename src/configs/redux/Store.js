@@ -1,5 +1,5 @@
-// our redux configurator file
-// any preConfiguration and initialization to the redux and all it's relevants should be done here
+// Our redux configuration file
+// unlike other initializations , any preConfiguration and initialization to the redux and all it's relevants should be done here
 
 import { createStore, combineReducers, compose } from 'redux';
 import { persistStore, persistCombineReducers, PersistConfig } from 'redux-persist';

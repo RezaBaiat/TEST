@@ -10921,7 +10921,7 @@ react-native-config@^0.11.7:
 
 "react-native-dev-kit@https://github.com/pixelsandcode/reactnative-dev-kit.git":
   version "0.0.1"
-  resolved "https://github.com/pixelsandcode/reactnative-dev-kit.git#993667ae776ef73de6bd2386f92f637e7e3d87a6"
+  resolved "https://github.com/pixelsandcode/reactnative-dev-kit.git#ef9bd8dec0118bdc3981f39f2948e0daf4dfcb49"
   dependencies:
     "@mapbox/geo-viewport" "^0.4.0"
     "@types/react-native" "^0.57.41"

@@ -2,6 +2,7 @@
 import React from 'react';
 import { View } from 'react-native';
 import { connect } from 'react-redux';
+import { createUrl } from 'react-native-dev-kit/src/ui/core/Image';
 import Configs from '../configs/Configs';
 import { BaseComponent, createMapStateToProps } from './BaseComponent';
 import RootState from '../redux/states/RootState';
@@ -9,12 +10,10 @@ import DataSource from '../storages/DataSource';
 import AppPermissionManager from '../handlers/PermissionsHandler';
 import AppButton from '../components/core/AppButton';
 import AppTextView from '../components/core/AppTextView';
-import AppImageView, { createUrl } from '../components/core/AppImageView';
+import AppImageView from '../components/core/AppImageView';
 import Screen2 from './Screen2';
 import AppNavigator from '../routes/AppNavigator';
 
-// i should be visible as doc in docs/activities/App.html
-// after you run docco src/activities/App.js
 export class App extends BaseComponent {
 
   static className = 'App';

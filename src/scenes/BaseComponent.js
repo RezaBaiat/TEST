@@ -1,4 +1,6 @@
-// @flow
+// All scenes (screens) should extend this component,
+// they can use multiple valuable work around who are done in this file
+// including redux's createMapStateToProps , onResume, onPause and...
 import {
   AppState, AppStateStatus, EmitterSubscription, ViewStyle,
 } from 'react-native';
@@ -96,9 +98,8 @@ export class BaseComponent<P : BaseComponentProps> extends SmartComponent<P> {
   }))(App)
 
  ```
- *
- * this enables IDE to detect state types , preventing typo and enabled code completion
- */
+*/
+// this enables IDE to detect state types , preventing typo and enabled code completion
 export function createMapStateToProps(func : (state : {rootReducer : InitialState})=>{}) {
   return func;
 }

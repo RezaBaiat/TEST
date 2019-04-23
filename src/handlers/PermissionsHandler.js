@@ -1,9 +1,11 @@
+// Handling the permissions dialog , based on permissions in [Permissions](../configs/Permissions.html)
+
 import PermissionsManager from 'react-native-dev-kit/src/permissions/PermissionsManager';
 import Permissions from '../configs/Permissions';
 
-export default class {
+export default class PermissionsHandler {
 
-  // this will return true only when all permissions have been granted
+  // This will return true only when all permissions have been granted , other wise returns false
   static async checkPermissions() : Promise<boolean> {
 
     for (const permission of Permissions.permissions) {

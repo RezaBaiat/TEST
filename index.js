@@ -1,42 +1,40 @@
-/** @format */
+// This file , since it is the first file to be called , contains all
+// initializations , pre configurations and global fixes
 
 import { I18nManager } from 'react-native';
 import NetUtils from 'react-native-dev-kit/src/utils/NetUtils';
-import { persistStore, persistReducer } from 'redux-persist';
-import NetworkWorker from './src/network/NetworkWorker';
 import RootDispatcher from './src/redux/dispatchers/RootDispatcher';
 import DataSource from './src/storages/DataSource';
 import Configs from './src/configs/Configs';
 import MockInterceptor from './src/network/mock/MockInterceptor';
-import PushNotificationsHandler from './src/handlers/PushNotificationsHandler';
-import strings from './src/resources/Strings';
+import Strings from './src/resources/Strings';
 import LocalNotifications from './src/configs/LocalNotifications';
 import PushNotifications from './src/configs/PushNotifications';
 import Routes from './src/routes/Routes';
 
-// fix for god damn Symbol!
+// Fix for global Symbol error!
 global.Symbol = require('core-js/es6/symbol');
 require('core-js/fn/symbol/iterator');
 require('core-js/fn/map');
 require('core-js/fn/set');
 require('core-js/fn/array/find');
 
-// initializes mock interceptor if enabled in .env.staging file
+// Initializes mock interceptor if enabled in .env.staging file
 if (Configs.MOCK_ENABLED) {
   MockInterceptor.initialize();
 }
-// this method changes language's RTL & LTR behavior
+// This method changes language's RTL & LTR behavior
 I18nManager.allowRTL(false);
-// selects app's language
-strings.setLang('fa');
-// initializer for NetUtils , allow for static call of NetWorkUtils.isConnected()
+// Selects app's language
+Strings.setLang('fa');
+// Initializer for NetUtils , allow for static call of NetWorkUtils.isConnected()
 NetUtils.init();
-// listen for network state changes
+// Listen for network state changes
 NetUtils.addListener(RootDispatcher.setNetworkState);
-// datasource is where every component should ask for data. basically datasource handles data changes upon network state changes
+// Datasource is where every component should ask for API data. basically DataSource handles cache and fetch strategies
 DataSource.initialize();
-// initializes Push Notifications listener
+// Initializes Push and Local Notifications listener
 PushNotifications.initialize();
 LocalNotifications.initialize();
-// register screens
+// Register screens
 Routes.registerScreens();

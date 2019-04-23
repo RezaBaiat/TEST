@@ -1,5 +1,5 @@
 # ReactNative Boilerplate
-This boilerplate is designed with mindset of performance in simplicity and tries to simplify routine tools . we try to wrap things up and staticify the whole project in a way that in order to change logics we have to pay visit to only a few files
+This boilerplate is designed with mindset of performance in simplicity and tries to simplify routine tools . we try to wrap every thing up and staticify the whole project in a way that in order to change logics we have to pay visit to minimum files possible
 
 ## Tools
 tools used in this project are based on nodepack (https://github.com/pixelsandcode/nodepack)
@@ -9,13 +9,13 @@ What else we are using
 - `react-native-navigation v2`:(https://github.com/wix/react-native-navigation) as router
 - `native-base` https://github.com/GeekyAnts/NativeBase as UI Pack
 - `react-native-vector-icons` (https://github.com/oblador/react-native-vector-icons) as icons feed
-- `react-timer-mixin` (https://github.com/reactjs/react-timer-mixin) as default timer pattern
 - `redux` (https://github.com/reduxjs/redux) as our state container
 - `react-native-dev-kit` (https://github.com/pixelsandcode/reactnative-dev-kit) as the pixelandcode's react development kit repo
 - `axios-mock-adapter` https://github.com/ctimmerm/axios-mock-adapter as the axios interceptor , used for mock
 - `axios` https://github.com/axios/axios in replacement of fetch
 - `rnfirebase` https://rnfirebase.io responsible for FCM push notifications
 - `chai,sinon,mocha,istanbul,enzyme` as the prefered testing kit
+- `redux-persist` as https://github.com/rt2zz/redux-persist
 
 
 ## How to use
@@ -28,7 +28,7 @@ or on ios with
 
 `yarn ios` , `yarn ios:prod`
 
-there are some more scipts worth mentioning:
+there are some more scripts worth mentioning:
 
 `installNoDev` installs app without need to Nodejs server
 
@@ -39,6 +39,7 @@ there are some more scipts worth mentioning:
 
 
 ### App
+
 this boilerplate tries to implement classes and methods as most static as possible . 
 it also tries to take the most advantages of wrapping any thing that is possible to do so ,
 resulting in ease of future changes. lets explore the app content a bit:
@@ -52,12 +53,12 @@ resulting in ease of future changes. lets explore the app content a bit:
    `/test` all our tests go inside this folder \
    `/src/screens` contains all screens of the app \
    `/src/handlers` managers and handlers lie here \
-   `/src/configs` contains all app's staging & production configurations
+   `/src/configs` contains all app's application configurations such ass buildconfigs , permission names , push notifications config , redux config and...  \
    `/src/models` the containers of APIs models layer \
    `/src/network` responsible folder for all network & API callbacks \
    `/src/network/mock` contains mock interceptor and mock data \
    `/src/redux` contains and all global state needs \
-   `/src/storages` all caches,databases and storages \
+   `/src/storages` cache handlers , offline storages and datasources \
    `/src/components` the container of all UI components wrapper , also containing the Views which are made by components \
    `/src/utils` the names tells it all ! :)
    
@@ -91,7 +92,7 @@ logging is also simplified using this class . so you have to only call :
 
 `Logger.info('weather...could be better!')`  or  `Logger.error('my stomach hurts !')` or `Logger.silly('tonight is sunny!')`
 
-- colors.js , drawables.js , strings.js & R.js
+- Colors.js , Images.js , Strings.js & R.js
 
 R is shortened word for Resources (Hello Android) , colors.js , drawables.js and strings.js are holders of their names! \
 yes we obviously keep our resources static too , so you can simply call them by:

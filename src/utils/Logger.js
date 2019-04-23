@@ -1,8 +1,13 @@
-import { Rollbar } from 'winston-transport-rollbar';
+// Provides convinent method for local and remote logging.
+// automatically sends defined levels to roll bar server
+
+import { Rollbar, Client, Configuration } from 'winston-transport-rollbar';
+import Configs from '../configs/Configs';
 
 const winston = require('winston');
 
-const rollbar = new Client(new Configuration('5990ddd7156e4fa58287271bbfa59ca6', {
+/*
+const rollbar = new Client(new Configuration(Configs.ROLLBAR_ACCESS_TOKEN, {
   payload: {
     client: {
       JavaScript: {
@@ -13,6 +18,7 @@ const rollbar = new Client(new Configuration('5990ddd7156e4fa58287271bbfa59ca6',
     },
   },
 }));
+*/
 
 /**
  @see https://github.com/winstonjs/winston
@@ -42,7 +48,7 @@ if (process.env.NODE_ENV !== 'production') {
   }));
 } else {
   const options = {
-    accessToken: '5990ddd7156e4fa58287271bbfa59ca6',
+    accessToken: Configs.ROLLBAR_ACCESS_TOKEN,
     environment: 'production',
     reportLevel: 'error',
   };

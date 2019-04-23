@@ -1,7 +1,8 @@
+// This class, is a p2p implementation of [Socket.io](https://github.com/socketio/socket.io) and is designed to be used as an abstraction and be extended by another class,
+
 const Parser = require('socket.io-parser');
 const io = require('socket.io-client');
-const { Manager } = require('socket.io-client');
-const { Socket } = require('socket.io-client');
+const { Manager, Socket } = require('socket.io-client');
 
 export interface ManagerOptions{
   path?: string, // name of the path that is captured on the server side (/socket.io)
@@ -16,7 +17,7 @@ export interface ManagerOptions{
   parser? : Parser, // the parser to use. Defaults to an instance of the Parser that ships with socket.io. See socket.io-parser.
   forceNew? : boolean, // whether to reuse an existing connection
 }
-// please see @https://github.com/socketio/socket.io-client/blob/master/docs/API.md#initialization-examples for more informations
+// Please see @https://github.com/socketio/socket.io-client/blob/master/docs/API.md#initialization-examples for more informations
 // and docs at @https://socket.io/docs
 export default class AbstractSocket {
 

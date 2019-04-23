@@ -1,7 +1,9 @@
+// This file handles sending local notifications on both ios and android using [LocalNotifications](../configs/LocalNotifications.html)
 import LocalNotifications from '../configs/LocalNotifications';
 
 export default class LocalNotificationsHandler {
 
+  // just a simple of usage and all available configurations
   static test() {
     LocalNotifications.sendLocalNotification({
       /* Android Only Properties */

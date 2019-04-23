@@ -1,22 +1,10 @@
-import React, { Component, PureComponent } from 'react';
-import { View, ViewStyle, TouchableOpacity } from 'react-native';
-import SmartComponent from 'react-native-dev-kit/src/ui/SmartComponent';
+// This class is an extension of our related global UI components wrapper , which provide solutions for current react-native bugs
+// and also handles the shouldComponentUpdate() function .
+// this is currently empty but should be changed based on the App's needs .
+// the App prefix means the class is Application specific
 
-interface Props {
-  style? : ViewStyle,
-  children? : any,
-  onPress : ()=>void,
-  onLongPress? : ()=>void
-}
-export default class AppTouchable extends SmartComponent<Props> {
+import Touchable from 'react-native-dev-kit/src/ui/core/Touchable';
 
-  render() {
-    return (
-      <TouchableOpacity {...this.props} delayLongPress={500}>
-        {
-          this.props.children
-        }
-      </TouchableOpacity>
-    );
-  }
+export default class AppTouchable extends Touchable {
+
 }

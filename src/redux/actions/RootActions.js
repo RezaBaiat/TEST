@@ -1,4 +1,4 @@
-// constants identifying which action is already being dispatched used in RootReducer.js and RootDispatcher.js
+// Constants identifying which action is already being dispatched used in [RootReducer](../reduce/RootReducer.html) and [RootDispatcher](../reduce/RootDispatcher.html)
 export default class RootActions {
 
   static ACTION_NETWORK_STATE_CHANGE = 'ACTION_NETWORK_STATE_CHANGE';

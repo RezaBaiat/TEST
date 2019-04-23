@@ -1,6 +1,6 @@
 import strings from './Strings';
 import colors from './Colors';
-import drawables from './Drawables';
+import images from './Images';
 import styles from './Styles';
 import animations from './Animations';
 
@@ -8,7 +8,7 @@ import animations from './Animations';
 const R = {
   strings,
   colors,
-  drawables,
+  drawables: images,
   styles,
   animations,
 };

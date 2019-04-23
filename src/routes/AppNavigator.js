@@ -1,3 +1,6 @@
+// Convenient class responsible for all screen navigations and
+// containing static methods to be called from any class outside
+
 import { Navigation } from 'react-native-navigation';
 
 const mOpenScreens : {componentId : string, componentName : string}[] = [];
@@ -59,6 +62,7 @@ export default class AppNavigator {
     });
   }
 
+  // returns name of top screen
   static getActiveScreenByName(componentName : string) : {componentId : string, componentName : string} {
     for (const component of mOpenScreens) {
       if (component.componentName === componentName) {

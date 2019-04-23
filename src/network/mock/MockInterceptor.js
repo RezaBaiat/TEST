@@ -1,10 +1,11 @@
-// @flow
+// Simple , yet powerful Mock Interceptor
 import Configs from '../../configs/Configs';
 import { axios } from '../NetworkWorker';
 
-// check out https://github.com/ctimmerm/axios-mock-adapter for more info
+// Check out https://github.com/ctimmerm/axios-mock-adapter for more info
 export default class MockInterceptor {
 
+  // Initializing this - which can only be done in debug mode - will cause the intercepted urls to return the defined response
   static initialize() {
     if (!Configs.IS_DEBUG) {
       return;

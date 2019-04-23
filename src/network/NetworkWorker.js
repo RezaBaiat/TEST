@@ -1,3 +1,6 @@
+// This file is main responsible class for network calls ,
+// which should contain at least the main get,post,put,delete methods
+
 import { AxiosInstance } from 'axios';
 import Configs from '../configs/Configs';
 
