@@ -3,8 +3,8 @@
 // this is currently empty but should be changed based on the App's needs .
 // the App prefix means the class is Application specific
 
-import Button from 'react-native-dev-kit/src/ui/core/Button';
+import ButtonWrapper from 'react-native-dev-kit/src/ui/wrappers/ButtonWrapper';
 
-export default class AppButton extends Button {
+export default class AppButton extends ButtonWrapper {
 
 }

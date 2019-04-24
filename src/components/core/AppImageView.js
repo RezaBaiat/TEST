@@ -3,8 +3,8 @@
 // this is currently empty but should be changed based on the App's needs .
 // the App prefix means the class is Application specific
 
-import Image from 'react-native-dev-kit/src/ui/core/Image';
+import ImageWrapper from 'react-native-dev-kit/src/ui/wrappers/ImageWrapper';
 
-export default class AppImageView extends Image {
+export default class AppImageView extends ImageWrapper {
 
 }

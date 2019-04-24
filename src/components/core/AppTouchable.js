@@ -3,8 +3,8 @@
 // this is currently empty but should be changed based on the App's needs .
 // the App prefix means the class is Application specific
 
-import Touchable from 'react-native-dev-kit/src/ui/core/Touchable';
+import TouchableWrapper from 'react-native-dev-kit/src/ui/wrappers/TouchableWrapper';
 
-export default class AppTouchable extends Touchable {
+export default class AppTouchable extends TouchableWrapper {
 
 }

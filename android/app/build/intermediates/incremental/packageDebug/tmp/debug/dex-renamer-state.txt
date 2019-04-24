@@ -1,4 +1,4 @@
-#Tue Apr 23 18:56:14 GMT+03:30 2019
+#Wed Apr 24 16:53:25 GMT+03:30 2019
 base.0=E\:\\Android\\Git Projects\\react-native-starter\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 path.1=classes2.dex
 renamed.1=classes2.dex

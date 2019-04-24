@@ -5,23 +5,24 @@
 import {
   AxiosInstance, AxiosPromise, AxiosRequestConfig, AxiosResponse,
 } from 'axios';
+import Configs from '../configs/Configs';
 
 export const axios : AxiosInstance = require('axios');
 
 
-export default class HttpRequest {
+export default class NetworkWorker {
 
+  static readData() : AxiosPromise<AxiosResponse> {
+    return this.get('https://github.com/reduxjs/reselect/blob/master/README.md');
+  }
 
   static execute(url : string, headers = {}, method = 'GET', config : AxiosRequestConfig) : AxiosPromise<AxiosResponse> {
     return axios.get(url, {
       ...config,
       params: headers,
       method,
-    }).then((res) => {
-      HttpRequest.statusChecking(res);
-    }).catch((error) => {
-      HttpRequest.errorHandling(error);
-    });
+    }).then(res => NetworkWorker.statusChecking(res))
+      .catch(error => NetworkWorker.errorHandling(error));
   }
 
   static post(url : string, headers = {}, config : AxiosRequestConfig) {

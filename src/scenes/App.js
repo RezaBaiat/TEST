@@ -2,7 +2,7 @@
 import React from 'react';
 import { View } from 'react-native';
 import { connect } from 'react-redux';
-import { createUrl } from 'react-native-dev-kit/src/ui/core/Image';
+import { createUrl } from 'react-native-dev-kit/src/ui/wrappers/ImageWrapper';
 import Configs from '../configs/Configs';
 import { BaseComponent, createMapStateToProps } from './BaseComponent';
 import RootState from '../redux/states/RootState';

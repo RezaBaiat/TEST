@@ -3,9 +3,9 @@
 // this is currently empty but should be changed based on the App's needs .
 // the App prefix means the class is Application specific
 
-import Text from 'react-native-dev-kit/src/ui/core/Text';
+import TextWrapper from 'react-native-dev-kit/src/ui/wrappers/TextWrapper';
 
-export default class AppTextView extends Text {
+export default class AppTextView extends TextWrapper {
 
 
 }

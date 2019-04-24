@@ -47,13 +47,9 @@ public class MainApplication extends NavigationApplication  {
             new RNFetchBlobPackage(),
             new VectorIconsPackage(),
             new FastImageViewPackage(),
-            new ReactNativeConfigPackage(),
                 new ReactNativePushNotificationPackage(),
                 new RNFirebasePackage(),
                 new RNFirebaseMessagingPackage(),
-                new RNFetchBlobPackage(),
-                new FastImageViewPackage(),
-                new VectorIconsPackage(),
                 new ReactNativeConfigPackage(),
                 new RNFirebaseNotificationsPackage()
         );

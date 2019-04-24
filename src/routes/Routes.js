@@ -20,7 +20,7 @@ export default class Routes {
     });
 
     // registers a screen with redux included
-    Navigation.registerComponentWithRedux(App.className, () => require('./src/scenes/App').default, Provider, store);
+    Navigation.registerComponentWithRedux(App.className, () => require('../scenes/App').default, Provider, store);
 
     // identifies which screen to run first when application launched
     Navigation.events().registerAppLaunchedListener(() => {

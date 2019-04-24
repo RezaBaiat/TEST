@@ -9,6 +9,7 @@ import reducer from '../../redux/reducers/RootReducer';
 const config : PersistConfig = {
   key: 'root',
   storage,
+  blacklist: ['navigation'], // navigation will not be persisted
 };
 
 const combinedReducer = persistCombineReducers(config, {
