@@ -6,6 +6,8 @@ export default class RootActions {
 
   static ACTION_DATA_UPDATE = 'ACTION_DATA_UPDATE';
 
+  static ACTION_TEST_SAGA = 'ACTION_TEST_SAGA';
+
   static networkStateChangeAction(isConnected : boolean) {
     return {
       type: RootActions.ACTION_NETWORK_STATE_CHANGE,
@@ -17,6 +19,13 @@ export default class RootActions {
     return {
       type: RootActions.ACTION_DATA_UPDATE,
       payload: newData,
+    };
+  }
+
+  static testSagaAction(url : string) {
+    return {
+      type: RootActions.ACTION_TEST_SAGA,
+      payload: url,
     };
   }
 }

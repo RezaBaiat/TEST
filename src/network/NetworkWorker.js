@@ -16,7 +16,7 @@ export default class NetworkWorker {
     return this.get('https://github.com/reduxjs/reselect/blob/master/README.md');
   }
 
-  static execute(url : string, headers = {}, method = 'GET', config : AxiosRequestConfig) : AxiosPromise<AxiosResponse> {
+  static execute = (url : string, headers = {}, method = 'GET', config : AxiosRequestConfig) : AxiosPromise<AxiosResponse> => {
     return axios.get(url, {
       ...config,
       params: headers,
@@ -45,7 +45,9 @@ export default class NetworkWorker {
     return this.execute(url, headers, 'DELETE', config);
   }
 
-  static get(url : string, headers = {}, config : AxiosRequestConfig) {
+  static get = (url : string, headers = {}, config : AxiosRequestConfig) => {
+    console.log('GET '+url);
+
     return this.execute(url, headers, 'GET', config);
   }
 

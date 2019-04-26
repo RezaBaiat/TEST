@@ -1,11 +1,16 @@
 // Our redux configuration file
 // unlike other initializations , any preConfiguration and initialization to the redux and all it's relevants should be done here
 
-import { createStore, combineReducers, compose } from 'redux';
+import {
+  createStore, combineReducers, compose, applyMiddleware,
+} from 'redux';
 import { persistStore, persistCombineReducers, PersistConfig } from 'redux-persist';
 import storage from 'redux-persist/es/storage';
+import createSagaMiddleware from 'redux-saga';
 import reducer from '../../redux/reducers/RootReducer';
+import mySaga from '../../redux/sagas/SagaExample';
 
+// main configuration for redux-persist
 const config : PersistConfig = {
   key: 'root',
   storage,
@@ -25,8 +30,20 @@ if (__DEV__) {
 }
 /* eslint-enable */
 
-const configureStore = () => createStore(combinedReducer, composeEnhancers());
+
+// create the saga middleware and mount it on the Store
+export const sagaMiddleware = createSagaMiddleware();
+const middlewares = [sagaMiddleware];
+const enhancers = [applyMiddleware(...middlewares)];
+
+const configureStore = () => createStore(combinedReducer, composeEnhancers(...enhancers));
 
 const store = configureStore();
 
+// export const persistor = persistStore(store);
+
 export default store;
+
+
+// then run the saga . for example
+sagaMiddleware.run(mySaga);

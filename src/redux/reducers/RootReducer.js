@@ -19,6 +19,7 @@ const initialState : InitialState = {
 // A reducer is the place which returns the new state , based on the type of action who has just dispatched
 // note that this should be a copy , never return the previous state
 const reducer = (state = initialState, action: { type: any;payload:any }) => {
+  console.log('reducer updated with action '+JSON.stringify(action));
   switch (action.type) {
     case RootActions.ACTION_NETWORK_STATE_CHANGE:
       return {

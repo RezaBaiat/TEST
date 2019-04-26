@@ -16,9 +16,6 @@ export default class DataSource {
         this.updateData();
       }
     });
-
-
-    this.updateData();
   }
 
   static getData() {
@@ -26,9 +23,7 @@ export default class DataSource {
   }
 
   static updateData() {
-    console.log(`data currently is ${RootState.getRootState().data}`);
     NetworkWorker.readData().then((res) => {
-      alert(`data updated ${res}`);
       RootDispatcher.setData(res.data);
     }).catch((err) => {
       RootDispatcher.setData(RootState.getRootState().data || 'Error loading data');

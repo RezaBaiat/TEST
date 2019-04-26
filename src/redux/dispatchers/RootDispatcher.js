@@ -15,4 +15,8 @@ export default class RootDispatcher {
     store.dispatch(RootActions.setDataAction(newData));
   }
 
+  static runSagaTest(url : string) {
+    store.dispatch(RootActions.testSagaAction(url));
+  }
+
 }

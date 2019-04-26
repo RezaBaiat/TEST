@@ -49,6 +49,7 @@
     "react-timer-mixin": "^0.13.4",
     "redux": "^4.0.1",
     "redux-persist": "^5.10.0",
+    "redux-saga": "^1.0.2",
     "rn-fetch-blob": "^0.10.15",
     "sinon": "^7.3.1",
     "socket.io-client": "^2.2.0",

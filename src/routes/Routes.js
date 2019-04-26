@@ -3,6 +3,7 @@
 
 import { Navigation } from 'react-native-navigation';
 import { Provider } from 'react-redux';
+import { persistStore, persistCombineReducers, PersistConfig } from 'redux-persist';
 import store from '../configs/redux/Store';
 import { App } from '../scenes/App';
 
@@ -10,7 +11,7 @@ export default class Routes {
 
   static registerScreens() {
 
-    // default options for react-native-navigation-v2
+    // default options for [react-native-navigation-v2](https://github.com/wix/react-native-navigation)
     Navigation.setDefaultOptions({
       topBar: {
         visible: false,
@@ -24,20 +25,24 @@ export default class Routes {
 
     // identifies which screen to run first when application launched
     Navigation.events().registerAppLaunchedListener(() => {
-      Navigation.setRoot({
-        root: {
-          stack: {
-            id: 'App',
-            children: [
-              {
-                component: {
-                  name: 'App',
+      // since we are using redux-persist , we have to wait for it to load data from DB into our redux state
+      persistStore(store, null, () => {
+        Navigation.setRoot({
+          root: {
+            stack: {
+              id: 'App',
+              children: [
+                {
+                  component: {
+                    name: 'App',
+                  },
                 },
-              },
-            ],
+              ],
+            },
           },
-        },
+        });
       });
+
     });
   }
 

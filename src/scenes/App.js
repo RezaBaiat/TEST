@@ -13,6 +13,7 @@ import AppTextView from '../components/core/AppTextView';
 import AppImageView from '../components/core/AppImageView';
 import Screen2 from './Screen2';
 import AppNavigator from '../routes/AppNavigator';
+import RootDispatcher from '../redux/dispatchers/RootDispatcher';
 
 export class App extends BaseComponent {
 
@@ -21,7 +22,8 @@ export class App extends BaseComponent {
   componentDidMount() {
 
     AppPermissionManager.checkPermissions().then((granted : boolean) => {
-
+      DataSource.updateData();
+      RootDispatcher.runSagaTest('https://github.com/reduxjs/reselect/blob/master/README.md');
     });
   }
 
