@@ -1,5 +1,6 @@
-/* eslint-disable */
+// References to app's used colors
 
+/* eslint-disable */
 export default class Colors {
 
     static colorPrimary = '#019201';

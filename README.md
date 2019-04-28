@@ -90,7 +90,7 @@ then info inside the corresponding `.env` file will be coppied into `BuildConfig
 
 logging is also simplified using this class . so you have to only call :
 
-`Logger.info('weather...could be better!')`  or  `Logger.error('my stomach hurts !')` or `Logger.silly('tonight is sunny!')`
+`Logger.info('weather...could be better!')`  or  `Logger.error('my stomach hurts !')` or `Logger.silly('tonight it's sunny!')`
 
 - Colors.js , Images.js , Strings.js & R.js
 
@@ -105,4 +105,4 @@ calling `MockInterceptor.Initialize()` - which will only work in debug mode - wi
 
 # Resources
 https://github.com/pixelsandcode/ReactNative-Boilerplate/tree/master/docs/index.html  \
-https://drive.google.com/open?id=1ryQNjyS3GGs2C5q5XJg25YxoMeKNbWEw
+https://drive.google.com/open?id=19rqelTmqJvW0wsFb2IIm40x38RWBJ8ch

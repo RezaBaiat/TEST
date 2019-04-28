@@ -1,5 +1,5 @@
 // Constants identifying which action is already being dispatched used in [RootReducer](../reduce/RootReducer.html) and [RootDispatcher](../reduce/RootDispatcher.html)
-// in addition to providing the action method related to each constant
+// In addition to providing the action method related to each constant
 export default class RootActions {
 
   static ACTION_NETWORK_STATE_CHANGE = 'ACTION_NETWORK_STATE_CHANGE';

@@ -1,4 +1,4 @@
-// Provides convinent method for local and remote logging.
+// Provides convenient method for local and remote logging.
 // automatically sends defined levels to roll bar server
 
 import { Rollbar, Client, Configuration } from 'winston-transport-rollbar';

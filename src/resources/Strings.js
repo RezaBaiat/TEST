@@ -1,3 +1,7 @@
+// All strings should be referenced from this class .
+// this should also provide a solution
+// to hold a key reference to the related language's Json file
+
 /* eslint-disable */
 import EN from '../assets/translations/EN';
 import FA from '../assets/translations/FA';

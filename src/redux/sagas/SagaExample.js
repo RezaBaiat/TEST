@@ -1,3 +1,4 @@
+// A working example of redux-saga usage
 import {
   call, put, takeEvery, takeLatest,
 } from 'redux-saga/effects';

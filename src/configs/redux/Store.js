@@ -1,5 +1,7 @@
 // Our redux configuration file
-// unlike other initializations , any preConfiguration and initialization to the redux and all it's relevants should be done here
+// unlike other initializations , any preConfiguration and initialization related to the redux and all it's relevants should be done here
+// any middleware for the redux will be created and added here in the middlewares object
+// this file also exports store object and installs sagas if there are any
 
 import {
   createStore, combineReducers, compose, applyMiddleware,

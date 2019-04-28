@@ -1,4 +1,5 @@
-// Handling the permissions dialog , based on permissions in [Permissions](../configs/Permissions.html)
+// Handling app's permissions . will show a permission dialog whenever needed , based on permissions in [Permissions](../configs/Permissions.html)
+// and will only return true when all permissions have been granted
 
 import PermissionsManager from 'react-native-dev-kit/src/permissions/PermissionsManager';
 import Permissions from '../configs/Permissions';

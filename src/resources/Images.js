@@ -1,3 +1,5 @@
+// References to image files in assets/images
+
 /* eslint-disable */
 
 export default class images {

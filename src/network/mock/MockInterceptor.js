@@ -1,4 +1,5 @@
 // Simple , yet powerful Mock Interceptor
+// When initialized and in DEBUG_MODE will intercept requests on-fly
 import Configs from '../../configs/Configs';
 import { axios } from '../NetworkWorker';
 

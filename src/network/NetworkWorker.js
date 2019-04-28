@@ -5,6 +5,7 @@
 import {
   AxiosInstance, AxiosPromise, AxiosRequestConfig, AxiosResponse,
 } from 'axios';
+import CallCreator from 'react-native-dev-kit/src/network/CallCreator';
 import Configs from '../configs/Configs';
 
 export const axios : AxiosInstance = require('axios');
@@ -16,14 +17,12 @@ export default class NetworkWorker {
     return this.get('https://github.com/reduxjs/reselect/blob/master/README.md');
   }
 
-  static execute = (url : string, headers = {}, method = 'GET', config : AxiosRequestConfig) : AxiosPromise<AxiosResponse> => {
-    return axios.get(url, {
-      ...config,
-      params: headers,
-      method,
-    }).then(res => NetworkWorker.statusChecking(res))
-      .catch(error => NetworkWorker.errorHandling(error));
-  }
+  static execute = (url : string, headers = {}, method = 'GET', config : AxiosRequestConfig) : AxiosPromise<AxiosResponse> => axios.get(url, {
+    ...config,
+    params: headers,
+    method,
+  }).then(res => NetworkWorker.statusChecking(res))
+    .catch(error => NetworkWorker.errorHandling(error));
 
   static post(url : string, headers = {}, config : AxiosRequestConfig) {
     return this.execute(url, headers, 'POST', config);
@@ -46,10 +45,8 @@ export default class NetworkWorker {
   }
 
   static get = (url : string, headers = {}, config : AxiosRequestConfig) => {
-    console.log('GET '+url);
-
     return this.execute(url, headers, 'GET', config);
-  }
+  };
 
   static postFile(url : string, headers = {}, data : any, config : AxiosRequestConfig = {}) {
     return this.execute(url, headers, 'POST', {
