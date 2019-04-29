@@ -67,7 +67,6 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.11.0",
     "flow-bin": "^0.95.1",
-    "prettier": "^1.16.4",
     "react-scripts": "2.1.8"
   },
   "gh-pages-deploy": {
