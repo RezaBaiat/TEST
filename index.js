@@ -1,5 +1,6 @@
 // This file , since it is the first file to be called , contains all
-// initializations , pre configurations and global fixes
+// initializations , pre configurations and global fixes except the one's for redux which lies
+// in configs/redux folder
 
 import { I18nManager } from 'react-native';
 import NetUtils from 'react-native-dev-kit/src/utils/NetUtils';
