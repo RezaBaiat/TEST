@@ -1,5 +1,12 @@
 ##[Reducing Redux Boilerplate](https://redux.js.org/recipes/reducing-boilerplate)
-- allows accessing redux dispatchers and states statically , instead of injecting them into every component , resulting in reduced boilerplate , number of files , less complexity , easier debug , cleaner and more readable code by a huge amount. 
+ allows accessing redux dispatchers and states statically , instead of injecting them into every component . resulting in :
+ - Reduced boilerplate 
+ - You <u><b>CAN</b></u> combine actions,dispatchers and constants which reduces file number of files , without adding any complexity
+ - Less complexity 
+ - Easier debug 
+ - Cleaner and more readable code by a huge amount. 
+ - You can then dispatch actions without any need to connect , which means background workers can also use dispatch without complexity which is a huge benefit.
+ - There is no down side effect
 
 ##Using [Builder Pattern](https://github.com/pixelsandcode/reactnative-dev-kit/blob/master/src/network/CallCreator.tsx) instead of [casual integration](https://github.com/pixelsandcode/web-boilerplate/blob/develop/src/network/HttpRequest.js)
 

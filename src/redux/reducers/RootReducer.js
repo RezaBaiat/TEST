@@ -7,7 +7,7 @@ import RootActions from '../actions/RootActions';
 // Interface to just describe our variables types
 export interface InitialState {
   isNetworkAvailable : boolean,
-  data : boolean
+  data : string
 }
 
 // The name tells it all , before any changes this is the default value of our state variables
@@ -19,7 +19,7 @@ const initialState : InitialState = {
 // A reducer is the place which returns the new state , based on the type of action who has just dispatched
 // note that this should be a copy , never return the previous state
 const reducer = (state = initialState, action: { type: any;payload:any }) => {
-  console.log('reducer updated with action '+JSON.stringify(action));
+  console.log(`reducer updated with action ${JSON.stringify(action)}`);
   switch (action.type) {
     case RootActions.ACTION_NETWORK_STATE_CHANGE:
       return {

@@ -44,9 +44,7 @@ export default class NetworkWorker {
     return this.execute(url, headers, 'DELETE', config);
   }
 
-  static get = (url : string, headers = {}, config : AxiosRequestConfig) => {
-    return this.execute(url, headers, 'GET', config);
-  };
+  static get = (url : string, headers = {}, config : AxiosRequestConfig) => this.execute(url, headers, 'GET', config);
 
   static postFile(url : string, headers = {}, data : any, config : AxiosRequestConfig = {}) {
     return this.execute(url, headers, 'POST', {
