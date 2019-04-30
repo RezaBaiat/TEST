@@ -19,16 +19,6 @@
             
             
             
-            
-            <li class="indent0">
-              <a class="source" href="..\..\..\index.html">
-                index.js
-              </a>
-            </li>
-          
-            
-            
-            
               
               
                 
@@ -113,15 +103,11 @@
                   <h4 class="indent1">components/</h4>
                 
               
-                
-                  <h4 class="indent2">core/</h4>
-                
-              
               
             
             
-            <li class="indent3">
-              <a class="source" href="..\..\..\src\components\core\AppButton.html">
+            <li class="indent2">
+              <a class="source" href="..\..\..\src\components\AppButton.html">
                 AppButton.js
               </a>
             </li>
@@ -130,8 +116,8 @@
             
             
             
-            <li class="indent3">
-              <a class="source" href="..\..\..\src\components\core\AppImageView.html">
+            <li class="indent2">
+              <a class="source" href="..\..\..\src\components\AppImageView.html">
                 AppImageView.js
               </a>
             </li>
@@ -140,8 +126,8 @@
             
             
             
-            <li class="indent3">
-              <a class="source" href="..\..\..\src\components\core\AppTextView.html">
+            <li class="indent2">
+              <a class="source" href="..\..\..\src\components\AppTextView.html">
                 AppTextView.js
               </a>
             </li>
@@ -150,8 +136,8 @@
             
             
             
-            <li class="indent3">
-              <a class="source" href="..\..\..\src\components\core\AppTouchable.html">
+            <li class="indent2">
+              <a class="source" href="..\..\..\src\components\AppTouchable.html">
                 AppTouchable.js
               </a>
             </li>
@@ -305,6 +291,16 @@
             
             
             <li class="indent2">
+              <a class="source" href="..\..\..\src\handlers\DataHandler.html">
+                DataHandler.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
               <a class="source" href="..\..\..\src\handlers\LocalNotificationsHandler.html">
                 LocalNotificationsHandler.js
               </a>
@@ -317,6 +313,74 @@
             <li class="indent2">
               <a class="source" href="..\..\..\src\handlers\PermissionsHandler.html">
                 PermissionsHandler.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\..\..\src\handlers\SocketHandler.html">
+                SocketHandler.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+              
+                
+                  <h4 class="indent2">pushnotifications/</h4>
+                
+              
+              
+            
+            
+            <li class="indent3">
+              <a class="source" href="..\..\..\src\handlers\pushnotifications\GeneralPushNotificationHandler.html">
+                GeneralPushNotificationHandler.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent3">
+              <a class="source" href="..\..\..\src\handlers\pushnotifications\PushNotificationListenerInterface.html">
+                PushNotificationListenerInterface.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+              
+            
+            
+            <li class="indent1">
+              <a class="source" href="..\..\..\src\index.html">
+                index.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent1">
+              <a class="source" href="..\..\..\src\index.html">
+                index.js
               </a>
             </li>
           
@@ -632,36 +696,6 @@
                 
               
                 
-                  <h4 class="indent1">storages/</h4>
-                
-              
-              
-            
-            
-            <li class="indent2">
-              <a class="source" href="..\..\..\src\storages\DataSource.html">
-                DataSource.js
-              </a>
-            </li>
-          
-            
-            
-            
-            
-            <li class="indent2">
-              <a class="source" href="..\..\..\src\storages\OfflineStorage.html">
-                OfflineStorage.js
-              </a>
-            </li>
-          
-            
-            
-            
-              
-              
-                
-              
-                
                   <h4 class="indent1">utils/</h4>
                 
               
@@ -715,8 +749,36 @@
       
         
         <p>##<a href="https://redux.js.org/recipes/reducing-boilerplate">Reducing Redux Boilerplate</a></p>
+<p><a href="https://stackoverflow.com/questions/38532433/react-redux-global-function-that-can-dispatch-actions">https://stackoverflow.com/questions/38532433/react-redux-global-function-that-can-dispatch-actions</a></p>
+<p>allows accessing redux dispatchers and states statically , instead of injecting them into every component . resulting in :</p>
 <ul>
-<li>allows accessing redux dispatchers and states statically , instead of injecting them into every component , resulting in reduced boilerplate , number of files , less complexity , easier debug , cleaner and more readable code by a huge amount. </li>
+<li>Reduced boilerplate (some times can be huge)</li>
+<li>You <u><b>CAN</b></u> combine actions,dispatchers which reduces file number of files , without adding any complexity</li>
+<li>Less complexity </li>
+<li>Easier debug </li>
+<li>Cleaner and more readable code by a huge amount. </li>
+<li>You can then dispatch actions without any need to connect , which means background workers can also use dispatch without complexity which is a huge benefit.</li>
+<li>Much easier to rename or remove functions in case of need</li>
+<li>Much easier to find usages of the function</li>
+<li>There is no down side effect</li>
+</ul>
+<p>Quotes from redux website :</p>
+<p>how ever it is recommended to keep action constants in a separate files in large projects because : </p>
+<ul>
+<li><p>It helps keep the naming consistent because all action types are gathered in a single place.</p>
+</li>
+<li><p>Sometimes you want to see all existing actions before working on a new feature. It may be that the action you need was already added by somebody on the team, but you didn’t know.</p>
+</li>
+<li><p>The list of action types that were added, removed, and changed in a Pull Request helps everyone on the team keep track of scope and implementation of new features.</p>
+</li>
+<li><p>If you make a typo when importing an action constant, you will get undefined. Redux will immediately throw when dispatching such an action, and you’ll find the mistake sooner.</p>
+</li>
+<li><p><u>It is up to you to choose the conventions for your project. You may start by using inline strings, and later transition to constants, and maybe later group them into a single file. Redux does not have any opinion here, so use your best judgment<u/></p>
+</li>
+<li><p><u>Action creators have often been criticized as boilerplate. Well, you don’t have to write them! You can use object literals if you feel this better suits your project. There are, however, some benefits for writing action creators you should know about.<u/></p>
+</li>
+<li><p><u>redux website is using store from redux-thunk and calling dispatch on it , but we are importing store and using it directly<u/>    </p>
+</li>
 </ul>
 <p>##Using <a href="https://github.com/pixelsandcode/reactnative-dev-kit/blob/master/src/network/CallCreator.tsx">Builder Pattern</a> instead of <a href="https://github.com/pixelsandcode/web-boilerplate/blob/develop/src/network/HttpRequest.js">casual integration</a></p>
 <ul>

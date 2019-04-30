@@ -19,16 +19,6 @@
             
             
             
-            
-            <li class="indent0">
-              <a class="source" href="..\..\index.html">
-                index.js
-              </a>
-            </li>
-          
-            
-            
-            
               
               
                 
@@ -113,15 +103,11 @@
                   <h4 class="indent1">components/</h4>
                 
               
-                
-                  <h4 class="indent2">core/</h4>
-                
-              
               
             
             
-            <li class="indent3">
-              <a class="source" href="..\components\core\AppButton.html">
+            <li class="indent2">
+              <a class="source" href="..\components\AppButton.html">
                 AppButton.js
               </a>
             </li>
@@ -130,8 +116,8 @@
             
             
             
-            <li class="indent3">
-              <a class="source" href="..\components\core\AppImageView.html">
+            <li class="indent2">
+              <a class="source" href="..\components\AppImageView.html">
                 AppImageView.js
               </a>
             </li>
@@ -140,8 +126,8 @@
             
             
             
-            <li class="indent3">
-              <a class="source" href="..\components\core\AppTextView.html">
+            <li class="indent2">
+              <a class="source" href="..\components\AppTextView.html">
                 AppTextView.js
               </a>
             </li>
@@ -150,8 +136,8 @@
             
             
             
-            <li class="indent3">
-              <a class="source" href="..\components\core\AppTouchable.html">
+            <li class="indent2">
+              <a class="source" href="..\components\AppTouchable.html">
                 AppTouchable.js
               </a>
             </li>
@@ -305,6 +291,16 @@
             
             
             <li class="indent2">
+              <a class="source" href="..\handlers\DataHandler.html">
+                DataHandler.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
               <a class="source" href="..\handlers\LocalNotificationsHandler.html">
                 LocalNotificationsHandler.js
               </a>
@@ -317,6 +313,74 @@
             <li class="indent2">
               <a class="source" href="..\handlers\PermissionsHandler.html">
                 PermissionsHandler.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\handlers\SocketHandler.html">
+                SocketHandler.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+              
+                
+                  <h4 class="indent2">pushnotifications/</h4>
+                
+              
+              
+            
+            
+            <li class="indent3">
+              <a class="source" href="..\handlers\pushnotifications\GeneralPushNotificationHandler.html">
+                GeneralPushNotificationHandler.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent3">
+              <a class="source" href="..\handlers\pushnotifications\PushNotificationListenerInterface.html">
+                PushNotificationListenerInterface.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+              
+            
+            
+            <li class="indent1">
+              <a class="source" href="..\index.html">
+                index.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent1">
+              <a class="source" href="..\index.html">
+                index.js
               </a>
             </li>
           
@@ -632,36 +696,6 @@
                 
               
                 
-                  <h4 class="indent1">storages/</h4>
-                
-              
-              
-            
-            
-            <li class="indent2">
-              <a class="source" href="..\storages\DataSource.html">
-                DataSource.js
-              </a>
-            </li>
-          
-            
-            
-            
-            
-            <li class="indent2">
-              <a class="source" href="..\storages\OfflineStorage.html">
-                OfflineStorage.js
-              </a>
-            </li>
-          
-            
-            
-            
-              
-              
-                
-              
-                
                   <h4 class="indent1">utils/</h4>
                 
               
@@ -724,7 +758,7 @@
 <span class="hljs-keyword">import</span> Configs <span class="hljs-keyword">from</span> <span class="hljs-string">'../configs/Configs'</span>;
 <span class="hljs-keyword">import</span> { BaseComponent, createMapStateToProps } <span class="hljs-keyword">from</span> <span class="hljs-string">'./BaseComponent'</span>;
 <span class="hljs-keyword">import</span> RootState <span class="hljs-keyword">from</span> <span class="hljs-string">'../redux/states/RootState'</span>;
-<span class="hljs-keyword">import</span> DataSource <span class="hljs-keyword">from</span> <span class="hljs-string">'../storages/DataSource'</span>;
+<span class="hljs-keyword">import</span> DataHandler <span class="hljs-keyword">from</span> <span class="hljs-string">'../storages/DataHandler'</span>;
 <span class="hljs-keyword">import</span> AppPermissionManager <span class="hljs-keyword">from</span> <span class="hljs-string">'../handlers/PermissionsHandler'</span>;
 <span class="hljs-keyword">import</span> AppButton <span class="hljs-keyword">from</span> <span class="hljs-string">'../components/core/AppButton'</span>;
 <span class="hljs-keyword">import</span> AppTextView <span class="hljs-keyword">from</span> <span class="hljs-string">'../components/core/AppTextView'</span>;
@@ -740,7 +774,7 @@
   componentDidMount() {
 
     AppPermissionManager.checkPermissions().then(<span class="hljs-function">(<span class="hljs-params">granted : boolean</span>) =&gt;</span> {
-      DataSource.updateData();
+      DataHandler.updateData();
       RootDispatcher.runSagaTest(<span class="hljs-string">'https://github.com/reduxjs/reselect/blob/master/README.md'</span>);
     });
   }
@@ -767,7 +801,7 @@
           text="Go to next page"
         /&gt;
         &lt;AppImageView style={{ width: 250, height: 250, backgroundColor: 'black' }} src={createUrl('http://hdwpro.com/wp-content/uploads/2018/12/hd-wallpapers-1.jpg')} /&gt;
-        &lt;AppTextView text={DataSource.getData()} /&gt;
+        &lt;AppTextView text={DataHandler.getData()} /&gt;
       &lt;/View&gt;
     );
   }
