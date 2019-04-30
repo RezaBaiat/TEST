@@ -6,7 +6,7 @@ import { createUrl } from 'react-native-dev-kit/src/ui/wrappers/ImageWrapper';
 import Configs from '../configs/Configs';
 import { BaseComponent, createMapStateToProps } from './BaseComponent';
 import RootState from '../redux/states/RootState';
-import DataSource from '../storages/DataSource';
+import DataHandler from '../storages/DataHandler';
 import AppPermissionManager from '../handlers/PermissionsHandler';
 import AppButton from '../components/core/AppButton';
 import AppTextView from '../components/core/AppTextView';
@@ -22,7 +22,7 @@ export class App extends BaseComponent {
   componentDidMount() {
 
     AppPermissionManager.checkPermissions().then((granted : boolean) => {
-      DataSource.updateData();
+      DataHandler.updateData();
       RootDispatcher.runSagaTest('https://github.com/reduxjs/reselect/blob/master/README.md');
     });
   }
@@ -49,7 +49,7 @@ export class App extends BaseComponent {
           text="Go to next page"
         />
         <AppImageView style={{ width: 250, height: 250, backgroundColor: 'black' }} src={createUrl('http://hdwpro.com/wp-content/uploads/2018/12/hd-wallpapers-1.jpg')} />
-        <AppTextView text={DataSource.getData()} />
+        <AppTextView text={DataHandler.getData()} />
       </View>
     );
   }

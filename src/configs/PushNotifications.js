@@ -1,7 +1,13 @@
 // Configuration file for listening to push notifications , every thing will be handled here since there is no need to another handler
 
-import firebase from 'react-native-firebase';
+import firebase, { Firebase, Notification, RNFirebase } from 'react-native-firebase';
 import { AsyncStorage } from 'react-native';
+import type { PushNotificationListenerInterface } from '../handlers/pushnotifications/PushNotificationListenerInterface';
+import GeneralPushNotificationHandler
+  from '../handlers/pushnotifications/GeneralPushNotificationHandler';
+// eslint-disable-next-line import/no-duplicates
+
+const mFireBase : Firebase = firebase;
 
 export default class PushNotifications {
 
@@ -34,7 +40,7 @@ export default class PushNotifications {
   }
 
   static async checkPermission() {
-    const enabled = await firebase.messaging().hasPermission();
+    const enabled = await mFireBase.messaging().hasPermission();
     if (enabled) {
       this.getToken();
     } else {
@@ -45,7 +51,7 @@ export default class PushNotifications {
   static async getToken() {
     let fcmToken = await AsyncStorage.getItem('fcmToken');
     if (!fcmToken) {
-      fcmToken = await firebase.messaging().getToken();
+      fcmToken = await mFireBase.messaging().getToken();
       if (fcmToken) {
         // user has a device token
         await AsyncStorage.setItem('fcmToken', fcmToken);
@@ -55,7 +61,7 @@ export default class PushNotifications {
 
   static async requestPermission() {
     try {
-      await firebase.messaging().requestPermission();
+      await mFireBase.messaging().requestPermission();
       // User has authorised
       this.getToken();
     } catch (error) {
@@ -68,29 +74,26 @@ export default class PushNotifications {
   static async createNotificationListeners() {
 
     // Triggered when a particular notification has been received in foreground
-    this.notificationListener = firebase.notifications().onNotification((notification) => {
-      const { title, body } = notification;
-      this.showAlert(title, body);
+    this.notificationListener = mFireBase.notifications().onNotification((notification : Notification) => {
+      this.getNotificationHandler(notification).onNotification(notification);
     });
 
     // If your app is in background, you can listen for when a notification is clicked / tapped / opened as follows:
-    this.notificationOpenedListener = firebase.notifications().onNotificationOpened((notificationOpen) => {
-      const { title, body } = notificationOpen.notification;
-      this.showAlert(title, body);
+    this.notificationOpenedListener = mFireBase.notifications().onNotificationOpened((notificationOpen : RNFirebase.notifications.NotificationOpen) => {
+      this.getNotificationHandler(notificationOpen.notification).onNotificationOpened(notificationOpen);
     });
 
 
     // If your app is closed, you can check if it was opened by a notification being clicked / tapped / opened as follows:
-    const notificationOpen = await firebase.notifications().getInitialNotification();
+    const notificationOpen = await mFireBase.notifications().getInitialNotification();
     if (notificationOpen) {
-      const { title, body } = notificationOpen.notification;
-      this.showAlert(title, body);
+      this.getNotificationHandler(notificationOpen.notification).onInitialNotification(notificationOpen);
     }
 
     // Triggered for data only payload in foreground
-    this.messageListener = firebase.messaging().onMessage((message) => {
+    this.messageListener = mFireBase.messaging().onMessage((message) => {
       // process data message
-      console.log(JSON.stringify(message));
+      GeneralPushNotificationHandler.onMessage(message);
     });
   }
 
@@ -99,14 +102,9 @@ export default class PushNotifications {
     this.notificationOpenedListener();
   }
 
-  static showAlert(title, body) {
-    alert(
-      title, body,
-      [
-        { text: 'OK', onPress: () => console.log('OK Pressed') },
-      ],
-      { cancelable: false },
-    );
-  }
 
+  static getNotificationHandler(notification : Notification) : PushNotificationListenerInterface {
+    // switch later
+    return GeneralPushNotificationHandler;
+  }
 }

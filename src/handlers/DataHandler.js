@@ -7,7 +7,7 @@ import RootState from '../redux/states/RootState';
 import RootDispatcher from '../redux/dispatchers/RootDispatcher';
 import NetworkWorker from '../network/NetworkWorker';
 
-export default class DataSource {
+export default class DataHandler {
 
   static initialize() {
     NetUtils.addListener(() => {
