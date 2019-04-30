@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>GeneralPushNotificationHandler.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" media="all" href="public/stylesheets/normalize.css" />
+  <link rel="stylesheet" media="all" href="..\..\..\docco.css" />
+</head>
+<body>
+  <div class="container">
+    
+      <div class="toc">
+        <h3>Table of Contents</h3>
+        <ul>
+          
+          
+          
+            
+            
+            
+              
+              
+                
+                  <h4 class="indent0">misc/</h4>
+                
+              
+                
+                  <h4 class="indent1">tutorials/</h4>
+                
+              
+              
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\..\..\misc\tutorials\NavigationUsage.html">
+                NavigationUsage.md
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\..\..\misc\tutorials\NetworkInstallation.html">
+                NetworkInstallation.md
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\..\..\misc\tutorials\ReduxUsage.html">
+                ReduxUsage.md
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+              
+                
+                  <h4 class="indent2">challenges/</h4>
+                
+              
+              
+            
+            
+            <li class="indent3">
+              <a class="source" href="..\..\..\misc\tutorials\challenges\DependencyInjection.html">
+                DependencyInjection.md
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent3">
+              <a class="source" href="..\..\..\misc\tutorials\challenges\Web Differences.html">
+                Web Differences.md
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+                  <h4 class="indent0">src/</h4>
+                
+              
+                
+                  <h4 class="indent1">components/</h4>
+                
+              
+              
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\..\components\AppButton.html">
+                AppButton.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\..\components\AppImageView.html">
+                AppImageView.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\..\components\AppTextView.html">
+                AppTextView.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\..\components\AppTouchable.html">
+                AppTouchable.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+                  <h4 class="indent1">configs/</h4>
+                
+              
+              
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\..\configs\Configs.html">
+                Configs.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\..\configs\LocalNotifications.html">
+                LocalNotifications.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\..\configs\Permissions.html">
+                Permissions.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\..\configs\PushNotifications.html">
+                PushNotifications.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+              
+                
+                  <h4 class="indent2">languageProvider/</h4>
+                
+              
+              
+            
+            
+            <li class="indent3">
+              <a class="source" href="..\..\configs\languageProvider\actions.html">
+                actions.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent3">
+              <a class="source" href="..\..\configs\languageProvider\constants.html">
+                constants.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent3">
+              <a class="source" href="..\..\configs\languageProvider\index.html">
+                index.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent3">
+              <a class="source" href="..\..\configs\languageProvider\reducer.html">
+                reducer.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent3">
+              <a class="source" href="..\..\configs\languageProvider\selectors.html">
+                selectors.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+              
+                
+                  <h4 class="indent2">redux/</h4>
+                
+              
+              
+            
+            
+            <li class="indent3">
+              <a class="source" href="..\..\configs\redux\Store.html">
+                Store.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+                  <h4 class="indent1">handlers/</h4>
+                
+              
+              
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\DataHandler.html">
+                DataHandler.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\LocalNotificationsHandler.html">
+                LocalNotificationsHandler.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\PermissionsHandler.html">
+                PermissionsHandler.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\SocketHandler.html">
+                SocketHandler.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+              
+                
+                  <h4 class="indent2">pushnotifications/</h4>
+                
+              
+              
+            
+            
+            <li class="indent3">
+              <a class="source" href="GeneralPushNotificationHandler.html">
+                GeneralPushNotificationHandler.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent3">
+              <a class="source" href="PushNotificationListenerInterface.html">
+                PushNotificationListenerInterface.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+              
+            
+            
+            <li class="indent1">
+              <a class="source" href="..\..\index.html">
+                index.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent1">
+              <a class="source" href="..\..\index.html">
+                index.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+                  <h4 class="indent1">network/</h4>
+                
+              
+              
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\..\network\AbstractSocket.html">
+                AbstractSocket.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\..\network\NetworkWorker.html">
+                NetworkWorker.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+              
+                
+                  <h4 class="indent2">mock/</h4>
+                
+              
+              
+            
+            
+            <li class="indent3">
+              <a class="source" href="..\..\network\mock\MockInterceptor.html">
+                MockInterceptor.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+                  <h4 class="indent1">redux/</h4>
+                
+              
+                
+                  <h4 class="indent2">actions/</h4>
+                
+              
+              
+            
+            
+            <li class="indent3">
+              <a class="source" href="..\..\redux\actions\RootActions.html">
+                RootActions.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+              
+                
+                  <h4 class="indent2">dispatchers/</h4>
+                
+              
+              
+            
+            
+            <li class="indent3">
+              <a class="source" href="..\..\redux\dispatchers\RootDispatcher.html">
+                RootDispatcher.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+              
+                
+                  <h4 class="indent2">reducers/</h4>
+                
+              
+              
+            
+            
+            <li class="indent3">
+              <a class="source" href="..\..\redux\reducers\RootReducer.html">
+                RootReducer.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+              
+                
+                  <h4 class="indent2">sagas/</h4>
+                
+              
+              
+            
+            
+            <li class="indent3">
+              <a class="source" href="..\..\redux\sagas\SagaExample.html">
+                SagaExample.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+              
+                
+                  <h4 class="indent2">states/</h4>
+                
+              
+              
+            
+            
+            <li class="indent3">
+              <a class="source" href="..\..\redux\states\RootState.html">
+                RootState.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+                  <h4 class="indent1">resources/</h4>
+                
+              
+              
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\..\resources\Animations.html">
+                Animations.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\..\resources\Colors.html">
+                Colors.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\..\resources\Images.html">
+                Images.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\..\resources\R.html">
+                R.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\..\resources\Strings.html">
+                Strings.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\..\resources\Styles.html">
+                Styles.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+                  <h4 class="indent1">routes/</h4>
+                
+              
+              
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\..\routes\AppNavigator.html">
+                AppNavigator.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\..\routes\Routes.html">
+                Routes.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+                  <h4 class="indent1">scenes/</h4>
+                
+              
+              
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\..\scenes\App.html">
+                App.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\..\scenes\BaseComponent.html">
+                BaseComponent.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\..\scenes\Screen2.html">
+                Screen2.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+                  <h4 class="indent1">utils/</h4>
+                
+              
+              
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\..\utils\Logger.html">
+                Logger.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+                  <h4 class="indent0">test/</h4>
+                
+              
+              
+            
+            
+            <li class="indent1">
+              <a class="source" href="..\..\..\test\App.test.html">
+                App.test.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent1">
+              <a class="source" href="..\..\..\test\HOWTO.html">
+                HOWTO.md
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+    <div class="page">
+      <div class="header">
+        
+          <h1>GeneralPushNotificationHandler.js</h1>
+        
+      </div>
+
+      
+        
+        <p>General push notification handler , an implementation on PushNotificationListenerInterface ,
+is mainly responsible for data type notifications and other notifications which will not
+fit into any other</p>
+
+        
+          <div class='highlight'><pre>
+<span class="hljs-keyword">import</span> { PushNotificationListenerInterface } <span class="hljs-keyword">from</span> <span class="hljs-string">'./PushNotificationListenerInterface'</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GeneralPushNotificationHandler</span> <span class="hljs-title">implements</span> <span class="hljs-title">PushNotificationListenerInterface</span> </span>{
+
+  <span class="hljs-keyword">static</span> onInitialNotification(notificationOpen) {
+    <span class="hljs-keyword">const</span> { title, body } = notificationOpen;
+    <span class="hljs-keyword">this</span>.showAlert(title, body);
+  }
+
+  <span class="hljs-keyword">static</span> onNotification(notification) {
+    <span class="hljs-keyword">const</span> { title, body } = notification;
+    <span class="hljs-keyword">this</span>.showAlert(title, body);
+  }
+
+  <span class="hljs-keyword">static</span> onNotificationOpened(notificationOpen) {
+    <span class="hljs-keyword">const</span> { title, body } = notificationOpen;
+    <span class="hljs-keyword">this</span>.showAlert(title, body);
+  }
+
+  <span class="hljs-keyword">static</span> onMessage(message) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify(message));
+  }
+
+
+  <span class="hljs-keyword">static</span> showAlert(title, body) {
+    alert(
+      title, body,
+      [
+        { <span class="hljs-attr">text</span>: <span class="hljs-string">'OK'</span>, <span class="hljs-attr">onPress</span>: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'OK Pressed'</span>) },
+      ],
+      { <span class="hljs-attr">cancelable</span>: <span class="hljs-literal">false</span> },
+    );
+  }
+
+}</pre></div>
+        
+      
+      <div class="fleur">h</div>
+    </div>
+  </div>
+</body>
+</html>
