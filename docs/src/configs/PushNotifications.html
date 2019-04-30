@@ -19,16 +19,6 @@
             
             
             
-            
-            <li class="indent0">
-              <a class="source" href="..\..\index.html">
-                index.js
-              </a>
-            </li>
-          
-            
-            
-            
               
               
                 
@@ -113,15 +103,11 @@
                   <h4 class="indent1">components/</h4>
                 
               
-                
-                  <h4 class="indent2">core/</h4>
-                
-              
               
             
             
-            <li class="indent3">
-              <a class="source" href="..\components\core\AppButton.html">
+            <li class="indent2">
+              <a class="source" href="..\components\AppButton.html">
                 AppButton.js
               </a>
             </li>
@@ -130,8 +116,8 @@
             
             
             
-            <li class="indent3">
-              <a class="source" href="..\components\core\AppImageView.html">
+            <li class="indent2">
+              <a class="source" href="..\components\AppImageView.html">
                 AppImageView.js
               </a>
             </li>
@@ -140,8 +126,8 @@
             
             
             
-            <li class="indent3">
-              <a class="source" href="..\components\core\AppTextView.html">
+            <li class="indent2">
+              <a class="source" href="..\components\AppTextView.html">
                 AppTextView.js
               </a>
             </li>
@@ -150,8 +136,8 @@
             
             
             
-            <li class="indent3">
-              <a class="source" href="..\components\core\AppTouchable.html">
+            <li class="indent2">
+              <a class="source" href="..\components\AppTouchable.html">
                 AppTouchable.js
               </a>
             </li>
@@ -305,6 +291,16 @@
             
             
             <li class="indent2">
+              <a class="source" href="..\handlers\DataHandler.html">
+                DataHandler.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
               <a class="source" href="..\handlers\LocalNotificationsHandler.html">
                 LocalNotificationsHandler.js
               </a>
@@ -317,6 +313,74 @@
             <li class="indent2">
               <a class="source" href="..\handlers\PermissionsHandler.html">
                 PermissionsHandler.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\handlers\SocketHandler.html">
+                SocketHandler.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+              
+                
+                  <h4 class="indent2">pushnotifications/</h4>
+                
+              
+              
+            
+            
+            <li class="indent3">
+              <a class="source" href="..\handlers\pushnotifications\GeneralPushNotificationHandler.html">
+                GeneralPushNotificationHandler.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent3">
+              <a class="source" href="..\handlers\pushnotifications\PushNotificationListenerInterface.html">
+                PushNotificationListenerInterface.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+              
+            
+            
+            <li class="indent1">
+              <a class="source" href="..\index.html">
+                index.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent1">
+              <a class="source" href="..\index.html">
+                index.js
               </a>
             </li>
           
@@ -632,36 +696,6 @@
                 
               
                 
-                  <h4 class="indent1">storages/</h4>
-                
-              
-              
-            
-            
-            <li class="indent2">
-              <a class="source" href="..\storages\DataSource.html">
-                DataSource.js
-              </a>
-            </li>
-          
-            
-            
-            
-            
-            <li class="indent2">
-              <a class="source" href="..\storages\OfflineStorage.html">
-                OfflineStorage.js
-              </a>
-            </li>
-          
-            
-            
-            
-              
-              
-                
-              
-                
                   <h4 class="indent1">utils/</h4>
                 
               
@@ -718,8 +752,19 @@
 
         
           <div class='highlight'><pre>
-<span class="hljs-keyword">import</span> firebase <span class="hljs-keyword">from</span> <span class="hljs-string">'react-native-firebase'</span>;
+<span class="hljs-keyword">import</span> firebase, { Firebase, Notification, RNFirebase } <span class="hljs-keyword">from</span> <span class="hljs-string">'react-native-firebase'</span>;
 <span class="hljs-keyword">import</span> { AsyncStorage } <span class="hljs-keyword">from</span> <span class="hljs-string">'react-native'</span>;
+<span class="hljs-keyword">import</span> type { PushNotificationListenerInterface } <span class="hljs-keyword">from</span> <span class="hljs-string">'../handlers/pushnotifications/PushNotificationListenerInterface'</span>;
+<span class="hljs-keyword">import</span> GeneralPushNotificationHandler
+  <span class="hljs-keyword">from</span> <span class="hljs-string">'../handlers/pushnotifications/GeneralPushNotificationHandler'</span>;</pre></div>
+        
+      
+        
+        <p>eslint-disable-next-line import/no-duplicates</p>
+
+        
+          <div class='highlight'><pre>
+<span class="hljs-keyword">const</span> mFireBase : Firebase = firebase;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PushNotifications</span> </span>{</pre></div>
         
@@ -758,7 +803,7 @@ even checkout @<a href="https://medium.com/@yangnana11/how-to-set-up-firebase-no
   }
 
   <span class="hljs-keyword">static</span> <span class="hljs-keyword">async</span> checkPermission() {
-    <span class="hljs-keyword">const</span> enabled = <span class="hljs-keyword">await</span> firebase.messaging().hasPermission();
+    <span class="hljs-keyword">const</span> enabled = <span class="hljs-keyword">await</span> mFireBase.messaging().hasPermission();
     <span class="hljs-keyword">if</span> (enabled) {
       <span class="hljs-keyword">this</span>.getToken();
     } <span class="hljs-keyword">else</span> {
@@ -769,7 +814,7 @@ even checkout @<a href="https://medium.com/@yangnana11/how-to-set-up-firebase-no
   <span class="hljs-keyword">static</span> <span class="hljs-keyword">async</span> getToken() {
     <span class="hljs-keyword">let</span> fcmToken = <span class="hljs-keyword">await</span> AsyncStorage.getItem(<span class="hljs-string">'fcmToken'</span>);
     <span class="hljs-keyword">if</span> (!fcmToken) {
-      fcmToken = <span class="hljs-keyword">await</span> firebase.messaging().getToken();
+      fcmToken = <span class="hljs-keyword">await</span> mFireBase.messaging().getToken();
       <span class="hljs-keyword">if</span> (fcmToken) {</pre></div>
         
       
@@ -784,7 +829,7 @@ even checkout @<a href="https://medium.com/@yangnana11/how-to-set-up-firebase-no
 
   <span class="hljs-keyword">static</span> <span class="hljs-keyword">async</span> requestPermission() {
     <span class="hljs-keyword">try</span> {
-      <span class="hljs-keyword">await</span> firebase.messaging().requestPermission();</pre></div>
+      <span class="hljs-keyword">await</span> mFireBase.messaging().requestPermission();</pre></div>
         
       
         
@@ -811,9 +856,8 @@ even checkout @<a href="https://medium.com/@yangnana11/how-to-set-up-firebase-no
         <p>Triggered when a particular notification has been received in foreground</p>
 
         
-          <div class='highlight'><pre>    <span class="hljs-keyword">this</span>.notificationListener = firebase.notifications().onNotification(<span class="hljs-function">(<span class="hljs-params">notification</span>) =&gt;</span> {
-      <span class="hljs-keyword">const</span> { title, body } = notification;
-      <span class="hljs-keyword">this</span>.showAlert(title, body);
+          <div class='highlight'><pre>    <span class="hljs-keyword">this</span>.notificationListener = mFireBase.notifications().onNotification(<span class="hljs-function">(<span class="hljs-params">notification : Notification</span>) =&gt;</span> {
+      <span class="hljs-keyword">this</span>.getNotificationHandler(notification).onNotification(notification);
     });</pre></div>
         
       
@@ -821,9 +865,8 @@ even checkout @<a href="https://medium.com/@yangnana11/how-to-set-up-firebase-no
         <p>If your app is in background, you can listen for when a notification is clicked / tapped / opened as follows:</p>
 
         
-          <div class='highlight'><pre>    <span class="hljs-keyword">this</span>.notificationOpenedListener = firebase.notifications().onNotificationOpened(<span class="hljs-function">(<span class="hljs-params">notificationOpen</span>) =&gt;</span> {
-      <span class="hljs-keyword">const</span> { title, body } = notificationOpen.notification;
-      <span class="hljs-keyword">this</span>.showAlert(title, body);
+          <div class='highlight'><pre>    <span class="hljs-keyword">this</span>.notificationOpenedListener = mFireBase.notifications().onNotificationOpened(<span class="hljs-function">(<span class="hljs-params">notificationOpen : RNFirebase.notifications.NotificationOpen</span>) =&gt;</span> {
+      <span class="hljs-keyword">this</span>.getNotificationHandler(notificationOpen.notification).onNotificationOpened(notificationOpen);
     });</pre></div>
         
       
@@ -831,10 +874,9 @@ even checkout @<a href="https://medium.com/@yangnana11/how-to-set-up-firebase-no
         <p>If your app is closed, you can check if it was opened by a notification being clicked / tapped / opened as follows:</p>
 
         
-          <div class='highlight'><pre>    <span class="hljs-keyword">const</span> notificationOpen = <span class="hljs-keyword">await</span> firebase.notifications().getInitialNotification();
+          <div class='highlight'><pre>    <span class="hljs-keyword">const</span> notificationOpen = <span class="hljs-keyword">await</span> mFireBase.notifications().getInitialNotification();
     <span class="hljs-keyword">if</span> (notificationOpen) {
-      <span class="hljs-keyword">const</span> { title, body } = notificationOpen.notification;
-      <span class="hljs-keyword">this</span>.showAlert(title, body);
+      <span class="hljs-keyword">this</span>.getNotificationHandler(notificationOpen.notification).onInitialNotification(notificationOpen);
     }</pre></div>
         
       
@@ -842,14 +884,14 @@ even checkout @<a href="https://medium.com/@yangnana11/how-to-set-up-firebase-no
         <p>Triggered for data only payload in foreground</p>
 
         
-          <div class='highlight'><pre>    <span class="hljs-keyword">this</span>.messageListener = firebase.messaging().onMessage(<span class="hljs-function">(<span class="hljs-params">message</span>) =&gt;</span> {</pre></div>
+          <div class='highlight'><pre>    <span class="hljs-keyword">this</span>.messageListener = mFireBase.messaging().onMessage(<span class="hljs-function">(<span class="hljs-params">message</span>) =&gt;</span> {</pre></div>
         
       
         
         <p>process data message</p>
 
         
-          <div class='highlight'><pre>      <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify(message));
+          <div class='highlight'><pre>      GeneralPushNotificationHandler.onMessage(message);
     });
   }
 
@@ -858,16 +900,16 @@ even checkout @<a href="https://medium.com/@yangnana11/how-to-set-up-firebase-no
     <span class="hljs-keyword">this</span>.notificationOpenedListener();
   }
 
-  <span class="hljs-keyword">static</span> showAlert(title, body) {
-    alert(
-      title, body,
-      [
-        { <span class="hljs-attr">text</span>: <span class="hljs-string">'OK'</span>, <span class="hljs-attr">onPress</span>: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'OK Pressed'</span>) },
-      ],
-      { <span class="hljs-attr">cancelable</span>: <span class="hljs-literal">false</span> },
-    );
-  }
 
+  <span class="hljs-keyword">static</span> getNotificationHandler(notification : Notification) : PushNotificationListenerInterface {</pre></div>
+        
+      
+        
+        <p>switch later</p>
+
+        
+          <div class='highlight'><pre>    <span class="hljs-keyword">return</span> GeneralPushNotificationHandler;
+  }
 }</pre></div>
         
       
