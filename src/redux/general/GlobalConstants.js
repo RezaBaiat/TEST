@@ -1,0 +1,9 @@
+export default class GlobalConstants {
+
+  static ACTION_NETWORK_STATE_CHANGE = 'ACTION_NETWORK_STATE_CHANGE';
+
+  static ACTION_DATA_UPDATE = 'ACTION_DATA_UPDATE';
+
+  static ACTION_TEST_SAGA = 'ACTION_TEST_SAGA';
+
+}

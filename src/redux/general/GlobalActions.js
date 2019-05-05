@@ -2,12 +2,6 @@
 // In addition to providing the action method related to each constant
 export default class GlobalActions {
 
-  static ACTION_NETWORK_STATE_CHANGE = 'ACTION_NETWORK_STATE_CHANGE';
-
-  static ACTION_DATA_UPDATE = 'ACTION_DATA_UPDATE';
-
-  static ACTION_TEST_SAGA = 'ACTION_TEST_SAGA';
-
   static networkStateChangeAction(isConnected : boolean) {
     return {
       type: GlobalActions.ACTION_NETWORK_STATE_CHANGE,
