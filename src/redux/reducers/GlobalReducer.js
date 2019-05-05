@@ -2,7 +2,7 @@
 // states which dont fit in any other, like networkState, otherwise it will contain all redux states
 
 import NetUtils from 'react-native-dev-kit/src/utils/NetUtils';
-import RootActions from '../actions/RootActions';
+import GlobalActions from '../actions/GlobalActions';
 import { AVAILABLE_LANGUAGES } from '../../configs/languageProvider/IntlProviderWrapper';
 
 // Interface to just describe our variables types
@@ -24,12 +24,12 @@ const initialState : InitialState = {
 const reducer = (state = initialState, action: { type: any;payload:any }) => {
   console.log(`reducer updated with action ${JSON.stringify(action)}`);
   switch (action.type) {
-    case RootActions.ACTION_NETWORK_STATE_CHANGE:
+    case GlobalActions.ACTION_NETWORK_STATE_CHANGE:
       return {
         ...state,
         isNetworkAvailable: action.payload,
       };
-    case RootActions.ACTION_DATA_UPDATE:
+    case GlobalActions.ACTION_DATA_UPDATE:
       return {
         ...state,
         data: action.payload,

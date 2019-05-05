@@ -3,7 +3,7 @@ import {
   call, put, takeEvery, takeLatest,
 } from 'redux-saga/effects';
 import NetworkHttpRequest from '../../network/Gateway';
-import RootActions from '../actions/RootActions';
+import GlobalActions from '../actions/GlobalActions';
 
 // worker Saga: will be fired on USER_FETCH_REQUESTED actions
 function* fetchAPI(action : {payload:string}) {
@@ -21,7 +21,7 @@ function* fetchAPI(action : {payload:string}) {
 
 function* mySaga() {
   console.log('ON MY SAGA');
-  yield takeEvery(RootActions.ACTION_TEST_SAGA, fetchAPI);
+  yield takeEvery(GlobalActions.ACTION_TEST_SAGA, fetchAPI);
 }
 
 

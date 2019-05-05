@@ -1,6 +1,6 @@
 // Constants identifying which action is already being dispatched used in [RootReducer](../reduce/RootReducer.html) and [RootDispatcher](../reduce/RootDispatcher.html)
 // In addition to providing the action method related to each constant
-export default class RootActions {
+export default class GlobalActions {
 
   static ACTION_NETWORK_STATE_CHANGE = 'ACTION_NETWORK_STATE_CHANGE';
 
@@ -10,21 +10,21 @@ export default class RootActions {
 
   static networkStateChangeAction(isConnected : boolean) {
     return {
-      type: RootActions.ACTION_NETWORK_STATE_CHANGE,
+      type: GlobalActions.ACTION_NETWORK_STATE_CHANGE,
       payload: isConnected,
     };
   }
 
   static setDataAction(newData : string) {
     return {
-      type: RootActions.ACTION_DATA_UPDATE,
+      type: GlobalActions.ACTION_DATA_UPDATE,
       payload: newData,
     };
   }
 
   static testSagaAction(url : string) {
     return {
-      type: RootActions.ACTION_TEST_SAGA,
+      type: GlobalActions.ACTION_TEST_SAGA,
       payload: url,
     };
   }

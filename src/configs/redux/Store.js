@@ -9,7 +9,7 @@ import {
 import { persistStore, persistCombineReducers, PersistConfig } from 'redux-persist';
 import storage from 'redux-persist/es/storage';
 import createSagaMiddleware from 'redux-saga';
-import reducer from '../../redux/reducers/RootReducer';
+import reducer from '../../redux/reducers/GlobalReducer';
 import mySaga from '../../redux/sagas/SagaExample';
 
 // main configuration for redux-persist
