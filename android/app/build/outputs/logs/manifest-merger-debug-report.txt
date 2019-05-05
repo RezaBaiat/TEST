@@ -4,13 +4,13 @@ ADDED from E:\Android\Git Projects\react-native-starter\android\app\src\main\And
 INJECTED from E:\Android\Git Projects\react-native-starter\android\app\src\main\AndroidManifest.xml:1:1-51:12
 INJECTED from E:\Android\Git Projects\react-native-starter\android\app\src\main\AndroidManifest.xml:1:1-51:12
 INJECTED from E:\Android\Git Projects\react-native-starter\android\app\src\main\AndroidManifest.xml:1:1-51:12
-MERGED from [:react-native-push-notification] E:\Android\Git Projects\react-native-starter\node_modules\react-native-push-notification\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:2:1-11:12
-MERGED from [:react-native-firebase] E:\Android\Git Projects\react-native-starter\node_modules\react-native-firebase\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:2:1-19:12
-MERGED from [com.android.support:multidex:1.0.3] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\d34dc11bc7257e245b5b2437e489de4d\AndroidManifest.xml:17:1-22:12
 MERGED from [:rn-fetch-blob] E:\Android\Git Projects\react-native-starter\node_modules\rn-fetch-blob\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:2:1-47:12
-MERGED from [:react-native-fast-image] E:\Android\Git Projects\react-native-starter\node_modules\react-native-fast-image\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-vector-icons] E:\Android\Git Projects\react-native-starter\node_modules\react-native-vector-icons\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-firebase] E:\Android\Git Projects\react-native-starter\node_modules\react-native-firebase\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:2:1-19:12
+MERGED from [:react-native-fast-image] E:\Android\Git Projects\react-native-starter\node_modules\react-native-fast-image\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-config] E:\Android\Git Projects\react-native-starter\node_modules\react-native-config\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-push-notification] E:\Android\Git Projects\react-native-starter\node_modules\react-native-push-notification\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:multidex:1.0.3] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\d34dc11bc7257e245b5b2437e489de4d\AndroidManifest.xml:17:1-22:12
 MERGED from [:react-native-navigation] E:\Android\Git Projects\react-native-starter\node_modules\react-native-navigation\lib\android\app\build\intermediates\manifests\full\reactNative57_5\debug\AndroidManifest.xml:2:1-17:12
 MERGED from [com.facebook.react:react-native:0.57.8] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\22daf19652d40aff22d6a14a91ba2e9a\AndroidManifest.xml:2:1-15:12
 MERGED from [com.github.wix-playground:ahbottomnavigation:2.4.9] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\9ecc6a00d991241244286011a9f64a8a\AndroidManifest.xml:2:1-13:12
@@ -99,10 +99,10 @@ INJECTED from E:\Android\Git Projects\react-native-starter\android\app\src\main\
 		INJECTED from E:\Android\Git Projects\react-native-starter\android\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.INTERNET
 ADDED from E:\Android\Git Projects\react-native-starter\android\app\src\main\AndroidManifest.xml:6:5-67
-MERGED from [:react-native-firebase] E:\Android\Git Projects\react-native-starter\node_modules\react-native-firebase\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:15:5-67
-MERGED from [:react-native-firebase] E:\Android\Git Projects\react-native-starter\node_modules\react-native-firebase\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:15:5-67
 MERGED from [:rn-fetch-blob] E:\Android\Git Projects\react-native-starter\node_modules\rn-fetch-blob\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:15:5-67
 MERGED from [:rn-fetch-blob] E:\Android\Git Projects\react-native-starter\node_modules\rn-fetch-blob\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:15:5-67
+MERGED from [:react-native-firebase] E:\Android\Git Projects\react-native-starter\node_modules\react-native-firebase\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:15:5-67
+MERGED from [:react-native-firebase] E:\Android\Git Projects\react-native-starter\node_modules\react-native-firebase\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:15:5-67
 MERGED from [com.google.android.gms:play-services-gcm:16.1.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\e3cca4e7f158ccb5531c4e1450b36104\AndroidManifest.xml:24:5-67
 MERGED from [com.google.android.gms:play-services-gcm:16.1.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\e3cca4e7f158ccb5531c4e1450b36104\AndroidManifest.xml:24:5-67
 MERGED from [com.google.android.gms:play-services-iid:16.0.1] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\59f5fe187f8348351c710f9588b02b59\AndroidManifest.xml:24:5-67
@@ -121,10 +121,10 @@ MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.4.0] C:
 		ADDED from E:\Android\Git Projects\react-native-starter\android\app\src\main\AndroidManifest.xml:6:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from E:\Android\Git Projects\react-native-starter\android\app\src\main\AndroidManifest.xml:7:5-78
-MERGED from [:react-native-firebase] E:\Android\Git Projects\react-native-starter\node_modules\react-native-firebase\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:17:5-79
-MERGED from [:react-native-firebase] E:\Android\Git Projects\react-native-starter\node_modules\react-native-firebase\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:17:5-79
 MERGED from [:rn-fetch-blob] E:\Android\Git Projects\react-native-starter\node_modules\rn-fetch-blob\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:27:5-79
 MERGED from [:rn-fetch-blob] E:\Android\Git Projects\react-native-starter\node_modules\rn-fetch-blob\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:27:5-79
+MERGED from [:react-native-firebase] E:\Android\Git Projects\react-native-starter\node_modules\react-native-firebase\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:17:5-79
+MERGED from [:react-native-firebase] E:\Android\Git Projects\react-native-starter\node_modules\react-native-firebase\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:17:5-79
 MERGED from [com.google.android.gms:play-services-measurement-api:16.4.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\5f8943e94be51ed1a8700cc7d22408c6\AndroidManifest.xml:23:5-79
 MERGED from [com.google.android.gms:play-services-measurement-api:16.4.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\5f8943e94be51ed1a8700cc7d22408c6\AndroidManifest.xml:23:5-79
 MERGED from [com.google.firebase:firebase-iid:17.1.2] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\69a4faa34fdbd6c7fee581c95f9f9e95\AndroidManifest.xml:22:5-79
@@ -301,20 +301,20 @@ uses-sdk
 INJECTED from E:\Android\Git Projects\react-native-starter\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from E:\Android\Git Projects\react-native-starter\android\app\src\main\AndroidManifest.xml
 INJECTED from E:\Android\Git Projects\react-native-starter\android\app\src\main\AndroidManifest.xml
-MERGED from [:react-native-push-notification] E:\Android\Git Projects\react-native-starter\node_modules\react-native-push-notification\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:7:5-9:41
-MERGED from [:react-native-push-notification] E:\Android\Git Projects\react-native-starter\node_modules\react-native-push-notification\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:7:5-9:41
-MERGED from [:react-native-firebase] E:\Android\Git Projects\react-native-starter\node_modules\react-native-firebase\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:11:5-13:41
-MERGED from [:react-native-firebase] E:\Android\Git Projects\react-native-starter\node_modules\react-native-firebase\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:11:5-13:41
-MERGED from [com.android.support:multidex:1.0.3] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\d34dc11bc7257e245b5b2437e489de4d\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:multidex:1.0.3] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\d34dc11bc7257e245b5b2437e489de4d\AndroidManifest.xml:20:5-43
 MERGED from [:rn-fetch-blob] E:\Android\Git Projects\react-native-starter\node_modules\rn-fetch-blob\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:rn-fetch-blob] E:\Android\Git Projects\react-native-starter\node_modules\rn-fetch-blob\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:7:5-9:41
-MERGED from [:react-native-fast-image] E:\Android\Git Projects\react-native-starter\node_modules\react-native-fast-image\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:7:5-9:41
-MERGED from [:react-native-fast-image] E:\Android\Git Projects\react-native-starter\node_modules\react-native-fast-image\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-vector-icons] E:\Android\Git Projects\react-native-starter\node_modules\react-native-vector-icons\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-vector-icons] E:\Android\Git Projects\react-native-starter\node_modules\react-native-vector-icons\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-firebase] E:\Android\Git Projects\react-native-starter\node_modules\react-native-firebase\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:11:5-13:41
+MERGED from [:react-native-firebase] E:\Android\Git Projects\react-native-starter\node_modules\react-native-firebase\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:11:5-13:41
+MERGED from [:react-native-fast-image] E:\Android\Git Projects\react-native-starter\node_modules\react-native-fast-image\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-fast-image] E:\Android\Git Projects\react-native-starter\node_modules\react-native-fast-image\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-config] E:\Android\Git Projects\react-native-starter\node_modules\react-native-config\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-config] E:\Android\Git Projects\react-native-starter\node_modules\react-native-config\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-push-notification] E:\Android\Git Projects\react-native-starter\node_modules\react-native-push-notification\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-push-notification] E:\Android\Git Projects\react-native-starter\node_modules\react-native-push-notification\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:multidex:1.0.3] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\d34dc11bc7257e245b5b2437e489de4d\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:multidex:1.0.3] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\d34dc11bc7257e245b5b2437e489de4d\AndroidManifest.xml:20:5-43
 MERGED from [:react-native-navigation] E:\Android\Git Projects\react-native-starter\node_modules\react-native-navigation\lib\android\app\build\intermediates\manifests\full\reactNative57_5\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-navigation] E:\Android\Git Projects\react-native-starter\node_modules\react-native-navigation\lib\android\app\build\intermediates\manifests\full\reactNative57_5\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.57.8] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\22daf19652d40aff22d6a14a91ba2e9a\AndroidManifest.xml:7:5-9:41
@@ -461,26 +461,26 @@ INJECTED from E:\Android\Git Projects\react-native-starter\android\app\src\main\
 		INJECTED from E:\Android\Git Projects\react-native-starter\android\app\src\main\AndroidManifest.xml
 		ADDED from E:\Android\Git Projects\react-native-starter\android\app\src\main\AndroidManifest.xml
 		INJECTED from E:\Android\Git Projects\react-native-starter\android\app\src\main\AndroidManifest.xml
-uses-permission#android.permission.WAKE_LOCK
-ADDED from [:react-native-firebase] E:\Android\Git Projects\react-native-starter\node_modules\react-native-firebase\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:16:5-68
-MERGED from [:rn-fetch-blob] E:\Android\Git Projects\react-native-starter\node_modules\rn-fetch-blob\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:21:5-68
-MERGED from [:rn-fetch-blob] E:\Android\Git Projects\react-native-starter\node_modules\rn-fetch-blob\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:21:5-68
-MERGED from [com.google.android.gms:play-services-measurement-api:16.4.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\5f8943e94be51ed1a8700cc7d22408c6\AndroidManifest.xml:24:5-68
-MERGED from [com.google.android.gms:play-services-measurement-api:16.4.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\5f8943e94be51ed1a8700cc7d22408c6\AndroidManifest.xml:24:5-68
-MERGED from [com.google.firebase:firebase-iid:17.1.2] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\69a4faa34fdbd6c7fee581c95f9f9e95\AndroidManifest.xml:24:5-68
-MERGED from [com.google.firebase:firebase-iid:17.1.2] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\69a4faa34fdbd6c7fee581c95f9f9e95\AndroidManifest.xml:24:5-68
-MERGED from [com.google.android.gms:play-services-measurement:16.4.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\75111d9108e8e7a3bc6c8898a042c632\AndroidManifest.xml:25:5-68
-MERGED from [com.google.android.gms:play-services-measurement:16.4.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\75111d9108e8e7a3bc6c8898a042c632\AndroidManifest.xml:25:5-68
-MERGED from [com.google.android.gms:play-services-measurement-impl:16.4.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\231d04112c97fa1830fa97af310c716a\AndroidManifest.xml:25:5-68
-MERGED from [com.google.android.gms:play-services-measurement-impl:16.4.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\231d04112c97fa1830fa97af310c716a\AndroidManifest.xml:25:5-68
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.4.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\a20a647543906c5bb70cfe8f9a0b3193\AndroidManifest.xml:25:5-68
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.4.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\a20a647543906c5bb70cfe8f9a0b3193\AndroidManifest.xml:25:5-68
-	android:name
-		ADDED from [:react-native-firebase] E:\Android\Git Projects\react-native-starter\node_modules\react-native-firebase\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:16:22-65
 uses-permission#com.android.vending.CHECK_LICENSE
 ADDED from [:rn-fetch-blob] E:\Android\Git Projects\react-native-starter\node_modules\rn-fetch-blob\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:12:5-73
 	android:name
 		ADDED from [:rn-fetch-blob] E:\Android\Git Projects\react-native-starter\node_modules\rn-fetch-blob\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:12:22-70
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [:rn-fetch-blob] E:\Android\Git Projects\react-native-starter\node_modules\rn-fetch-blob\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:21:5-68
+MERGED from [:react-native-firebase] E:\Android\Git Projects\react-native-starter\node_modules\react-native-firebase\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:16:5-68
+MERGED from [:react-native-firebase] E:\Android\Git Projects\react-native-starter\node_modules\react-native-firebase\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:16:5-68
+MERGED from [com.google.android.gms:play-services-measurement-api:16.4.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\5f8943e94be51ed1a8700cc7d22408c6\AndroidManifest.xml:24:5-68
+MERGED from [com.google.android.gms:play-services-measurement-api:16.4.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\5f8943e94be51ed1a8700cc7d22408c6\AndroidManifest.xml:24:5-68
+MERGED from [com.google.firebase:firebase-iid:17.1.2] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\69a4faa34fdbd6c7fee581c95f9f9e95\AndroidManifest.xml:24:5-68
+MERGED from [com.google.firebase:firebase-iid:17.1.2] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\69a4faa34fdbd6c7fee581c95f9f9e95\AndroidManifest.xml:24:5-68
+MERGED from [com.google.android.gms:play-services-measurement:16.4.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\75111d9108e8e7a3bc6c8898a042c632\AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement:16.4.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\75111d9108e8e7a3bc6c8898a042c632\AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-impl:16.4.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\231d04112c97fa1830fa97af310c716a\AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-impl:16.4.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\231d04112c97fa1830fa97af310c716a\AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.4.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\a20a647543906c5bb70cfe8f9a0b3193\AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.4.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\a20a647543906c5bb70cfe8f9a0b3193\AndroidManifest.xml:25:5-68
+	android:name
+		ADDED from [:rn-fetch-blob] E:\Android\Git Projects\react-native-starter\node_modules\rn-fetch-blob\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:21:22-65
 uses-permission#android.permission.ACCESS_WIFI_STATE
 ADDED from [:rn-fetch-blob] E:\Android\Git Projects\react-native-starter\node_modules\rn-fetch-blob\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:30:5-76
 	android:name

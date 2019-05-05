@@ -2,13 +2,13 @@
 import {
   call, put, takeEvery, takeLatest,
 } from 'redux-saga/effects';
-import NetworkWorker from '../../network/NetworkWorker';
+import NetworkHttpRequest from '../../network/Gateway';
 import RootActions from '../actions/RootActions';
 
 // worker Saga: will be fired on USER_FETCH_REQUESTED actions
 function* fetchAPI(action : {payload:string}) {
   try {
-    const user = yield call(NetworkWorker.get, action.payload);
+    const user = yield call(NetworkHttpRequest.get, action.payload);
     yield put({ type: 'USER_FETCH_SUCCEEDED', user });
   } catch (e) {
     yield put({ type: 'USER_FETCH_FAILED', message: e.message });

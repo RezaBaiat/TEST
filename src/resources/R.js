@@ -13,7 +13,7 @@ import animations from './Animations';
 const R = {
   strings,
   colors,
-  drawables: images,
+  images,
   styles,
   animations,
 };

@@ -3,17 +3,20 @@
 
 import NetUtils from 'react-native-dev-kit/src/utils/NetUtils';
 import RootActions from '../actions/RootActions';
+import { AVAILABLE_LANGUAGES } from '../../configs/languageProvider/IntlProviderWrapper';
 
 // Interface to just describe our variables types
 export interface InitialState {
   isNetworkAvailable : boolean,
-  data : string
+  data : string,
+  locale : string,
 }
 
 // The name tells it all , before any changes this is the default value of our state variables
 const initialState : InitialState = {
   isNetworkAvailable: NetUtils.isConnected(),
   data: 'fetching data',
+  locale: AVAILABLE_LANGUAGES[0],
 };
 
 // A reducer is the place which returns the new state , based on the type of action who has just dispatched
