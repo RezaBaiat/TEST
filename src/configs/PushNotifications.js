@@ -1,10 +1,9 @@
 // Configuration file for listening to push notifications , every thing will be handled here since there is no need to another handler
 
 import firebase, { Firebase, Notification, RNFirebase } from 'react-native-firebase';
-import { AsyncStorage } from 'react-native';
-import type { PushNotificationListenerInterface } from '../handlers/pushnotifications/PushNotificationListenerInterface';
-import GeneralPushNotificationHandler
-  from '../handlers/pushnotifications/GeneralPushNotificationHandler';
+import { AsyncStorage } from '@react-native-community/async-storage';
+import type { PushNotificationListenerInterface } from '../notifications/PushNotificationListenerInterface';
+import GeneralPushNotificationHandler from '../notifications/GeneralPushNotificationHandler';
 // eslint-disable-next-line import/no-duplicates
 
 const mFireBase : Firebase = firebase;

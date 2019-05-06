@@ -6,8 +6,16 @@ import {
 } from 'react-native';
 import { Navigation } from 'react-native-navigation';
 import SmartComponent from 'react-native-dev-kit/src/ui/SmartComponent';
-import { InitialState } from '../redux/reducers/RootReducer';
-import AppNavigator from '../routes/AppNavigator';
+import { compose } from 'redux';
+import {
+  injectIntl, intlShape, IntlProvider, addLocaleData,
+} from 'react-intl';
+import { connect } from 'react-redux';
+import { InitialState } from '../../../redux/general/GlobalReducer';
+import AppNavigator from '../../../routes/AppNavigator';
+import { Screen1 } from '../screen1/Screen1';
+import * as actions from '../../../redux/general/GlobalActions';
+import GlobalActions from '../../../redux/general/GlobalActions';
 
 export interface BaseComponentProps {
   componentId? : string,
@@ -86,24 +94,20 @@ export class BaseComponent<P : BaseComponentProps> extends SmartComponent<P> {
     } else {
       alert(`EVENT = ${nextAppState}`);
     }
+
+  };
+
+  getGlobalActions() : GlobalActions {
+    return this.props;
   }
 
 }
 
-
-/**
- * ```javascript
- *
- * export default connect(createMapStateToProps((state)=>{
-  const {isNetworkAvailable} = state.rootReducer;
-  return{
-    isNetworkAvailable
-  }
-  }))(App)
-
- ```
-*/
 // this enables IDE to detect state types , preventing typo and enabled code completion
-export function createMapStateToProps(func : (state : {rootReducer : InitialState})=>{}) {
-  return func;
+export function createCompose(mapStateToProps : (state : {rootReducer : InitialState})=>{}) {
+  const withConnect = connect(mapStateToProps, actions);
+  return compose(
+    withConnect,
+    injectIntl,
+  );
 }

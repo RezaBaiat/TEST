@@ -3,13 +3,12 @@ import {
   injectIntl, intlShape, IntlProvider, addLocaleData,
 } from 'react-intl';
 import { connect } from 'react-redux';
-import { createMapStateToProps } from '../../scenes/BaseComponent';
-import type { InitialState } from "../../redux/reducers/RootReducer";
+import type { InitialState } from '../redux/general/GlobalReducer';
 
 require('intl');
 
-const faTranslation = require('../../assets/translations/FA');
-const enTranslation = require('../../assets/translations/EN');
+const faTranslation = require('../assets/i18n/fa/FA');
+const enTranslation = require('../assets/i18n/en/EN');
 
 addLocaleData([
   ...require('react-intl/locale-data/en'),
@@ -41,9 +40,9 @@ class Locale extends PureComponent<InitialState> {
   }
 }
 
-export default connect(createMapStateToProps((state) => {
+export default connect((state) => {
   const { locale } = state.rootReducer;
   return {
     locale,
   };
-}))(Locale);
+})(Locale);

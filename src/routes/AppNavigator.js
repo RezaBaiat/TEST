@@ -25,12 +25,12 @@ export default class AppNavigator {
 
 
   static getTopScreenName() : string {
-    return mOpenScreens[mOpenScreens.length - 1].componentName;
+    return mOpenScreens.length === 0 ? null : mOpenScreens[mOpenScreens.length - 1].componentName;
   }
 
   // returns componentId of the top screen
   static getTopScreenId() : string {
-    return mOpenScreens[mOpenScreens.length - 1].componentId;
+    return mOpenScreens.length === 0 ? null : mOpenScreens[mOpenScreens.length - 1].componentId;
   }
 
   // pushes a screen to the stack

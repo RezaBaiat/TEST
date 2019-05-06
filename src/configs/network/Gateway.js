@@ -8,7 +8,6 @@ import {
   AxiosInstance, AxiosPromise, AxiosRequestConfig, AxiosResponse,
 } from 'axios';
 import CallCreator from 'react-native-dev-kit/src/network/CallCreator';
-import Configs from '../configs/Configs';
 
 export const axios : AxiosInstance = require('axios');
 

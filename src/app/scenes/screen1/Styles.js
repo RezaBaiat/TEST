@@ -1,4 +1,3 @@
-import { StyleSheet } from 'react-native';
 import { ViewStyle } from 'react-native/Libraries/StyleSheet/StyleSheet';
 
 const imageview : ViewStyle = {

@@ -1,4 +1,4 @@
-import AbstractSocket from '../network/AbstractSocket';
+import AbstractSocket from '../configs/network/SocketIO';
 import Configs from '../configs/Configs';
 
 const mSocket : AbstractSocket = new AbstractSocket(Configs.API_BASE_URL, { autoConnect: true, reconnection: true, timeout: 15000 });

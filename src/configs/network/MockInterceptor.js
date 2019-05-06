@@ -1,7 +1,7 @@
 // Simple , yet powerful Mock Interceptor
 // When initialized and in DEBUG_MODE will intercept requests on-fly
 import Configs from '../Configs';
-import { axios } from '../Gateway';
+import { axios } from './Gateway';
 
 // Check out https://github.com/ctimmerm/axios-mock-adapter for more info
 export default class MockInterceptor {

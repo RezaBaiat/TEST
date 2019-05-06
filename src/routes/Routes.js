@@ -6,14 +6,11 @@
 import { Navigation } from 'react-native-navigation';
 import { Provider } from 'react-redux';
 import { persistStore, persistCombineReducers, PersistConfig } from 'redux-persist';
-import React, { Component } from 'react';
-import { IntlProvider, addLocaleData } from 'react-intl';
-import en from 'react-intl/locale-data/en';
-import de from 'react-intl/locale-data/de';
+import React from 'react';
 import store from '../configs/redux/Store';
-import { App } from '../scenes/App';
-import Screen2 from '../scenes/Screen2';
-import IntlProviderWrapper from '../configs/languageProvider/IntlProviderWrapper';
+import { Screen1 } from '../app/scenes/screen1/Screen1';
+import Screen2 from '../app/scenes/screen2/Screen2';
+import IntlProviderWrapper from '../configs/Locale';
 
 const Providers = (props : {children : any}) => {
   const { children } = props;
@@ -41,8 +38,8 @@ export default class Routes {
     });
 
     // registers a screen with redux included
-    Navigation.registerComponentWithRedux(App.className, () => require('../scenes/App').default, Providers, store);
-    Navigation.registerComponentWithRedux(Screen2.className, () => require('../scenes/Screen2').default, Providers, store);
+    Navigation.registerComponentWithRedux(Screen1.className, () => require('../app/scenes/screen1/Screen1').default, Providers, store);
+    Navigation.registerComponentWithRedux(Screen2.className, () => require('../app/scenes/screen2/Screen2').default, Providers, store);
 
     // identifies which screen to run first when application launched
     Navigation.events().registerAppLaunchedListener(() => {
@@ -55,7 +52,7 @@ export default class Routes {
               children: [
                 {
                   component: {
-                    name: 'App',
+                    name: Screen1.className,
                   },
                 },
               ],

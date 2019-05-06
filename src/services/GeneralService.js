@@ -3,7 +3,7 @@
 // map Server response to Client Data
 
 import { AxiosPromise, AxiosResponse } from 'axios';
-import Gateway from '../Gateway';
+import Gateway from '../configs/network/Gateway';
 
 export default class GeneralService {
 

@@ -5,12 +5,11 @@
 import { I18nManager } from 'react-native';
 import NetUtils from 'react-native-dev-kit/src/utils/NetUtils';
 import Configs from './src/configs/Configs';
-import MockInterceptor from './src/network/mock/MockInterceptor';
-import Strings from './src/resources/Strings';
+import MockInterceptor from './src/configs/network/MockInterceptor';
 import LocalNotifications from './src/configs/LocalNotifications';
 import PushNotifications from './src/configs/PushNotifications';
 import Routes from './src/routes/Routes';
-import HealthCheck from './src/network/HealthCheck';
+import HealthCheck from './src/configs/network/Health';
 
 // Fix for global Symbol error!
 global.Symbol = require('core-js/es6/symbol');
