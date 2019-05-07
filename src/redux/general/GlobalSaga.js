@@ -4,7 +4,7 @@ import {
 } from 'redux-saga/effects';
 import NetworkHttpRequest from '../../configs/network/Gateway';
 import GlobalActions from './GlobalActions';
-import GlobalConstants from "./GlobalConstants";
+import GlobalConstants from './GlobalConstants';
 
 // worker Saga: will be fired on USER_FETCH_REQUESTED actions
 function* fetchAPI(action : {payload:string}) {
