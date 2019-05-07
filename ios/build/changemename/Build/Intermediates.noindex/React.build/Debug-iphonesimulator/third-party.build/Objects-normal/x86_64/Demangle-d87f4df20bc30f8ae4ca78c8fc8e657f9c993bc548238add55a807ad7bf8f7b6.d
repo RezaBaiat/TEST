@@ -1,0 +1,24 @@
+dependencies: \
+  /Users/rezabaiat/Desktop/ReactNative-Boilerplate/node_modules/react-native/third-party/folly-2018.10.22.00/folly/Demangle.cpp \
+  /Users/rezabaiat/Desktop/ReactNative-Boilerplate/node_modules/react-native/third-party/folly-2018.10.22.00/folly/Demangle.h \
+  /Users/rezabaiat/Desktop/ReactNative-Boilerplate/node_modules/react-native/third-party/folly-2018.10.22.00/folly/FBString.h \
+  /Users/rezabaiat/Desktop/ReactNative-Boilerplate/node_modules/react-native/third-party/folly-2018.10.22.00/folly/CppAttributes.h \
+  /Users/rezabaiat/Desktop/ReactNative-Boilerplate/node_modules/react-native/third-party/folly-2018.10.22.00/folly/Portability.h \
+  /Users/rezabaiat/Desktop/ReactNative-Boilerplate/node_modules/react-native/third-party/folly-2018.10.22.00/folly/portability/Config.h \
+  /Users/rezabaiat/Desktop/ReactNative-Boilerplate/node_modules/react-native/third-party/folly-2018.10.22.00/folly/CPortability.h \
+  /Users/rezabaiat/Desktop/ReactNative-Boilerplate/node_modules/react-native/third-party/folly-2018.10.22.00/folly/Traits.h \
+  /Users/rezabaiat/Desktop/ReactNative-Boilerplate/node_modules/react-native/third-party/folly-2018.10.22.00/folly/hash/Hash.h \
+  /Users/rezabaiat/Desktop/ReactNative-Boilerplate/node_modules/react-native/third-party/folly-2018.10.22.00/folly/Utility.h \
+  /Users/rezabaiat/Desktop/ReactNative-Boilerplate/node_modules/react-native/third-party/folly-2018.10.22.00/folly/functional/ApplyTuple.h \
+  /Users/rezabaiat/Desktop/ReactNative-Boilerplate/node_modules/react-native/third-party/folly-2018.10.22.00/folly/functional/Invoke.h \
+  /Users/rezabaiat/Desktop/ReactNative-Boilerplate/node_modules/react-native/third-party/folly-2018.10.22.00/folly/Preprocessor.h \
+  /Users/rezabaiat/Desktop/ReactNative-Boilerplate/node_modules/react-native/third-party/folly-2018.10.22.00/folly/hash/SpookyHashV1.h \
+  /Users/rezabaiat/Desktop/ReactNative-Boilerplate/node_modules/react-native/third-party/folly-2018.10.22.00/folly/hash/SpookyHashV2.h \
+  /Users/rezabaiat/Desktop/ReactNative-Boilerplate/node_modules/react-native/third-party/folly-2018.10.22.00/folly/lang/Bits.h \
+  /Users/rezabaiat/Desktop/ReactNative-Boilerplate/node_modules/react-native/third-party/folly-2018.10.22.00/folly/ConstexprMath.h \
+  /Users/rezabaiat/Desktop/ReactNative-Boilerplate/node_modules/react-native/third-party/folly-2018.10.22.00/folly/lang/Assume.h \
+  /Users/rezabaiat/Desktop/ReactNative-Boilerplate/node_modules/react-native/third-party/folly-2018.10.22.00/folly/portability/Builtins.h \
+  /Users/rezabaiat/Desktop/ReactNative-Boilerplate/node_modules/react-native/third-party/folly-2018.10.22.00/folly/lang/Exception.h \
+  /Users/rezabaiat/Desktop/ReactNative-Boilerplate/node_modules/react-native/third-party/folly-2018.10.22.00/folly/memory/Malloc.h \
+  /Users/rezabaiat/Desktop/ReactNative-Boilerplate/node_modules/react-native/third-party/folly-2018.10.22.00/folly/memory/detail/MallocImpl.h \
+  /Users/rezabaiat/Desktop/ReactNative-Boilerplate/node_modules/react-native/third-party/folly-2018.10.22.00/folly/detail/Demangle.h
