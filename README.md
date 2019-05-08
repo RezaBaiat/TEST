@@ -98,7 +98,7 @@ R is shortened word for Resources (Hello Android) , colors.js , drawables.js and
 yes we obviously keep our resources static too , so you can simply call them by:
 
 `<Text>{R.strings.holla}<Text/>`
-
+~~~~
 - MockInterceptor.js
 
 calling `MockInterceptor.Initialize()` - which will only work in debug mode - will replace default fetch with a simulated fetch , allowing network requests be intercepted and return mock data as needed . you can control which urls to intercept and how to responde at `MockData.js`
