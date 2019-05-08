@@ -34,6 +34,7 @@
     "babel-polyfill": "^6.26.0",
     "chai": "^4.2.0",
     "docco": "^0.8.0",
+    "enzyme": "^3.9.0",
     "es6-symbol": "^3.1.1",
     "intl": "^1.2.5",
     "invariant": "^2.2.4",
