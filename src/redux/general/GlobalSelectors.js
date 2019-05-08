@@ -1,14 +1,14 @@
 // Will contain global redux's selector if there are any
 // this might be never used but since 14k of 100k react developers around the world have starred it
 // so we definitely need it...!
-import { createSelector } from 'reselect'
+import { createSelector } from 'reselect';
 
 export default class GlobalSelectors {
 
 
 /*
 
-  # how to create a selector
+  # How to create a selector
 
 const getVisibilityFilter = (state) => state.visibilityFilter
 const getTodos = (state) => state.todos
@@ -26,7 +26,7 @@ export const getVisibleTodos = createSelector(
     }
   }
 
-  #how to use it
+  # How to use it
 
 import { connect } from 'react-redux'
 import { toggleTodo } from '../actions'
