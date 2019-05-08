@@ -2,11 +2,15 @@
 // upon network (state) change
 
 import NetUtils from 'react-native-dev-kit/src/utils/NetUtils';
-import GlobalDispatch from '../../redux/general/GlobalDispatch';
+import GlobalActions from '../../redux/general/GlobalActions';
+import store from "../redux/Store";
+
 
 
 export default class Health {
   static initialize() {
-    NetUtils.addListener(GlobalDispatch.setNetworkState);
+    NetUtils.addListener((isConnected)=>{
+      store.dispatch(new GlobalActions().networkStateChangeAction(isConnected));
+    });
   }
 }
