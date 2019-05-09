@@ -1,6 +1,5 @@
 // Will contain global redux's selector if there are any
-// this might be never used but since 14k of 100k react developers around the world have starred it
-// so we definitely need it...!
+// this might be never used but 14% of react developers use this
 import { createSelector } from 'reselect';
 
 export default class GlobalSelectors {
