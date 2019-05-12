@@ -6,4 +6,5 @@ export default class GlobalConstants {
 
   static ACTION_TEST_SAGA = 'ACTION_TEST_SAGA';
 
+  static ACTION_SET_LANGUAGE = 'ACTION_SET_LANGUAGE';
 }
