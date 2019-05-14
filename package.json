@@ -20,7 +20,7 @@
     "doc": "rm -fr ./docs && node_modules/.bin/docco {src,test}/{**/*,*,**/*/*} index.js misc/tutorials/{**/*,*} -t ./misc/template/docco.jst -c ./misc/template/docco.css && cp -r ./misc/template/public ./docs",
     "reload": "adb shell input text RR",
     "menu": "adb shell input keyevent 82",
-    "github-pages": "gh-pages-deploy",
+    "github-pages": "yarn gh-pages-deploy",
     "add_tag": "git tag v1 && git push --tags",
     "delete_tag": "git tag -d v1 && git push --delete origin v1"
   },
