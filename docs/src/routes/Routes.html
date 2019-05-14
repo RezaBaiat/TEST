@@ -2,7 +2,7 @@
 
 <html>
 <head>
-  <title>Configs.js</title>
+  <title>Routes.js</title>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <link rel="stylesheet" media="all" href="public/stylesheets/normalize.css" />
   <link rel="stylesheet" media="all" href="..\..\docco.css" />
@@ -157,7 +157,7 @@
             
             
             <li class="indent2">
-              <a class="source" href="Configs.html">
+              <a class="source" href="..\configs\Configs.html">
                 Configs.js
               </a>
             </li>
@@ -167,7 +167,7 @@
             
             
             <li class="indent2">
-              <a class="source" href="LocalNotifications.html">
+              <a class="source" href="..\configs\LocalNotifications.html">
                 LocalNotifications.js
               </a>
             </li>
@@ -177,7 +177,7 @@
             
             
             <li class="indent2">
-              <a class="source" href="Permissions.html">
+              <a class="source" href="..\configs\Permissions.html">
                 Permissions.js
               </a>
             </li>
@@ -187,7 +187,7 @@
             
             
             <li class="indent2">
-              <a class="source" href="PushNotifications.html">
+              <a class="source" href="..\configs\PushNotifications.html">
                 PushNotifications.js
               </a>
             </li>
@@ -209,7 +209,7 @@
             
             
             <li class="indent3">
-              <a class="source" href="languageProvider\actions.html">
+              <a class="source" href="..\configs\languageProvider\actions.html">
                 actions.js
               </a>
             </li>
@@ -219,7 +219,7 @@
             
             
             <li class="indent3">
-              <a class="source" href="languageProvider\constants.html">
+              <a class="source" href="..\configs\languageProvider\constants.html">
                 constants.js
               </a>
             </li>
@@ -229,7 +229,7 @@
             
             
             <li class="indent3">
-              <a class="source" href="languageProvider\index.html">
+              <a class="source" href="..\configs\languageProvider\index.html">
                 index.js
               </a>
             </li>
@@ -239,7 +239,7 @@
             
             
             <li class="indent3">
-              <a class="source" href="languageProvider\reducer.html">
+              <a class="source" href="..\configs\languageProvider\reducer.html">
                 reducer.js
               </a>
             </li>
@@ -249,7 +249,7 @@
             
             
             <li class="indent3">
-              <a class="source" href="languageProvider\selectors.html">
+              <a class="source" href="..\configs\languageProvider\selectors.html">
                 selectors.js
               </a>
             </li>
@@ -271,7 +271,7 @@
             
             
             <li class="indent3">
-              <a class="source" href="redux\Store.html">
+              <a class="source" href="..\configs\redux\Store.html">
                 Store.js
               </a>
             </li>
@@ -633,7 +633,7 @@
             
             
             <li class="indent2">
-              <a class="source" href="..\routes\AppNavigator.html">
+              <a class="source" href="AppNavigator.html">
                 AppNavigator.js
               </a>
             </li>
@@ -643,7 +643,7 @@
             
             
             <li class="indent2">
-              <a class="source" href="..\routes\Routes.html">
+              <a class="source" href="Routes.html">
                 Routes.js
               </a>
             </li>
@@ -742,28 +742,79 @@
     <div class="page">
       <div class="header">
         
-          <h1>Configs.js</h1>
+          <h1>Routes.js</h1>
         
       </div>
 
       
         
-        <p>This class creates a reference to the variables available in .env.staging or .env.production
-based on the build variant used to run the application</p>
+        <p>Class which registers all screens and identifies which screen to run first when app started
+it also sets default options for navigates</p>
 
         
           <div class='highlight'><pre>
-<span class="hljs-keyword">import</span> Config <span class="hljs-keyword">from</span> <span class="hljs-string">'react-native-config'</span>;
+<span class="hljs-keyword">import</span> { Navigation } <span class="hljs-keyword">from</span> <span class="hljs-string">'react-native-navigation'</span>;
+<span class="hljs-keyword">import</span> { Provider } <span class="hljs-keyword">from</span> <span class="hljs-string">'react-redux'</span>;
+<span class="hljs-keyword">import</span> { persistStore, persistCombineReducers, PersistConfig } <span class="hljs-keyword">from</span> <span class="hljs-string">'redux-persist'</span>;
+<span class="hljs-keyword">import</span> store <span class="hljs-keyword">from</span> <span class="hljs-string">'../configs/redux/Store'</span>;
+<span class="hljs-keyword">import</span> { App } <span class="hljs-keyword">from</span> <span class="hljs-string">'../scenes/App'</span>;
 
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Configs</span> </span>{
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Routes</span> </span>{
 
-  <span class="hljs-keyword">static</span> API_BASE_URL = Config.API_BASE_URL;
+  <span class="hljs-keyword">static</span> registerScreens() {</pre></div>
+        
+      
+        
+        <p>default options for <a href="https://github.com/wix/react-native-navigation">react-native-navigation-v2</a></p>
 
-  <span class="hljs-keyword">static</span> IS_DEBUG = Config.IS_DEBUG === <span class="hljs-string">'true'</span>;
+        
+          <div class='highlight'><pre>    Navigation.setDefaultOptions({
+      <span class="hljs-attr">topBar</span>: {
+        <span class="hljs-attr">visible</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">drawBehind</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">animate</span>: <span class="hljs-literal">false</span>,
+      },
+    });</pre></div>
+        
+      
+        
+        <p>registers a screen with redux included</p>
 
-  <span class="hljs-keyword">static</span> MOCK_ENABLED = Config.MOCK_ENABLED &amp;&amp; Config.MOCK_ENABLED === <span class="hljs-string">'true'</span>;
+        
+          <div class='highlight'><pre>    Navigation.registerComponentWithRedux(App.className, () =&gt; <span class="hljs-built_in">require</span>(<span class="hljs-string">'../scenes/App'</span>).default, Provider, store);</pre></div>
+        
+      
+        
+        <p>identifies which screen to run first when application launched</p>
 
-  <span class="hljs-keyword">static</span> ROLLBAR_ACCESS_TOKEN = Config.ROLL_BAR_ID;
+        
+          <div class='highlight'><pre>    Navigation.events().registerAppLaunchedListener(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {</pre></div>
+        
+      
+        
+        <p>since we are using redux-persist , we have to wait for it to load data from DB into our redux state</p>
+
+        
+          <div class='highlight'><pre>      persistStore(store, <span class="hljs-literal">null</span>, () =&gt; {
+        Navigation.setRoot({
+          <span class="hljs-attr">root</span>: {
+            <span class="hljs-attr">stack</span>: {
+              <span class="hljs-attr">id</span>: <span class="hljs-string">'App'</span>,
+              <span class="hljs-attr">children</span>: [
+                {
+                  <span class="hljs-attr">component</span>: {
+                    <span class="hljs-attr">name</span>: <span class="hljs-string">'App'</span>,
+                  },
+                },
+              ],
+            },
+          },
+        });
+      });
+
+    });
+  }
+
 }</pre></div>
         
       
