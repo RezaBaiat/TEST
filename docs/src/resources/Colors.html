@@ -2,7 +2,7 @@
 
 <html>
 <head>
-  <title>Configs.js</title>
+  <title>Colors.js</title>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <link rel="stylesheet" media="all" href="public/stylesheets/normalize.css" />
   <link rel="stylesheet" media="all" href="..\..\docco.css" />
@@ -161,7 +161,7 @@
             
             
             <li class="indent2">
-              <a class="source" href="Configs.html">
+              <a class="source" href="..\configs\Configs.html">
                 Configs.js
               </a>
             </li>
@@ -171,7 +171,7 @@
             
             
             <li class="indent2">
-              <a class="source" href="LocalNotifications.html">
+              <a class="source" href="..\configs\LocalNotifications.html">
                 LocalNotifications.js
               </a>
             </li>
@@ -181,7 +181,7 @@
             
             
             <li class="indent2">
-              <a class="source" href="Locale.html">
+              <a class="source" href="..\configs\Locale.html">
                 Locale.js
               </a>
             </li>
@@ -191,7 +191,7 @@
             
             
             <li class="indent2">
-              <a class="source" href="Permission.html">
+              <a class="source" href="..\configs\Permission.html">
                 Permission.js
               </a>
             </li>
@@ -201,7 +201,7 @@
             
             
             <li class="indent2">
-              <a class="source" href="PushNotifications.html">
+              <a class="source" href="..\configs\PushNotifications.html">
                 PushNotifications.js
               </a>
             </li>
@@ -223,7 +223,7 @@
             
             
             <li class="indent3">
-              <a class="source" href="network\Gateway.html">
+              <a class="source" href="..\configs\network\Gateway.html">
                 Gateway.js
               </a>
             </li>
@@ -233,7 +233,7 @@
             
             
             <li class="indent3">
-              <a class="source" href="network\Health.html">
+              <a class="source" href="..\configs\network\Health.html">
                 Health.js
               </a>
             </li>
@@ -243,7 +243,7 @@
             
             
             <li class="indent3">
-              <a class="source" href="network\Security.html">
+              <a class="source" href="..\configs\network\Security.html">
                 Security.js
               </a>
             </li>
@@ -253,7 +253,7 @@
             
             
             <li class="indent3">
-              <a class="source" href="network\Socket.html">
+              <a class="source" href="..\configs\network\Socket.html">
                 Socket.js
               </a>
             </li>
@@ -275,7 +275,7 @@
             
             
             <li class="indent3">
-              <a class="source" href="redux\Store.html">
+              <a class="source" href="..\configs\redux\Store.html">
                 Store.js
               </a>
             </li>
@@ -439,7 +439,7 @@
             
             
             <li class="indent2">
-              <a class="source" href="..\resources\Animations.html">
+              <a class="source" href="Animations.html">
                 Animations.js
               </a>
             </li>
@@ -449,7 +449,7 @@
             
             
             <li class="indent2">
-              <a class="source" href="..\resources\Colors.html">
+              <a class="source" href="Colors.html">
                 Colors.js
               </a>
             </li>
@@ -459,7 +459,7 @@
             
             
             <li class="indent2">
-              <a class="source" href="..\resources\Images.html">
+              <a class="source" href="Images.html">
                 Images.js
               </a>
             </li>
@@ -469,7 +469,7 @@
             
             
             <li class="indent2">
-              <a class="source" href="..\resources\R.html">
+              <a class="source" href="R.html">
                 R.js
               </a>
             </li>
@@ -479,7 +479,7 @@
             
             
             <li class="indent2">
-              <a class="source" href="..\resources\Strings.html">
+              <a class="source" href="Strings.html">
                 Strings.js
               </a>
             </li>
@@ -489,7 +489,7 @@
             
             
             <li class="indent2">
-              <a class="source" href="..\resources\Styles.html">
+              <a class="source" href="Styles.html">
                 Styles.js
               </a>
             </li>
@@ -598,28 +598,22 @@
     <div class="page">
       <div class="header">
         
-          <h1>Configs.js</h1>
+          <h1>Colors.js</h1>
         
       </div>
 
       
         
-        <p>This class creates a reference to the variables available in .env.staging or .env.production
-based on the build variant used to run the application</p>
+        <p>References to app’s used colors</p>
 
         
           <div class='highlight'><pre>
-<span class="hljs-keyword">import</span> Config <span class="hljs-keyword">from</span> <span class="hljs-string">'react-native-config'</span>;
+<span class="hljs-comment">/* eslint-disable */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Colors</span> </span>{
 
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Configs</span> </span>{
-
-  <span class="hljs-keyword">static</span> API_BASE_URL = Config.API_BASE_URL;
-
-  <span class="hljs-keyword">static</span> IS_DEBUG = Config.IS_DEBUG === <span class="hljs-string">'true'</span>;
-
-  <span class="hljs-keyword">static</span> MOCK_ENABLED = Config.MOCK_ENABLED &amp;&amp; Config.MOCK_ENABLED === <span class="hljs-string">'true'</span>;
-
-  <span class="hljs-keyword">static</span> ROLLBAR_ACCESS_TOKEN = Config.ROLL_BAR_ID;
+    <span class="hljs-keyword">static</span> colorPrimary = <span class="hljs-string">'#019201'</span>;
+    <span class="hljs-keyword">static</span> colorSecondary = <span class="hljs-string">'#019201'</span>;
+    <span class="hljs-keyword">static</span> white = <span class="hljs-string">'#ffffff'</span>;
 }</pre></div>
         
       
