@@ -1,7 +1,7 @@
 // Convenient class responsible for all screen navigations and
 // containing static methods to be called from any class outside
 
-import { Navigation } from 'react-native-navigation';
+import { Navigation, Options } from 'react-native-navigation';
 
 const mOpenScreens : {componentId : string, componentName : string}[] = [];
 
@@ -34,10 +34,11 @@ export default class AppNavigator {
   }
 
   // pushes a screen to the stack
-  static navigateTo(component : string, props? : {}) {
+  static navigateTo(component : string, props? : {}, options? : Options) {
     Navigation.push(this.getTopScreenId(), {
       component: {
         name: component,
+        options,
         passProps: props,
       },
     });

@@ -15,7 +15,6 @@ import { InitialState } from '../../../redux/general/GlobalReducer';
 import AppNavigator from '../../../routes/AppNavigator';
 import { Screen1 } from '../screen1/Screen1';
 import * as actions from '../../../redux/general/GlobalActions';
-import GlobalActions from '../../../redux/general/GlobalActions';
 
 export interface BaseComponentProps {
   componentId? : string,
@@ -97,15 +96,15 @@ export class BaseComponent<P : BaseComponentProps> extends SmartComponent<P> {
 
   };
 
-  getGlobalActions() : GlobalActions {
-    return this.props;
-  }
+}
 
+function mapDispatchToProps(dispatch) {
+  return { ...actions, dispatch };
 }
 
 // this enables IDE to detect state types , preventing typo and enabled code completion
 export function createCompose(mapStateToProps : (state : {rootReducer : InitialState})=>{}) {
-  const withConnect = connect(mapStateToProps, actions);
+  const withConnect = connect(mapStateToProps, mapDispatchToProps);
   return compose(
     withConnect,
     injectIntl,

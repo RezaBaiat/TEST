@@ -34,6 +34,11 @@ const reducer = (state = initialState, action: { type: any;payload:any }) => {
         ...state,
         data: action.payload,
       };
+    case GlobalConstants.ACTION_SET_LANGUAGE:
+      return {
+        ...state,
+        locale: action.payload,
+      };
 
     default:
       return state;

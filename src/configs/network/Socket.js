@@ -19,9 +19,9 @@ export interface ManagerOptions{
 }
 // Please see @https://github.com/socketio/socket.io-client/blob/master/docs/API.md#initialization-examples for more informations
 // and docs at @https://socket.io/docs
-export default class SocketIO {
+export default class Socket {
 
-  socket : SocketIO;
+  socket : Socket;
 
 
   /**

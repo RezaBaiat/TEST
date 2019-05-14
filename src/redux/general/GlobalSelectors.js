@@ -5,7 +5,7 @@ import { createSelector } from 'reselect';
 export default class GlobalSelectors {
 
 
-/*
+  /*
 
   # How to create a selector
 
@@ -56,6 +56,6 @@ export default VisibleTodoList
 
 Each VisibleTodoList container should select a different slice of the state depending on the value of the listId prop
 
-)*/
-  
+) */
+
 }

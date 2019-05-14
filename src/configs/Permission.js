@@ -2,7 +2,7 @@
 // will be used by [PermissionsHandler](../handlers/PermissionsHandler.html)
 import { PermissionsAndroid } from 'react-native';
 
-export default class Permissions {
+export default class Permission {
 
   static permissions = [
     PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
