@@ -2,7 +2,7 @@
 
 <html>
 <head>
-  <title>Configs.js</title>
+  <title>AppNavigator.js</title>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <link rel="stylesheet" media="all" href="public/stylesheets/normalize.css" />
   <link rel="stylesheet" media="all" href="..\..\docco.css" />
@@ -161,7 +161,7 @@
             
             
             <li class="indent2">
-              <a class="source" href="Configs.html">
+              <a class="source" href="..\configs\Configs.html">
                 Configs.js
               </a>
             </li>
@@ -171,7 +171,7 @@
             
             
             <li class="indent2">
-              <a class="source" href="LocalNotifications.html">
+              <a class="source" href="..\configs\LocalNotifications.html">
                 LocalNotifications.js
               </a>
             </li>
@@ -181,7 +181,7 @@
             
             
             <li class="indent2">
-              <a class="source" href="Locale.html">
+              <a class="source" href="..\configs\Locale.html">
                 Locale.js
               </a>
             </li>
@@ -191,7 +191,7 @@
             
             
             <li class="indent2">
-              <a class="source" href="Permission.html">
+              <a class="source" href="..\configs\Permission.html">
                 Permission.js
               </a>
             </li>
@@ -201,7 +201,7 @@
             
             
             <li class="indent2">
-              <a class="source" href="PushNotifications.html">
+              <a class="source" href="..\configs\PushNotifications.html">
                 PushNotifications.js
               </a>
             </li>
@@ -223,7 +223,7 @@
             
             
             <li class="indent3">
-              <a class="source" href="network\Gateway.html">
+              <a class="source" href="..\configs\network\Gateway.html">
                 Gateway.js
               </a>
             </li>
@@ -233,7 +233,7 @@
             
             
             <li class="indent3">
-              <a class="source" href="network\Health.html">
+              <a class="source" href="..\configs\network\Health.html">
                 Health.js
               </a>
             </li>
@@ -243,7 +243,7 @@
             
             
             <li class="indent3">
-              <a class="source" href="network\Security.html">
+              <a class="source" href="..\configs\network\Security.html">
                 Security.js
               </a>
             </li>
@@ -253,7 +253,7 @@
             
             
             <li class="indent3">
-              <a class="source" href="network\Socket.html">
+              <a class="source" href="..\configs\network\Socket.html">
                 Socket.js
               </a>
             </li>
@@ -275,7 +275,7 @@
             
             
             <li class="indent3">
-              <a class="source" href="redux\Store.html">
+              <a class="source" href="..\configs\redux\Store.html">
                 Store.js
               </a>
             </li>
@@ -509,7 +509,7 @@
             
             
             <li class="indent2">
-              <a class="source" href="..\routes\AppNavigator.html">
+              <a class="source" href="AppNavigator.html">
                 AppNavigator.js
               </a>
             </li>
@@ -519,7 +519,7 @@
             
             
             <li class="indent2">
-              <a class="source" href="..\routes\Routes.html">
+              <a class="source" href="Routes.html">
                 Routes.js
               </a>
             </li>
@@ -598,28 +598,110 @@
     <div class="page">
       <div class="header">
         
-          <h1>Configs.js</h1>
+          <h1>AppNavigator.js</h1>
         
       </div>
 
       
         
-        <p>This class creates a reference to the variables available in .env.staging or .env.production
-based on the build variant used to run the application</p>
+        <p>Convenient class responsible for all screen navigations and
+containing static methods to be called from any class outside</p>
 
         
           <div class='highlight'><pre>
-<span class="hljs-keyword">import</span> Config <span class="hljs-keyword">from</span> <span class="hljs-string">'react-native-config'</span>;
+<span class="hljs-keyword">import</span> { Navigation, Options } <span class="hljs-keyword">from</span> <span class="hljs-string">'react-native-navigation'</span>;
 
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Configs</span> </span>{
+<span class="hljs-keyword">const</span> mOpenScreens : {<span class="hljs-attr">componentId</span> : string, <span class="hljs-attr">componentName</span> : string}[] = [];
 
-  <span class="hljs-keyword">static</span> API_BASE_URL = Config.API_BASE_URL;
+Navigation.events().registerComponentDidDisappearListener(<span class="hljs-function">(<span class="hljs-params">component</span>) =&gt;</span> {
+  mOpenScreens.forEach(<span class="hljs-function">(<span class="hljs-params">value, index</span>) =&gt;</span> {
+    <span class="hljs-keyword">if</span> (value.componentId === component.componentId) {
+      mOpenScreens.splice(index, <span class="hljs-number">1</span>);
+    }
+  });
+});
 
-  <span class="hljs-keyword">static</span> IS_DEBUG = Config.IS_DEBUG === <span class="hljs-string">'true'</span>;
+Navigation.events().registerComponentDidAppearListener(<span class="hljs-function">(<span class="hljs-params">component</span>) =&gt;</span> {
+  mOpenScreens.push({
+    <span class="hljs-attr">componentId</span>: component.componentId,
+    <span class="hljs-attr">componentName</span>: component.componentName,
+  });
+});
 
-  <span class="hljs-keyword">static</span> MOCK_ENABLED = Config.MOCK_ENABLED &amp;&amp; Config.MOCK_ENABLED === <span class="hljs-string">'true'</span>;
 
-  <span class="hljs-keyword">static</span> ROLLBAR_ACCESS_TOKEN = Config.ROLL_BAR_ID;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AppNavigator</span> </span>{
+
+
+  <span class="hljs-keyword">static</span> getTopScreenName() : string {
+    <span class="hljs-keyword">return</span> mOpenScreens.length === <span class="hljs-number">0</span> ? <span class="hljs-literal">null</span> : mOpenScreens[mOpenScreens.length - <span class="hljs-number">1</span>].componentName;
+  }</pre></div>
+        
+      
+        
+        <p>returns componentId of the top screen</p>
+
+        
+          <div class='highlight'><pre>  <span class="hljs-keyword">static</span> getTopScreenId() : string {
+    <span class="hljs-keyword">return</span> mOpenScreens.length === <span class="hljs-number">0</span> ? <span class="hljs-literal">null</span> : mOpenScreens[mOpenScreens.length - <span class="hljs-number">1</span>].componentId;
+  }</pre></div>
+        
+      
+        
+        <p>pushes a screen to the stack</p>
+
+        
+          <div class='highlight'><pre>  <span class="hljs-keyword">static</span> navigateTo(component : string, props? : {}, options? : Options) {
+    Navigation.push(<span class="hljs-keyword">this</span>.getTopScreenId(), {
+      <span class="hljs-attr">component</span>: {
+        <span class="hljs-attr">name</span>: component,
+        options,
+        <span class="hljs-attr">passProps</span>: props,
+      },
+    });
+  }</pre></div>
+        
+      
+        
+        <p>clears stack and sets the root</p>
+
+        
+          <div class='highlight'><pre>  <span class="hljs-keyword">static</span> setRoot(component : string, props? : {}) {
+    Navigation.setRoot({
+      <span class="hljs-attr">root</span>: {
+        <span class="hljs-attr">stack</span>: {
+          <span class="hljs-attr">id</span>: <span class="hljs-string">'App'</span>,
+          <span class="hljs-attr">children</span>: [
+            {
+              <span class="hljs-attr">component</span>: {
+                <span class="hljs-attr">name</span>: component,
+                <span class="hljs-attr">passProps</span>: props,
+              },
+            },
+          ],
+        },
+      },
+    });
+  }</pre></div>
+        
+      
+        
+        <p>returns name of top screen</p>
+
+        
+          <div class='highlight'><pre>  <span class="hljs-keyword">static</span> getActiveScreenByName(componentName : string) : {<span class="hljs-attr">componentId</span> : string, <span class="hljs-attr">componentName</span> : string} {
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> component <span class="hljs-keyword">of</span> mOpenScreens) {
+      <span class="hljs-keyword">if</span> (component.componentName === componentName) {
+        <span class="hljs-keyword">return</span> component;
+      }
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+  }
+
+
+  <span class="hljs-keyword">static</span> goBack(componentId : string) : <span class="hljs-built_in">Promise</span>&lt;any&gt; {
+    <span class="hljs-keyword">return</span> Navigation.pop(componentId);
+  }
+
 }</pre></div>
         
       

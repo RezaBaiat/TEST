@@ -2,7 +2,7 @@
 
 <html>
 <head>
-  <title>Configs.js</title>
+  <title>Routes.js</title>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <link rel="stylesheet" media="all" href="public/stylesheets/normalize.css" />
   <link rel="stylesheet" media="all" href="..\..\docco.css" />
@@ -161,7 +161,7 @@
             
             
             <li class="indent2">
-              <a class="source" href="Configs.html">
+              <a class="source" href="..\configs\Configs.html">
                 Configs.js
               </a>
             </li>
@@ -171,7 +171,7 @@
             
             
             <li class="indent2">
-              <a class="source" href="LocalNotifications.html">
+              <a class="source" href="..\configs\LocalNotifications.html">
                 LocalNotifications.js
               </a>
             </li>
@@ -181,7 +181,7 @@
             
             
             <li class="indent2">
-              <a class="source" href="Locale.html">
+              <a class="source" href="..\configs\Locale.html">
                 Locale.js
               </a>
             </li>
@@ -191,7 +191,7 @@
             
             
             <li class="indent2">
-              <a class="source" href="Permission.html">
+              <a class="source" href="..\configs\Permission.html">
                 Permission.js
               </a>
             </li>
@@ -201,7 +201,7 @@
             
             
             <li class="indent2">
-              <a class="source" href="PushNotifications.html">
+              <a class="source" href="..\configs\PushNotifications.html">
                 PushNotifications.js
               </a>
             </li>
@@ -223,7 +223,7 @@
             
             
             <li class="indent3">
-              <a class="source" href="network\Gateway.html">
+              <a class="source" href="..\configs\network\Gateway.html">
                 Gateway.js
               </a>
             </li>
@@ -233,7 +233,7 @@
             
             
             <li class="indent3">
-              <a class="source" href="network\Health.html">
+              <a class="source" href="..\configs\network\Health.html">
                 Health.js
               </a>
             </li>
@@ -243,7 +243,7 @@
             
             
             <li class="indent3">
-              <a class="source" href="network\Security.html">
+              <a class="source" href="..\configs\network\Security.html">
                 Security.js
               </a>
             </li>
@@ -253,7 +253,7 @@
             
             
             <li class="indent3">
-              <a class="source" href="network\Socket.html">
+              <a class="source" href="..\configs\network\Socket.html">
                 Socket.js
               </a>
             </li>
@@ -275,7 +275,7 @@
             
             
             <li class="indent3">
-              <a class="source" href="redux\Store.html">
+              <a class="source" href="..\configs\redux\Store.html">
                 Store.js
               </a>
             </li>
@@ -509,7 +509,7 @@
             
             
             <li class="indent2">
-              <a class="source" href="..\routes\AppNavigator.html">
+              <a class="source" href="AppNavigator.html">
                 AppNavigator.js
               </a>
             </li>
@@ -519,7 +519,7 @@
             
             
             <li class="indent2">
-              <a class="source" href="..\routes\Routes.html">
+              <a class="source" href="Routes.html">
                 Routes.js
               </a>
             </li>
@@ -598,28 +598,97 @@
     <div class="page">
       <div class="header">
         
-          <h1>Configs.js</h1>
+          <h1>Routes.js</h1>
         
       </div>
 
       
         
-        <p>This class creates a reference to the variables available in .env.staging or .env.production
-based on the build variant used to run the application</p>
+        <p>Class which registers all screens and identifies which screen to run first when app started
+it also sets default options for navigates
+literally copy pasted from <a href="https://github.com/react-boilerplate/react-boilerplate/tree/master/app/containers/LanguageProvider">https://github.com/react-boilerplate/react-boilerplate/tree/master/app/containers/LanguageProvider</a>
+…</p>
 
         
           <div class='highlight'><pre>
-<span class="hljs-keyword">import</span> Config <span class="hljs-keyword">from</span> <span class="hljs-string">'react-native-config'</span>;
+<span class="hljs-keyword">import</span> { Navigation } <span class="hljs-keyword">from</span> <span class="hljs-string">'react-native-navigation'</span>;
+<span class="hljs-keyword">import</span> { Provider } <span class="hljs-keyword">from</span> <span class="hljs-string">'react-redux'</span>;
+<span class="hljs-keyword">import</span> { persistStore, persistCombineReducers, PersistConfig } <span class="hljs-keyword">from</span> <span class="hljs-string">'redux-persist'</span>;
+<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+<span class="hljs-keyword">import</span> store <span class="hljs-keyword">from</span> <span class="hljs-string">'../configs/redux/Store'</span>;
+<span class="hljs-keyword">import</span> { Screen1 } <span class="hljs-keyword">from</span> <span class="hljs-string">'../app/scenes/screen1/Screen1'</span>;
+<span class="hljs-keyword">import</span> Screen2 <span class="hljs-keyword">from</span> <span class="hljs-string">'../app/scenes/screen2/Screen2'</span>;
+<span class="hljs-keyword">import</span> IntlProviderWrapper <span class="hljs-keyword">from</span> <span class="hljs-string">'../configs/Locale'</span>;
 
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Configs</span> </span>{
+<span class="hljs-keyword">const</span> Providers = <span class="hljs-function">(<span class="hljs-params">props : {children : any}</span>) =&gt;</span> {
+  <span class="hljs-keyword">const</span> { children } = props;
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Provider</span> <span class="hljs-attr">store</span>=<span class="hljs-string">{store}</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">IntlProviderWrapper</span>&gt;</span>
+        {children}
+      <span class="hljs-tag">&lt;/<span class="hljs-name">IntlProviderWrapper</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">Provider</span>&gt;</span></span>
+  );
+};
 
-  <span class="hljs-keyword">static</span> API_BASE_URL = Config.API_BASE_URL;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Routes</span> </span>{
 
-  <span class="hljs-keyword">static</span> IS_DEBUG = Config.IS_DEBUG === <span class="hljs-string">'true'</span>;
 
-  <span class="hljs-keyword">static</span> MOCK_ENABLED = Config.MOCK_ENABLED &amp;&amp; Config.MOCK_ENABLED === <span class="hljs-string">'true'</span>;
+  <span class="hljs-keyword">static</span> registerScreens() {</pre></div>
+        
+      
+        
+        <p>registers a screen with redux included</p>
 
-  <span class="hljs-keyword">static</span> ROLLBAR_ACCESS_TOKEN = Config.ROLL_BAR_ID;
+        
+          <div class='highlight'><pre>    Navigation.registerComponentWithRedux(Screen1.className, () =&gt; <span class="hljs-built_in">require</span>(<span class="hljs-string">'../app/scenes/screen1/Screen1'</span>).default, Providers, store);
+    Navigation.registerComponentWithRedux(Screen2.className, () =&gt; <span class="hljs-built_in">require</span>(<span class="hljs-string">'../app/scenes/screen2/Screen2'</span>).default, Providers, store);</pre></div>
+        
+      
+        
+        <p>identifies which screen to run first when application launched</p>
+
+        
+          <div class='highlight'><pre>    Navigation.events().registerAppLaunchedListener(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {</pre></div>
+        
+      
+        
+        <p>default options for <a href="https://github.com/wix/react-native-navigation">react-native-navigation-v2</a></p>
+
+        
+          <div class='highlight'><pre>      Navigation.setDefaultOptions({
+        <span class="hljs-attr">topBar</span>: {
+          <span class="hljs-attr">visible</span>: <span class="hljs-literal">false</span>,
+          <span class="hljs-attr">drawBehind</span>: <span class="hljs-literal">true</span>,
+          <span class="hljs-attr">animate</span>: <span class="hljs-literal">false</span>,
+        },
+      });</pre></div>
+        
+      
+        
+        <p>since we are using redux-persist , we have to wait for it to load data from DB into our redux state</p>
+
+        
+          <div class='highlight'><pre>      persistStore(store, <span class="hljs-literal">null</span>, () =&gt; {
+        Navigation.setRoot({
+          <span class="hljs-attr">root</span>: {
+            <span class="hljs-attr">stack</span>: {
+              <span class="hljs-attr">id</span>: <span class="hljs-string">'App'</span>,
+              <span class="hljs-attr">children</span>: [
+                {
+                  <span class="hljs-attr">component</span>: {
+                    <span class="hljs-attr">name</span>: Screen1.className,
+                  },
+                },
+              ],
+            },
+          },
+        });
+      });
+
+    });
+  }
+
 }</pre></div>
         
       
