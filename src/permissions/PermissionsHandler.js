@@ -2,14 +2,14 @@
 // and will only return true when all permissions have been granted
 
 import PermissionsManager from 'react-native-dev-kit/src/permissions/PermissionsManager';
-import Permissions from '../configs/Permissions';
+import Permission from '../configs/Permission';
 
 export default class PermissionsHandler {
 
   // This will return true only when all permissions have been granted , other wise returns false
   static async checkPermissions() : Promise<boolean> {
 
-    for (const permission of Permissions.permissions) {
+    for (const permission of Permission.permissions) {
       if (!await PermissionsManager.requestPermission(permission)) {
         return false;
       }
