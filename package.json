@@ -16,7 +16,7 @@
     "run_mocha": "mocha",
     "run_istanbul": "istanbul cover ./node_modules/mocha/bin/_mocha",
     "flow": "flow",
-    "doc": "rm -fr ./docs && node_modules/.bin/docco {src,test}/{**/*,*,**/*/*} src/index.js misc/tutorials/{**/*,*} -t ./misc/template/docco.jst -c ./misc/template/docco.css && cp -r ./misc/template/public ./docs",
+    "doc": "rm -fr ./docs && node_modules/.bin/docco {src,test}/{**/*,*,**/*/*} index.js misc/tutorials/{**/*,*} -t ./misc/template/docco.jst -c ./misc/template/docco.css && cp -r ./misc/template/public ./docs",
     "reload": "adb shell input text RR",
     "menu": "adb shell input keyevent 82",
     "github-pages": "yarn gh-pages-deploy",
