@@ -4,5 +4,6 @@ node_modules/**/*
 android/.gradle/**/*
 android/.idea/**/*
 android/app/build/**/*
+ios/Pods/Headers/**/*
 yarn.lock
 yarn-error.log
