@@ -5,7 +5,7 @@
 import { I18nManager } from 'react-native';
 import NetUtils from 'react-native-dev-kit/src/utils/NetUtils';
 import Configs from './src/configs/Configs';
-import MockInterceptor from './src/configs/network/MockInterceptor';
+// import MockInterceptor from './src/configs/network/MockInterceptor';
 import LocalNotifications from './src/configs/LocalNotifications';
 import PushNotifications from './src/configs/PushNotifications';
 import Routes from './src/routes/Routes';
@@ -20,7 +20,7 @@ require('core-js/fn/array/find');
 
 // Initializes mock interceptor if enabled in .env.staging file
 if (Configs.MOCK_ENABLED) {
-  MockInterceptor.initialize();
+ // MockInterceptor.initialize();
 }
 // This method changes language's RTL & LTR behavior
 I18nManager.allowRTL(false);

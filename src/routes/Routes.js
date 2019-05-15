@@ -28,8 +28,6 @@ export default class Routes {
 
   static registerScreens() {
 
-
-
     // registers a screen with redux included
     Navigation.registerComponentWithRedux(Screen1.className, () => require('../app/scenes/screen1/Screen1').default, Providers, store);
     Navigation.registerComponentWithRedux(Screen2.className, () => require('../app/scenes/screen2/Screen2').default, Providers, store);
