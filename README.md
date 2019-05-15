@@ -84,7 +84,7 @@ if you want to navigate , you want to listen to navigation events, you want to g
 
 there are 2 files in the root starting with `.env` responsible for staging or production environments . 
 by default running `yarn android` will enable staging and `yarn android:prod` will run in production mode.
-then info inside the corresponding `.env` file will be copied into `BuildConfig.js` file , allowing App Configs to be served statically. info inside these files are also accessible from `gradle`
+then info inside the corresponding `.env` file will be copied into `BuildConfig.js` file , allowing App Application to be served statically. info inside these files are also accessible from `gradle`
 
 - Logger.js :
 

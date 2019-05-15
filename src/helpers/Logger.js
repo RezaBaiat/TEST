@@ -2,12 +2,12 @@
 // automatically sends defined levels to roll bar server
 
 import { Rollbar, Client, Configuration } from 'winston-transport-rollbar';
-import Configs from '../configs/Configs';
+import Application from '../configs/Application';
 
 const winston = require('winston');
 
 /*
-const rollbar = new Client(new Configuration(Configs.ROLLBAR_ACCESS_TOKEN, {
+const rollbar = new Client(new Configuration(Application.ROLLBAR_ACCESS_TOKEN, {
   payload: {
     client: {
       JavaScript: {
@@ -48,7 +48,7 @@ if (process.env.NODE_ENV !== 'production') {
   }));
 } else {
   const options = {
-    accessToken: Configs.ROLLBAR_ACCESS_TOKEN,
+    accessToken: Application.ROLLBAR_ACCESS_TOKEN,
     environment: 'production',
     reportLevel: 'error',
   };

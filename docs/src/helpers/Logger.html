@@ -162,7 +162,7 @@
             
             <li class="indent2">
               <a class="source" href="..\configs\Configs.html">
-                Configs.js
+                Application.jsn.js
               </a>
             </li>
           
@@ -610,12 +610,12 @@ automatically sends defined levels to roll bar server</p>
         
           <div class='highlight'><pre>
 <span class="hljs-keyword">import</span> { Rollbar, Client, Configuration } <span class="hljs-keyword">from</span> <span class="hljs-string">'winston-transport-rollbar'</span>;
-<span class="hljs-keyword">import</span> Configs <span class="hljs-keyword">from</span> <span class="hljs-string">'../configs/Configs'</span>;
+<span class="hljs-keyword">import</span> Application <span class="hljs-keyword">from</span> <span class="hljs-string">'../configs/Application'</span>;
 
 <span class="hljs-keyword">const</span> winston = <span class="hljs-built_in">require</span>(<span class="hljs-string">'winston'</span>);
 
 <span class="hljs-comment">/*
-const rollbar = new Client(new Configuration(Configs.ROLLBAR_ACCESS_TOKEN, {
+const rollbar = new Client(new Configuration(Application.ROLLBAR_ACCESS_TOKEN, {
   payload: {
     client: {
       JavaScript: {
@@ -669,7 +669,7 @@ const logger = winston.createLogger({
   }));
 } <span class="hljs-keyword">else</span> {
   <span class="hljs-keyword">const</span> options = {
-    <span class="hljs-attr">accessToken</span>: Configs.ROLLBAR_ACCESS_TOKEN,
+    <span class="hljs-attr">accessToken</span>: Application.ROLLBAR_ACCESS_TOKEN,
     <span class="hljs-attr">environment</span>: <span class="hljs-string">'production'</span>,
     <span class="hljs-attr">reportLevel</span>: <span class="hljs-string">'error'</span>,
   };

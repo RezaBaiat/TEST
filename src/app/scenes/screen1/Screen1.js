@@ -7,7 +7,7 @@ import {
   injectIntl, intlShape, IntlProvider, addLocaleData,
 } from 'react-intl';
 import { compose } from 'redux';
-import Configs from '../../../configs/Configs';
+import Application from '../../../configs/Application';
 import { BaseComponent, createCompose } from '../general/BaseComponent';
 import AppPermissionManager from '../../../permissions/PermissionsHandler';
 import AppButton from '../../components/appbutton/AppButton';
@@ -43,7 +43,7 @@ export class Screen1 extends BaseComponent {
       <View style={styles.root}>
         <AppButton
           onPress={() => {
-            alert(`DEBUG MODE ENABLED ? ${Configs.IS_DEBUG}`);
+            alert(`DEBUG MODE ENABLED ? ${Application.IS_DEBUG}`);
           }}
           textColor="black"
           text="Check debug mode"

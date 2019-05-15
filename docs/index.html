@@ -162,7 +162,7 @@
             
             <li class="indent2">
               <a class="source" href="src\configs\Configs.html">
-                Configs.js
+                Application.jsn.js
               </a>
             </li>
           
@@ -612,7 +612,7 @@ in configs/redux folder</p>
           <div class='highlight'><pre>
 <span class="hljs-keyword">import</span> { I18nManager } <span class="hljs-keyword">from</span> <span class="hljs-string">'react-native'</span>;
 <span class="hljs-keyword">import</span> NetUtils <span class="hljs-keyword">from</span> <span class="hljs-string">'react-native-dev-kit/src/utils/NetUtils'</span>;
-<span class="hljs-keyword">import</span> Configs <span class="hljs-keyword">from</span> <span class="hljs-string">'./src/configs/Configs'</span>;
+<span class="hljs-keyword">import</span> Application <span class="hljs-keyword">from</span> <span class="hljs-string">'./src/configs/Application'</span>;
 <span class="hljs-keyword">import</span> MockInterceptor <span class="hljs-keyword">from</span> <span class="hljs-string">'./src/configs/network/MockInterceptor'</span>;
 <span class="hljs-keyword">import</span> LocalNotifications <span class="hljs-keyword">from</span> <span class="hljs-string">'./src/configs/LocalNotifications'</span>;
 <span class="hljs-keyword">import</span> PushNotifications <span class="hljs-keyword">from</span> <span class="hljs-string">'./src/configs/PushNotifications'</span>;
@@ -635,7 +635,7 @@ in configs/redux folder</p>
         <p>Initializes mock interceptor if enabled in .env.staging file</p>
 
         
-          <div class='highlight'><pre><span class="hljs-keyword">if</span> (Configs.MOCK_ENABLED) {
+          <div class='highlight'><pre><span class="hljs-keyword">if</span> (Application.MOCK_ENABLED) {
   MockInterceptor.initialize();
 }</pre></div>
         

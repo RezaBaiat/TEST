@@ -162,7 +162,7 @@
             
             <li class="indent2">
               <a class="source" href="..\configs\Configs.html">
-                Configs.js
+                Applicationtion.js
               </a>
             </li>
           
@@ -607,9 +607,9 @@
         
         
           <div class='highlight'><pre><span class="hljs-keyword">import</span> AbstractSocket <span class="hljs-keyword">from</span> <span class="hljs-string">'../configs/network/Socket'</span>;
-<span class="hljs-keyword">import</span> Configs <span class="hljs-keyword">from</span> <span class="hljs-string">'../configs/Configs'</span>;
+<span class="hljs-keyword">import</span> Application <span class="hljs-keyword">from</span> <span class="hljs-string">'../configs/Application'</span>;
 
-<span class="hljs-keyword">const</span> mSocket : AbstractSocket = <span class="hljs-keyword">new</span> AbstractSocket(Configs.API_BASE_URL, { <span class="hljs-attr">autoConnect</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">reconnection</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">timeout</span>: <span class="hljs-number">15000</span> });
+<span class="hljs-keyword">const</span> mSocket : AbstractSocket = <span class="hljs-keyword">new</span> AbstractSocket(Application.API_BASE_URL, { <span class="hljs-attr">autoConnect</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">reconnection</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">timeout</span>: <span class="hljs-number">15000</span> });
 
 mSocket.onConnect(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
   mSocket.joinRoom(<span class="hljs-string">'myroom'</span>);

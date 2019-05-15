@@ -1,7 +1,7 @@
 import AbstractSocket from '../configs/network/Socket';
-import Configs from '../configs/Configs';
+import Application from '../configs/Application';
 
-const mSocket : AbstractSocket = new AbstractSocket(Configs.API_BASE_URL, { autoConnect: true, reconnection: true, timeout: 15000 });
+const mSocket : AbstractSocket = new AbstractSocket(Application.API_BASE_URL, { autoConnect: true, reconnection: true, timeout: 15000 });
 
 mSocket.onConnect(() => {
   mSocket.joinRoom('myroom');
