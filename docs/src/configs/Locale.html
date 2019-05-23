@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Locale.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="..\..\docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+      <ul id="jump_to">
+        <li>
+          <a class="large" href="javascript:void(0);">Jump To &hellip;</a>
+          <a class="small" href="javascript:void(0);">+</a>
+          <div id="jump_wrapper">
+          <div id="jump_page_wrapper">
+            <div id="jump_page">
+              
+                
+                <a class="source" href="..\..\index.html">
+                  index.js
+                </a>
+              
+                
+                <a class="source" href="..\assets\styles\App.html">
+                  src/assets/styles/App.js
+                </a>
+              
+                
+                <a class="source" href="..\assets\styles\Base.html">
+                  src/assets/styles/Base.js
+                </a>
+              
+                
+                <a class="source" href="..\assets\styles\Constants.html">
+                  src/assets/styles/Constants.js
+                </a>
+              
+                
+                <a class="source" href="Application.html">
+                  src/configs/Application.js
+                </a>
+              
+                
+                <a class="source" href="LocalNotifications.html">
+                  src/configs/LocalNotifications.js
+                </a>
+              
+                
+                <a class="source" href="Locale.html">
+                  src/configs/Locale.js
+                </a>
+              
+                
+                <a class="source" href="Permission.html">
+                  src/configs/Permission.js
+                </a>
+              
+                
+                <a class="source" href="PushNotifications.html">
+                  src/configs/PushNotifications.js
+                </a>
+              
+                
+                <a class="source" href="network\Gateway.html">
+                  src/configs/network/Gateway.js
+                </a>
+              
+                
+                <a class="source" href="network\Health.html">
+                  src/configs/network/Health.js
+                </a>
+              
+                
+                <a class="source" href="network\Security.html">
+                  src/configs/network/Security.js
+                </a>
+              
+                
+                <a class="source" href="network\Socket.html">
+                  src/configs/network/Socket.js
+                </a>
+              
+                
+                <a class="source" href="redux\Store.html">
+                  src/configs/redux/Store.js
+                </a>
+              
+                
+                <a class="source" href="..\helpers\Logger.html">
+                  src/helpers/Logger.js
+                </a>
+              
+                
+                <a class="source" href="..\notifications\GeneralPushNotificationHandler.html">
+                  src/notifications/GeneralPushNotificationHandler.js
+                </a>
+              
+                
+                <a class="source" href="..\notifications\LocalNotificationsHandler.html">
+                  src/notifications/LocalNotificationsHandler.js
+                </a>
+              
+                
+                <a class="source" href="..\notifications\PushNotificationListenerInterface.html">
+                  src/notifications/PushNotificationListenerInterface.js
+                </a>
+              
+                
+                <a class="source" href="..\permissions\PermissionsHandler.html">
+                  src/permissions/PermissionsHandler.js
+                </a>
+              
+                
+                <a class="source" href="..\redux\general\GlobalActions.html">
+                  src/redux/general/GlobalActions.js
+                </a>
+              
+                
+                <a class="source" href="..\redux\general\GlobalConstants.html">
+                  src/redux/general/GlobalConstants.js
+                </a>
+              
+                
+                <a class="source" href="..\redux\general\GlobalReducer.html">
+                  src/redux/general/GlobalReducer.js
+                </a>
+              
+                
+                <a class="source" href="..\redux\general\GlobalSaga.html">
+                  src/redux/general/GlobalSaga.js
+                </a>
+              
+                
+                <a class="source" href="..\redux\general\GlobalSelectors.html">
+                  src/redux/general/GlobalSelectors.js
+                </a>
+              
+                
+                <a class="source" href="..\resources\Animations.html">
+                  src/resources/Animations.js
+                </a>
+              
+                
+                <a class="source" href="..\resources\Colors.html">
+                  src/resources/Colors.js
+                </a>
+              
+                
+                <a class="source" href="..\resources\Images.html">
+                  src/resources/Images.js
+                </a>
+              
+                
+                <a class="source" href="..\resources\R.html">
+                  src/resources/R.js
+                </a>
+              
+                
+                <a class="source" href="..\resources\Strings.html">
+                  src/resources/Strings.js
+                </a>
+              
+                
+                <a class="source" href="..\routes\AppNavigator.html">
+                  src/routes/AppNavigator.js
+                </a>
+              
+                
+                <a class="source" href="..\routes\Routes.html">
+                  src/routes/Routes.js
+                </a>
+              
+                
+                <a class="source" href="..\services\GeneralService.html">
+                  src/services/GeneralService.js
+                </a>
+              
+                
+                <a class="source" href="..\socket\SocketListener.html">
+                  src/socket/SocketListener.js
+                </a>
+              
+                
+                <a class="source" href="..\..\test\App.test.html">
+                  test/App.test.js
+                </a>
+              
+                
+                <a class="source" href="..\..\test\HOWTO.html">
+                  test/HOWTO.md
+                </a>
+              
+            </div>
+          </div>
+        </li>
+      </ul>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>Locale.js</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              <p>Provider and wrapper all-in-one solution for react-intl
+this class contains available languages,their equivalent strings,
+also listens to locale state change and updates strings list
+if necessary</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>
+<span class="hljs-keyword">import</span> React, { PureComponent } <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+<span class="hljs-keyword">import</span> {
+  injectIntl, intlShape, IntlProvider, addLocaleData,
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'react-intl'</span>;
+<span class="hljs-keyword">import</span> { connect } <span class="hljs-keyword">from</span> <span class="hljs-string">'react-redux'</span>;
+<span class="hljs-keyword">import</span> type { InitialState } <span class="hljs-keyword">from</span> <span class="hljs-string">'../redux/general/GlobalReducer'</span>;
+
+<span class="hljs-built_in">require</span>(<span class="hljs-string">'intl'</span>);
+
+<span class="hljs-keyword">const</span> faTranslation = <span class="hljs-built_in">require</span>(<span class="hljs-string">'../assets/i18n/fa/FA'</span>);
+<span class="hljs-keyword">const</span> enTranslation = <span class="hljs-built_in">require</span>(<span class="hljs-string">'../assets/i18n/en/EN'</span>);
+
+addLocaleData([
+  ...require(<span class="hljs-string">'react-intl/locale-data/en'</span>),
+  ...require(<span class="hljs-string">'react-intl/locale-data/fa'</span>),
+]);
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> AVAILABLE_LANGUAGES = [<span class="hljs-string">'en'</span>, <span class="hljs-string">'fa'</span>];
+<span class="hljs-keyword">const</span> MESSAGES = [enTranslation, faTranslation];
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Locale</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">PureComponent</span>&lt;<span class="hljs-title">InitialState</span>&gt; </span>{
+
+  state = {
+    <span class="hljs-attr">children</span>: <span class="hljs-keyword">this</span>.props.children,
+  };
+
+  render() {
+    <span class="hljs-keyword">const</span> { children } = <span class="hljs-keyword">this</span>.state;
+    <span class="hljs-keyword">const</span> { locale } = <span class="hljs-keyword">this</span>.props;
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">IntlProvider</span>
+        <span class="hljs-attr">key</span>=<span class="hljs-string">{locale}</span>
+        <span class="hljs-attr">locale</span>=<span class="hljs-string">{locale}</span>
+        <span class="hljs-attr">messages</span>=<span class="hljs-string">{MESSAGES[AVAILABLE_LANGUAGES.indexOf(locale)]}</span>
+        <span class="hljs-attr">defaultLocale</span>=<span class="hljs-string">{locale}</span>
+      &gt;</span>
+        {children}
+      <span class="hljs-tag">&lt;/<span class="hljs-name">IntlProvider</span>&gt;</span></span>
+    );
+  }
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> connect(<span class="hljs-function">(<span class="hljs-params">state</span>) =&gt;</span> {
+  <span class="hljs-keyword">const</span> { locale } = state.rootReducer;
+  <span class="hljs-keyword">return</span> {
+    locale,
+  };
+})(Locale);</pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>

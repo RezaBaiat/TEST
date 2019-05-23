@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>PushNotifications.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="..\..\docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+      <ul id="jump_to">
+        <li>
+          <a class="large" href="javascript:void(0);">Jump To &hellip;</a>
+          <a class="small" href="javascript:void(0);">+</a>
+          <div id="jump_wrapper">
+          <div id="jump_page_wrapper">
+            <div id="jump_page">
+              
+                
+                <a class="source" href="..\..\index.html">
+                  index.js
+                </a>
+              
+                
+                <a class="source" href="..\assets\styles\App.html">
+                  src/assets/styles/App.js
+                </a>
+              
+                
+                <a class="source" href="..\assets\styles\Base.html">
+                  src/assets/styles/Base.js
+                </a>
+              
+                
+                <a class="source" href="..\assets\styles\Constants.html">
+                  src/assets/styles/Constants.js
+                </a>
+              
+                
+                <a class="source" href="Application.html">
+                  src/configs/Application.js
+                </a>
+              
+                
+                <a class="source" href="LocalNotifications.html">
+                  src/configs/LocalNotifications.js
+                </a>
+              
+                
+                <a class="source" href="Locale.html">
+                  src/configs/Locale.js
+                </a>
+              
+                
+                <a class="source" href="Permission.html">
+                  src/configs/Permission.js
+                </a>
+              
+                
+                <a class="source" href="PushNotifications.html">
+                  src/configs/PushNotifications.js
+                </a>
+              
+                
+                <a class="source" href="network\Gateway.html">
+                  src/configs/network/Gateway.js
+                </a>
+              
+                
+                <a class="source" href="network\Health.html">
+                  src/configs/network/Health.js
+                </a>
+              
+                
+                <a class="source" href="network\Security.html">
+                  src/configs/network/Security.js
+                </a>
+              
+                
+                <a class="source" href="network\Socket.html">
+                  src/configs/network/Socket.js
+                </a>
+              
+                
+                <a class="source" href="redux\Store.html">
+                  src/configs/redux/Store.js
+                </a>
+              
+                
+                <a class="source" href="..\helpers\Logger.html">
+                  src/helpers/Logger.js
+                </a>
+              
+                
+                <a class="source" href="..\notifications\GeneralPushNotificationHandler.html">
+                  src/notifications/GeneralPushNotificationHandler.js
+                </a>
+              
+                
+                <a class="source" href="..\notifications\LocalNotificationsHandler.html">
+                  src/notifications/LocalNotificationsHandler.js
+                </a>
+              
+                
+                <a class="source" href="..\notifications\PushNotificationListenerInterface.html">
+                  src/notifications/PushNotificationListenerInterface.js
+                </a>
+              
+                
+                <a class="source" href="..\permissions\PermissionsHandler.html">
+                  src/permissions/PermissionsHandler.js
+                </a>
+              
+                
+                <a class="source" href="..\redux\general\GlobalActions.html">
+                  src/redux/general/GlobalActions.js
+                </a>
+              
+                
+                <a class="source" href="..\redux\general\GlobalConstants.html">
+                  src/redux/general/GlobalConstants.js
+                </a>
+              
+                
+                <a class="source" href="..\redux\general\GlobalReducer.html">
+                  src/redux/general/GlobalReducer.js
+                </a>
+              
+                
+                <a class="source" href="..\redux\general\GlobalSaga.html">
+                  src/redux/general/GlobalSaga.js
+                </a>
+              
+                
+                <a class="source" href="..\redux\general\GlobalSelectors.html">
+                  src/redux/general/GlobalSelectors.js
+                </a>
+              
+                
+                <a class="source" href="..\resources\Animations.html">
+                  src/resources/Animations.js
+                </a>
+              
+                
+                <a class="source" href="..\resources\Colors.html">
+                  src/resources/Colors.js
+                </a>
+              
+                
+                <a class="source" href="..\resources\Images.html">
+                  src/resources/Images.js
+                </a>
+              
+                
+                <a class="source" href="..\resources\R.html">
+                  src/resources/R.js
+                </a>
+              
+                
+                <a class="source" href="..\resources\Strings.html">
+                  src/resources/Strings.js
+                </a>
+              
+                
+                <a class="source" href="..\routes\AppNavigator.html">
+                  src/routes/AppNavigator.js
+                </a>
+              
+                
+                <a class="source" href="..\routes\Routes.html">
+                  src/routes/Routes.js
+                </a>
+              
+                
+                <a class="source" href="..\services\GeneralService.html">
+                  src/services/GeneralService.js
+                </a>
+              
+                
+                <a class="source" href="..\socket\SocketListener.html">
+                  src/socket/SocketListener.js
+                </a>
+              
+                
+                <a class="source" href="..\..\test\App.test.html">
+                  test/App.test.js
+                </a>
+              
+                
+                <a class="source" href="..\..\test\HOWTO.html">
+                  test/HOWTO.md
+                </a>
+              
+            </div>
+          </div>
+        </li>
+      </ul>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>PushNotifications.js</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              <p>Configuration file for listening to push notifications , every thing will be handled here since there is no need to another handler</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>
+<span class="hljs-keyword">import</span> firebase, { Firebase, Notification, RNFirebase } <span class="hljs-keyword">from</span> <span class="hljs-string">'react-native-firebase'</span>;
+<span class="hljs-keyword">import</span> AsyncStorage <span class="hljs-keyword">from</span> <span class="hljs-string">'@react-native-community/async-storage'</span>;
+<span class="hljs-keyword">import</span> type { PushNotificationListenerInterface } <span class="hljs-keyword">from</span> <span class="hljs-string">'../notifications/PushNotificationListenerInterface'</span>;
+<span class="hljs-keyword">import</span> GeneralPushNotificationHandler <span class="hljs-keyword">from</span> <span class="hljs-string">'../notifications/GeneralPushNotificationHandler'</span>;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-2">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-2">&#182;</a>
+              </div>
+              <p>eslint-disable-next-line import/no-duplicates</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>
+<span class="hljs-keyword">const</span> mFireBase : Firebase = firebase;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PushNotifications</span> </span>{</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-3">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-3">&#182;</a>
+              </div>
+              <p>Notification-only messages:            These are display messages that are automatically handled by Firebase SDK. Notifications are thrown to device tray.</p>
+<p>Notification + optional data messages: These are also handled by Firebase SDK. Only difference here is when user taps on notification, your app receives payload associated with that notification.</p>
+<p>Data only messages:                    These types of notifications are handled exclusively by app. No notification is thrown on device tray unless app explicitly does so. In iOS, these types of notifications are also termed as ‘Silent Push Notifications’.</p>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-4">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-4">&#182;</a>
+              </div>
+              <p>notice :</p>
+<p>In Android, if you tap on notification when app is killed, this library won’t be able to catch title and body of notification. Therefore these attributes will be undefined in showAlert function. As a solution, you should also send title and body in data payload of notification.
+To this date, Silent Push Notifications on iOS are not supported by this library. I have already opened an issue on their repository.
+To listen for data message notifications while the app is in background or killed in Android, you need to implement Headless JS functionality. For details, please refer to this link.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>
+  <span class="hljs-keyword">static</span> notificationListener;
+
+  <span class="hljs-keyword">static</span> notificationOpenedListener;
+
+  <span class="hljs-keyword">static</span> messageListener;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-5">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-5">&#182;</a>
+              </div>
+              <p>checkout @<a href="https://rnfirebase.io/docs/v5.x.x/notifications/android">https://rnfirebase.io/docs/v5.x.x/notifications/android</a>
+also checkout @<a href="https://medium.com/@anum.amin/react-native-integrating-push-notifications-using-fcm-349fff071591">https://medium.com/@anum.amin/react-native-integrating-push-notifications-using-fcm-349fff071591</a>
+even checkout @<a href="https://medium.com/@yangnana11/how-to-set-up-firebase-notification-in-react-native-app-android-only-4920eb875eae">https://medium.com/@yangnana11/how-to-set-up-firebase-notification-in-react-native-app-android-only-4920eb875eae</a></p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>  <span class="hljs-keyword">static</span> initialize() {
+    <span class="hljs-keyword">this</span>.checkPermission();
+    <span class="hljs-keyword">this</span>.createNotificationListeners();
+  }
+
+  <span class="hljs-keyword">static</span> <span class="hljs-keyword">async</span> checkPermission() {
+    <span class="hljs-keyword">const</span> enabled = <span class="hljs-keyword">await</span> mFireBase.messaging().hasPermission();
+    <span class="hljs-keyword">if</span> (enabled) {
+      <span class="hljs-keyword">this</span>.getToken();
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-keyword">this</span>.requestPermission();
+    }
+  }
+
+  <span class="hljs-keyword">static</span> <span class="hljs-keyword">async</span> getToken() {
+    <span class="hljs-keyword">let</span> fcmToken = <span class="hljs-keyword">await</span> AsyncStorage.getItem(<span class="hljs-string">'fcmToken'</span>);
+    <span class="hljs-keyword">if</span> (!fcmToken) {
+      fcmToken = <span class="hljs-keyword">await</span> mFireBase.messaging().getToken();
+      <span class="hljs-keyword">if</span> (fcmToken) {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-6">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-6">&#182;</a>
+              </div>
+              <p>user has a device token</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>        <span class="hljs-keyword">await</span> AsyncStorage.setItem(<span class="hljs-string">'fcmToken'</span>, fcmToken);
+      }
+    }
+  }
+
+  <span class="hljs-keyword">static</span> <span class="hljs-keyword">async</span> requestPermission() {
+    <span class="hljs-keyword">try</span> {
+      <span class="hljs-keyword">await</span> mFireBase.messaging().requestPermission();</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-7">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-7">&#182;</a>
+              </div>
+              <p>User has authorised</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>      <span class="hljs-keyword">this</span>.getToken();
+    } <span class="hljs-keyword">catch</span> (error) {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-8">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-8">&#182;</a>
+              </div>
+              <p>User has rejected permissions</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'permission rejected'</span>);
+    }
+  }
+
+
+  <span class="hljs-keyword">static</span> <span class="hljs-keyword">async</span> createNotificationListeners() {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-9">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-9">&#182;</a>
+              </div>
+              <p>Triggered when a particular notification has been received in foreground</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">this</span>.notificationListener = mFireBase.notifications().onNotification(<span class="hljs-function">(<span class="hljs-params">notification : Notification</span>) =&gt;</span> {
+      <span class="hljs-keyword">this</span>.getNotificationHandler(notification).onNotification(notification);
+    });</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-10">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-10">&#182;</a>
+              </div>
+              <p>If your app is in background, you can listen for when a notification is clicked / tapped / opened as follows:</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">this</span>.notificationOpenedListener = mFireBase.notifications().onNotificationOpened(<span class="hljs-function">(<span class="hljs-params">notificationOpen : RNFirebase.notifications.NotificationOpen</span>) =&gt;</span> {
+      <span class="hljs-keyword">this</span>.getNotificationHandler(notificationOpen.notification).onNotificationOpened(notificationOpen);
+    });</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-11">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-11">&#182;</a>
+              </div>
+              <p>If your app is closed, you can check if it was opened by a notification being clicked / tapped / opened as follows:</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">const</span> notificationOpen = <span class="hljs-keyword">await</span> mFireBase.notifications().getInitialNotification();
+    <span class="hljs-keyword">if</span> (notificationOpen) {
+      <span class="hljs-keyword">this</span>.getNotificationHandler(notificationOpen.notification).onInitialNotification(notificationOpen);
+    }</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-12">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-12">&#182;</a>
+              </div>
+              <p>Triggered for data only payload in foreground</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">this</span>.messageListener = mFireBase.messaging().onMessage(<span class="hljs-function">(<span class="hljs-params">message</span>) =&gt;</span> {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-13">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-13">&#182;</a>
+              </div>
+              <p>process data message</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>      GeneralPushNotificationHandler.onMessage(message);
+    });
+  }
+
+  release() {
+    <span class="hljs-keyword">this</span>.notificationListener();
+    <span class="hljs-keyword">this</span>.notificationOpenedListener();
+  }
+
+
+  <span class="hljs-keyword">static</span> getNotificationHandler(notification : Notification) : PushNotificationListenerInterface {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-14">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-14">&#182;</a>
+              </div>
+              <p>switch later</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">return</span> GeneralPushNotificationHandler;
+  }
+}</pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>
