@@ -21,7 +21,7 @@
     "doc2" : "rm -fr ./docs && node_modules/.bin/docco README.md $(find {src,test} -type f) -t ./misc/template/docco.jst -c ./misc/template/docco.css && cp -r ./misc/template/public ./docs",
     "reload": "adb shell input text RR",
     "menu": "adb shell input keyevent 82",
-    "github-pages": "yarn gh-pages-deploy",
+    "deploy": "gh-pages-deploy",
     "add_tag": "git tag v1 && git push --tags",
     "delete_tag": "git tag -d v1 && git push --delete origin v1"
   },

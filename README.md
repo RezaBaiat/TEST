@@ -47,4 +47,4 @@ resulting in ease of future changes.
 All necessary info can be found in the links below :
 
 [Diagram](https://www.draw.io/?state=%7B%22ids%22:%5B%221vp3xHKTBvdHcTCxBSs2cbSECSas8l2Va%22%5D,%22action%22:%22open%22,%22userId%22:%22114712799140052122793%22%7D#G1vp3xHKTBvdHcTCxBSs2cbSECSas8l2Va) \
-[Documentations](https://pixelsandcode.github.io/ReactNative-Boilerplate/docs/src/index.html)
+[Documentations](https://pixelsandcode.github.io/ReactNative-Boilerplate/docs/index.html)
