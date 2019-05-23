@@ -4,222 +4,720 @@
 <head>
   <title>Socket.js</title>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="public/stylesheets/normalize.css" />
   <link rel="stylesheet" media="all" href="..\..\..\docco.css" />
 </head>
 <body>
-  <div id="container">
-    <div id="background"></div>
+  <div class="container">
     
-      <ul id="jump_to">
-        <li>
-          <a class="large" href="javascript:void(0);">Jump To &hellip;</a>
-          <a class="small" href="javascript:void(0);">+</a>
-          <div id="jump_wrapper">
-          <div id="jump_page_wrapper">
-            <div id="jump_page">
-              
-                
-                <a class="source" href="..\..\..\index.html">
-                  index.js
-                </a>
-              
-                
-                <a class="source" href="..\..\assets\styles\App.html">
-                  src/assets/styles/App.js
-                </a>
-              
-                
-                <a class="source" href="..\..\assets\styles\Base.html">
-                  src/assets/styles/Base.js
-                </a>
-              
-                
-                <a class="source" href="..\..\assets\styles\Constants.html">
-                  src/assets/styles/Constants.js
-                </a>
-              
-                
-                <a class="source" href="..\Application.html">
-                  src/configs/Application.js
-                </a>
-              
-                
-                <a class="source" href="..\LocalNotifications.html">
-                  src/configs/LocalNotifications.js
-                </a>
-              
-                
-                <a class="source" href="..\Locale.html">
-                  src/configs/Locale.js
-                </a>
-              
-                
-                <a class="source" href="..\Permission.html">
-                  src/configs/Permission.js
-                </a>
-              
-                
-                <a class="source" href="..\PushNotifications.html">
-                  src/configs/PushNotifications.js
-                </a>
-              
-                
-                <a class="source" href="Gateway.html">
-                  src/configs/network/Gateway.js
-                </a>
-              
-                
-                <a class="source" href="Health.html">
-                  src/configs/network/Health.js
-                </a>
-              
-                
-                <a class="source" href="Security.html">
-                  src/configs/network/Security.js
-                </a>
-              
-                
-                <a class="source" href="Socket.html">
-                  src/configs/network/Socket.js
-                </a>
-              
-                
-                <a class="source" href="..\redux\Store.html">
-                  src/configs/redux/Store.js
-                </a>
-              
-                
-                <a class="source" href="..\..\helpers\Logger.html">
-                  src/helpers/Logger.js
-                </a>
-              
-                
-                <a class="source" href="..\..\notifications\GeneralPushNotificationHandler.html">
-                  src/notifications/GeneralPushNotificationHandler.js
-                </a>
-              
-                
-                <a class="source" href="..\..\notifications\LocalNotificationsHandler.html">
-                  src/notifications/LocalNotificationsHandler.js
-                </a>
-              
-                
-                <a class="source" href="..\..\notifications\PushNotificationListenerInterface.html">
-                  src/notifications/PushNotificationListenerInterface.js
-                </a>
-              
-                
-                <a class="source" href="..\..\permissions\PermissionsHandler.html">
-                  src/permissions/PermissionsHandler.js
-                </a>
-              
-                
-                <a class="source" href="..\..\redux\general\GlobalActions.html">
-                  src/redux/general/GlobalActions.js
-                </a>
-              
-                
-                <a class="source" href="..\..\redux\general\GlobalConstants.html">
-                  src/redux/general/GlobalConstants.js
-                </a>
-              
-                
-                <a class="source" href="..\..\redux\general\GlobalReducer.html">
-                  src/redux/general/GlobalReducer.js
-                </a>
-              
-                
-                <a class="source" href="..\..\redux\general\GlobalSaga.html">
-                  src/redux/general/GlobalSaga.js
-                </a>
-              
-                
-                <a class="source" href="..\..\redux\general\GlobalSelectors.html">
-                  src/redux/general/GlobalSelectors.js
-                </a>
-              
-                
-                <a class="source" href="..\..\resources\Animations.html">
-                  src/resources/Animations.js
-                </a>
-              
-                
-                <a class="source" href="..\..\resources\Colors.html">
-                  src/resources/Colors.js
-                </a>
-              
-                
-                <a class="source" href="..\..\resources\Images.html">
-                  src/resources/Images.js
-                </a>
-              
-                
-                <a class="source" href="..\..\resources\R.html">
-                  src/resources/R.js
-                </a>
-              
-                
-                <a class="source" href="..\..\resources\Strings.html">
-                  src/resources/Strings.js
-                </a>
-              
-                
-                <a class="source" href="..\..\routes\AppNavigator.html">
-                  src/routes/AppNavigator.js
-                </a>
-              
-                
-                <a class="source" href="..\..\routes\Routes.html">
-                  src/routes/Routes.js
-                </a>
-              
-                
-                <a class="source" href="..\..\services\GeneralService.html">
-                  src/services/GeneralService.js
-                </a>
-              
-                
-                <a class="source" href="..\..\socket\SocketListener.html">
-                  src/socket/SocketListener.js
-                </a>
-              
-                
-                <a class="source" href="..\..\..\test\App.test.html">
-                  test/App.test.js
-                </a>
-              
-                
-                <a class="source" href="..\..\..\test\HOWTO.html">
-                  test/HOWTO.md
-                </a>
-              
-            </div>
-          </div>
-        </li>
-      </ul>
-    
-    <ul class="sections">
-        
-          <li id="title">
-              <div class="annotation">
-                  <h1>Socket.js</h1>
-              </div>
-          </li>
-        
-        
-        
-        <li id="section-1">
-            <div class="annotation">
-              
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-1">&#182;</a>
-              </div>
-              <p>This class, is a p2p implementation of <a href="https://github.com/socketio/socket.io">Socket.io</a> and is designed to be used as an abstraction or instantiation by another class,</p>
-
-            </div>
+      <div class="toc">
+        <h3>Table of Contents</h3>
+        <ul>
+          
+          
+          
             
-            <div class="content"><div class='highlight'><pre>
+            
+            
+            
+            <li class="indent0">
+              <a class="source" href="..\..\..\README.html">
+                README.md
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+                  <h4 class="indent0">src/</h4>
+                
+              
+                
+                  <h4 class="indent1">app/</h4>
+                
+              
+                
+                  <h4 class="indent2">components/</h4>
+                
+              
+                
+                  <h4 class="indent3">appbutton/</h4>
+                
+              
+              
+            
+            
+            <li class="indent4">
+              <a class="source" href="..\..\app\components\appbutton\AppButton.html">
+                AppButton.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+              
+                
+              
+                
+                  <h4 class="indent3">appimageview/</h4>
+                
+              
+              
+            
+            
+            <li class="indent4">
+              <a class="source" href="..\..\app\components\appimageview\AppImageView.html">
+                AppImageView.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+              
+                
+              
+                
+                  <h4 class="indent3">apptextview/</h4>
+                
+              
+              
+            
+            
+            <li class="indent4">
+              <a class="source" href="..\..\app\components\apptextview\AppTextView.html">
+                AppTextView.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+              
+                
+              
+                
+                  <h4 class="indent3">apptouchable/</h4>
+                
+              
+              
+            
+            
+            <li class="indent4">
+              <a class="source" href="..\..\app\components\apptouchable\AppTouchable.html">
+                AppTouchable.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+              
+                
+                  <h4 class="indent2">scenes/</h4>
+                
+              
+                
+                  <h4 class="indent3">general/</h4>
+                
+              
+              
+            
+            
+            <li class="indent4">
+              <a class="source" href="..\..\app\scenes\general\BaseComponent.html">
+                BaseComponent.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+              
+                
+              
+                
+                  <h4 class="indent3">screen1/</h4>
+                
+              
+              
+            
+            
+            <li class="indent4">
+              <a class="source" href="..\..\app\scenes\screen1\Screen1.html">
+                Screen1.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent4">
+              <a class="source" href="..\..\app\scenes\screen1\Styles.html">
+                Styles.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+              
+                
+              
+                
+                  <h4 class="indent3">screen2/</h4>
+                
+              
+              
+            
+            
+            <li class="indent4">
+              <a class="source" href="..\..\app\scenes\screen2\Screen2.html">
+                Screen2.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent4">
+              <a class="source" href="..\..\app\scenes\screen2\Styles.html">
+                Styles.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+                  <h4 class="indent1">assets/</h4>
+                
+              
+                
+                  <h4 class="indent2">styles/</h4>
+                
+              
+              
+            
+            
+            <li class="indent3">
+              <a class="source" href="..\..\assets\styles\App.html">
+                App.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent3">
+              <a class="source" href="..\..\assets\styles\Base.html">
+                Base.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent3">
+              <a class="source" href="..\..\assets\styles\Constants.html">
+                Constants.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+                  <h4 class="indent1">configs/</h4>
+                
+              
+              
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\Application.html">
+                Application.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\LocalNotifications.html">
+                LocalNotifications.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\Locale.html">
+                Locale.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\Permission.html">
+                Permission.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\PushNotifications.html">
+                PushNotifications.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+              
+                
+                  <h4 class="indent2">network/</h4>
+                
+              
+              
+            
+            
+            <li class="indent3">
+              <a class="source" href="Gateway.html">
+                Gateway.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent3">
+              <a class="source" href="Health.html">
+                Health.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent3">
+              <a class="source" href="Security.html">
+                Security.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent3">
+              <a class="source" href="Socket.html">
+                Socket.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+              
+                
+                  <h4 class="indent2">redux/</h4>
+                
+              
+              
+            
+            
+            <li class="indent3">
+              <a class="source" href="..\redux\Store.html">
+                Store.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+                  <h4 class="indent1">helpers/</h4>
+                
+              
+              
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\..\helpers\Logger.html">
+                Logger.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+                  <h4 class="indent1">notifications/</h4>
+                
+              
+              
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\..\notifications\GeneralPushNotificationHandler.html">
+                GeneralPushNotificationHandler.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\..\notifications\LocalNotificationsHandler.html">
+                LocalNotificationsHandler.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\..\notifications\PushNotificationListenerInterface.html">
+                PushNotificationListenerInterface.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+                  <h4 class="indent1">permissions/</h4>
+                
+              
+              
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\..\permissions\PermissionsHandler.html">
+                PermissionsHandler.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+                  <h4 class="indent1">redux/</h4>
+                
+              
+                
+                  <h4 class="indent2">general/</h4>
+                
+              
+              
+            
+            
+            <li class="indent3">
+              <a class="source" href="..\..\redux\general\GlobalActions.html">
+                GlobalActions.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent3">
+              <a class="source" href="..\..\redux\general\GlobalConstants.html">
+                GlobalConstants.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent3">
+              <a class="source" href="..\..\redux\general\GlobalReducer.html">
+                GlobalReducer.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent3">
+              <a class="source" href="..\..\redux\general\GlobalSaga.html">
+                GlobalSaga.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent3">
+              <a class="source" href="..\..\redux\general\GlobalSelectors.html">
+                GlobalSelectors.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+                  <h4 class="indent1">resources/</h4>
+                
+              
+              
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\..\resources\Animations.html">
+                Animations.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\..\resources\Colors.html">
+                Colors.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\..\resources\Images.html">
+                Images.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\..\resources\R.html">
+                R.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\..\resources\Strings.html">
+                Strings.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+                  <h4 class="indent1">routes/</h4>
+                
+              
+              
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\..\routes\AppNavigator.html">
+                AppNavigator.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\..\routes\Routes.html">
+                Routes.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+                  <h4 class="indent1">services/</h4>
+                
+              
+              
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\..\services\GeneralService.html">
+                GeneralService.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+                  <h4 class="indent1">socket/</h4>
+                
+              
+              
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\..\socket\SocketListener.html">
+                SocketListener.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+                  <h4 class="indent0">test/</h4>
+                
+              
+              
+            
+            
+            <li class="indent1">
+              <a class="source" href="..\..\..\test\App.test.html">
+                App.test.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent1">
+              <a class="source" href="..\..\..\test\HOWTO.html">
+                HOWTO.md
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+    <div class="page">
+      <div class="header">
+        
+          <h1>Socket.js</h1>
+        
+      </div>
+
+      
+        
+        <p>This class, is a p2p implementation of <a href="https://github.com/socketio/socket.io">Socket.io</a> and is designed to be used as an abstraction or instantiation by another class,</p>
+
+        
+          <div class='highlight'><pre>
 <span class="hljs-keyword">const</span> Parser = <span class="hljs-built_in">require</span>(<span class="hljs-string">'socket.io-parser'</span>);
 <span class="hljs-keyword">const</span> io = <span class="hljs-built_in">require</span>(<span class="hljs-string">'socket.io-client'</span>);
 <span class="hljs-keyword">const</span> { Manager, Socket } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'socket.io-client'</span>);
@@ -236,23 +734,15 @@
   query? : any, <span class="hljs-comment">// additional query parameters that are sent when connecting a namespace (then found in socket.handshake.query object on the server-side)</span>
   parser? : Parser, <span class="hljs-comment">// the parser to use. Defaults to an instance of the Parser that ships with socket.io. See socket.io-parser.</span>
   forceNew? : boolean, <span class="hljs-comment">// whether to reuse an existing connection</span>
-}</pre></div></div>
-            
-        </li>
+}</pre></div>
         
+      
         
-        <li id="section-2">
-            <div class="annotation">
-              
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-2">&#182;</a>
-              </div>
-              <p>Please see @<a href="https://github.com/socketio/socket.io-client/blob/master/docs/API.md#initialization-examples">https://github.com/socketio/socket.io-client/blob/master/docs/API.md#initialization-examples</a> for more informations
+        <p>Please see @<a href="https://github.com/socketio/socket.io-client/blob/master/docs/API.md#initialization-examples">https://github.com/socketio/socket.io-client/blob/master/docs/API.md#initialization-examples</a> for more informations
 and docs at @<a href="https://socket.io/docs">https://socket.io/docs</a></p>
 
-            </div>
-            
-            <div class="content"><div class='highlight'><pre><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Socket</span> </span>{
+        
+          <div class='highlight'><pre><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Socket</span> </span>{
 
   socket : Socket;
 
@@ -277,22 +767,14 @@ and docs at @<a href="https://socket.io/docs">https://socket.io/docs</a></p>
 
   leaveRoom = <span class="hljs-function">(<span class="hljs-params">roomName : string</span>) =&gt;</span> {
     <span class="hljs-keyword">this</span>.socket.leave(roomName);
-  };</pre></div></div>
-            
-        </li>
+  };</pre></div>
         
+      
         
-        <li id="section-3">
-            <div class="annotation">
-              
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-3">&#182;</a>
-              </div>
-              <p>Fired upon a successful reconnection</p>
+        <p>Fired upon a successful reconnection</p>
 
-            </div>
-            
-            <div class="content"><div class='highlight'><pre>  onReconnected = <span class="hljs-function">(<span class="hljs-params">cb : (attemptNumber : number</span>)=&gt;</span><span class="hljs-keyword">void</span>) =&gt; {
+        
+          <div class='highlight'><pre>  onReconnected = <span class="hljs-function">(<span class="hljs-params">cb : (attemptNumber : number</span>)=&gt;</span><span class="hljs-keyword">void</span>) =&gt; {
     <span class="hljs-keyword">this</span>.socket.on(<span class="hljs-string">'reconnect'</span>, cb);
   };
 
@@ -326,26 +808,18 @@ and docs at @<a href="https://socket.io/docs">https://socket.io/docs</a></p>
 
   onError = <span class="hljs-function">(<span class="hljs-params">cb : (</span>)=&gt;</span><span class="hljs-keyword">void</span>) =&gt; {
     <span class="hljs-keyword">this</span>.socket.on(<span class="hljs-string">'error'</span>, cb);
-  };</pre></div></div>
-            
-        </li>
+  };</pre></div>
         
+      
         
-        <li id="section-4">
-            <div class="annotation">
-              
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-4">&#182;</a>
-              </div>
-              <p>if (reason === ‘io server disconnect’) {
+        <p>if (reason === ‘io server disconnect’) {
     // the disconnection was initiated by the server, you need to reconnect manually
     socket.connect();
   }
 else the socket will automatically try to reconnect</p>
 
-            </div>
-            
-            <div class="content"><div class='highlight'><pre>  onDisconnect = <span class="hljs-function">(<span class="hljs-params">cb : (reason : string</span>)=&gt;</span><span class="hljs-keyword">void</span>) =&gt; {
+        
+          <div class='highlight'><pre>  onDisconnect = <span class="hljs-function">(<span class="hljs-params">cb : (reason : string</span>)=&gt;</span><span class="hljs-keyword">void</span>) =&gt; {
     <span class="hljs-keyword">this</span>.socket.on(<span class="hljs-string">'disconnect'</span>, cb);
   };
 
@@ -369,11 +843,11 @@ else the socket will automatically try to reconnect</p>
     <span class="hljs-keyword">this</span>.socket.on(eventName, cb);
   };
 
-}</pre></div></div>
-            
-        </li>
+}</pre></div>
         
-    </ul>
+      
+      <div class="fleur">h</div>
+    </div>
   </div>
 </body>
 </html>
