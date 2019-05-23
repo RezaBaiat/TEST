@@ -1,4 +1,4 @@
-// This class, is a p2p implementation of [Socket.io](https://github.com/socketio/socket.io) and is designed to be used as an abstraction and be extended by another class,
+// This class, is a p2p implementation of [Socket.io](https://github.com/socketio/socket.io) and is designed to be used as an abstraction or instantiation by another class,
 
 const Parser = require('socket.io-parser');
 const io = require('socket.io-client');

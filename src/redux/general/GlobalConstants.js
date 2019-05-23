@@ -1,3 +1,6 @@
+// Providing redux's constants in global topics .
+// global topics are the one's who can be used in any application
+
 export default class GlobalConstants {
 
   static ACTION_NETWORK_STATE_CHANGE = 'ACTION_NETWORK_STATE_CHANGE';

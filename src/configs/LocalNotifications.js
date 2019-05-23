@@ -1,4 +1,5 @@
-// Configuration file and dispatcher for local notifications , will be used by [LocalNotificationsHandler](../handlers/LocalNotificationsHandler.html)
+// Configuration file and dispatcher for local notifications , will be used by [LocalNotificationsHandler](../notifications/LocalNotificationsHandler.html)
+
 const PushNotification = require('react-native-push-notification');
 
 export default class LocalNotifications {

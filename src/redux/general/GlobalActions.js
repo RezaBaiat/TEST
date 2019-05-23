@@ -1,5 +1,6 @@
-// Constants identifying which action is already being dispatched used in [RootReducer](../reduce/RootReducer.html) and [RootDispatcher](../reduce/RootDispatcher.html)
-// In addition to providing the action method related to each constant
+// Providing redux's actions in global topics .
+// global topics are the one's who can be used in any application
+
 import GlobalConstants from './GlobalConstants';
 
 

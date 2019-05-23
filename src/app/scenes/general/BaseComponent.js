@@ -1,6 +1,6 @@
 // All scenes (screens) should extend this component,
-// they can use multiple valuable work around who are done in this file
-// including redux's createMapStateToProps , onResume, onPause and...
+// they can use multiple valuable work arounds who are already done in this file
+// including redux's createCompose ,getString, onResume, onPause and...
 import {
   AppState, AppStateStatus, EmitterSubscription, ViewStyle,
 } from 'react-native';
@@ -13,7 +13,6 @@ import {
 import { connect } from 'react-redux';
 import { InitialState } from '../../../redux/general/GlobalReducer';
 import AppNavigator from '../../../routes/AppNavigator';
-import { Screen1 } from '../screen1/Screen1';
 import * as actions from '../../../redux/general/GlobalActions';
 
 export interface BaseComponentProps {
@@ -91,7 +90,7 @@ export class BaseComponent<P : BaseComponentProps> extends SmartComponent<P> {
         this.callPauseIfNeeded();
       }
     } else {
-      alert(`EVENT = ${nextAppState}`);
+      // alert(`EVENT = ${nextAppState}`);
     }
 
   };
@@ -102,7 +101,8 @@ function mapDispatchToProps(dispatch) {
   return { ...actions, dispatch };
 }
 
-// this enables IDE to detect state types , preventing typo and enabled code completion
+// use this function inside scenes instead of using connect() , this makes it alot easier
+// this also enables IDE to detect state types , preventing typo and enabled code completion
 export function createCompose(mapStateToProps : (state : {rootReducer : InitialState})=>{}) {
   const withConnect = connect(mapStateToProps, mapDispatchToProps);
   return compose(

@@ -1,6 +1,6 @@
 // General push notification handler , an implementation on PushNotificationListenerInterface ,
 // is mainly responsible for data type notifications and other notifications which will not
-// fit into any other
+// fit into any other handler
 
 import { PushNotificationListenerInterface } from './PushNotificationListenerInterface';
 

@@ -1,5 +1,5 @@
 // This files contains name references to all permissions this app requires , which
-// will be used by [PermissionsHandler](../handlers/PermissionsHandler.html)
+// will be used by [PermissionsHandler](../permissions/PermissionsHandler.html)
 import { PermissionsAndroid } from 'react-native';
 
 export default class Permission {

@@ -1,5 +1,6 @@
 // Will contain global redux's selector if there are any
 // this might be never used but 14% of react developers use this
+// global topics are the one's who can be used in any application
 import { createSelector } from 'reselect';
 
 export default class GlobalSelectors {

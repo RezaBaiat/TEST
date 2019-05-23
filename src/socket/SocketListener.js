@@ -1,3 +1,5 @@
+// This file is a dummy example of how to use the Socket class // in [Socket.js](../configs/network/Socket.html)
+
 import AbstractSocket from '../configs/network/Socket';
 import Application from '../configs/Application';
 

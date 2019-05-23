@@ -1,31 +1,13 @@
-// All strings should be referenced from this class .
-// this should also provide a solution
-// to hold a key reference to the related language's Json file
-
+// This file holds reference to 'key names' of the Json key value files in config/i18n folder
+// the purpose of this file is to solve the code completion issue when getting strings from react-intl by providing a work around :
+// if you take a look at [BaseComponent](../app/scenes/general/BaseComponent.html) file , there is a method called getString()
+// and it should be used like this :
+// getString(R.strings.error_connecting_network)
+// this file is exported in R.js file and should be called from there
+// the variables in this file should match EXACT same as the keys in the json files
 /* eslint-disable */
 
 export default class Strings {
-
-   /* static setLang(lang: 'en' | 'fa') {
-        switch (lang) {
-            case 'en':
-                this.apply(EN);
-                break;
-            case 'fa':
-                this.apply(FA);
-                break;
-        }
-    }
-
-    static apply(jsonObject : any){
-        Object.keys(Strings).map((key)=>{
-            if (jsonObject[key]){
-                Strings[key] = jsonObject[key];
-            } else {
-                Strings[key] = 'N/A !'
-            }
-        })
-    }*/
 
     static error_connecting_network = "error_connecting_network";
 }

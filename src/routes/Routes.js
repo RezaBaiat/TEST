@@ -1,7 +1,7 @@
 // Class which registers all screens and identifies which screen to run first when app started
-// it also sets default options for navigates
-// literally copy pasted from https://github.com/react-boilerplate/react-boilerplate/tree/master/app/containers/LanguageProvider
-// ...
+// it also sets default options for navigates and initializes react-redux
+// every scene being registered should be wrapped by atleast redux and react-intl equivalent provider
+// this will easily be done as is shown below
 
 import { Navigation } from 'react-native-navigation';
 import { Provider } from 'react-redux';

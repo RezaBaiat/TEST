@@ -1,3 +1,8 @@
+// Provider and wrapper all-in-one solution for react-intl
+// this class contains available languages,their equivalent strings,
+// also listens to locale state change and updates strings list
+// if necessary
+
 import React, { PureComponent } from 'react';
 import {
   injectIntl, intlShape, IntlProvider, addLocaleData,

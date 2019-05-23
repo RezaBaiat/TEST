@@ -1,4 +1,5 @@
-// A working example of redux-saga usage
+// A working example of redux-saga usage in global topic
+// global topics are the one's who can be used in any application
 import {
   call, put, takeEvery, takeLatest,
 } from 'redux-saga/effects';

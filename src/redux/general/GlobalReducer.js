@@ -1,5 +1,7 @@
 // In case of using multiple reducers , this reducer should contain only general and global
 // states which dont fit in any other, like networkState, otherwise it will contain all redux states
+// general topics are the one's who can be used in any application
+
 
 import NetUtils from 'react-native-dev-kit/src/utils/NetUtils';
 import { AVAILABLE_LANGUAGES } from '../../configs/Locale';
