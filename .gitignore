@@ -7,3 +7,5 @@ android/app/build/**/*
 ios/Pods/Headers/**/*
 yarn.lock
 yarn-error.log
+android/**/*
+ios/**/*
