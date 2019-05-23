@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>PushNotifications.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" media="all" href="public/stylesheets/normalize.css" />
+  <link rel="stylesheet" media="all" href="..\..\docco.css" />
+</head>
+<body>
+  <div class="container">
+    
+      <div class="toc">
+        <h3>Table of Contents</h3>
+        <ul>
+          
+          
+          
+            
+            
+            
+            
+            <li class="indent0">
+              <a class="source" href="..\..\README.html">
+                README.md
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+                  <h4 class="indent0">src/</h4>
+                
+              
+                
+                  <h4 class="indent1">app/</h4>
+                
+              
+                
+                  <h4 class="indent2">components/</h4>
+                
+              
+                
+                  <h4 class="indent3">appbutton/</h4>
+                
+              
+              
+            
+            
+            <li class="indent4">
+              <a class="source" href="..\app\components\appbutton\AppButton.html">
+                AppButton.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+              
+                
+              
+                
+                  <h4 class="indent3">appimageview/</h4>
+                
+              
+              
+            
+            
+            <li class="indent4">
+              <a class="source" href="..\app\components\appimageview\AppImageView.html">
+                AppImageView.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+              
+                
+              
+                
+                  <h4 class="indent3">apptextview/</h4>
+                
+              
+              
+            
+            
+            <li class="indent4">
+              <a class="source" href="..\app\components\apptextview\AppTextView.html">
+                AppTextView.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+              
+                
+              
+                
+                  <h4 class="indent3">apptouchable/</h4>
+                
+              
+              
+            
+            
+            <li class="indent4">
+              <a class="source" href="..\app\components\apptouchable\AppTouchable.html">
+                AppTouchable.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+              
+                
+                  <h4 class="indent2">scenes/</h4>
+                
+              
+                
+                  <h4 class="indent3">general/</h4>
+                
+              
+              
+            
+            
+            <li class="indent4">
+              <a class="source" href="..\app\scenes\general\BaseComponent.html">
+                BaseComponent.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+              
+                
+              
+                
+                  <h4 class="indent3">screen1/</h4>
+                
+              
+              
+            
+            
+            <li class="indent4">
+              <a class="source" href="..\app\scenes\screen1\Screen1.html">
+                Screen1.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent4">
+              <a class="source" href="..\app\scenes\screen1\Styles.html">
+                Styles.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+              
+                
+              
+                
+                  <h4 class="indent3">screen2/</h4>
+                
+              
+              
+            
+            
+            <li class="indent4">
+              <a class="source" href="..\app\scenes\screen2\Screen2.html">
+                Screen2.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent4">
+              <a class="source" href="..\app\scenes\screen2\Styles.html">
+                Styles.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+                  <h4 class="indent1">assets/</h4>
+                
+              
+                
+                  <h4 class="indent2">styles/</h4>
+                
+              
+              
+            
+            
+            <li class="indent3">
+              <a class="source" href="..\assets\styles\App.html">
+                App.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent3">
+              <a class="source" href="..\assets\styles\Base.html">
+                Base.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent3">
+              <a class="source" href="..\assets\styles\Constants.html">
+                Constants.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+                  <h4 class="indent1">configs/</h4>
+                
+              
+              
+            
+            
+            <li class="indent2">
+              <a class="source" href="Application.html">
+                Application.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="LocalNotifications.html">
+                LocalNotifications.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="Locale.html">
+                Locale.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="Permission.html">
+                Permission.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="PushNotifications.html">
+                PushNotifications.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+              
+                
+                  <h4 class="indent2">network/</h4>
+                
+              
+              
+            
+            
+            <li class="indent3">
+              <a class="source" href="network\Gateway.html">
+                Gateway.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent3">
+              <a class="source" href="network\Health.html">
+                Health.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent3">
+              <a class="source" href="network\Security.html">
+                Security.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent3">
+              <a class="source" href="network\Socket.html">
+                Socket.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+              
+                
+                  <h4 class="indent2">redux/</h4>
+                
+              
+              
+            
+            
+            <li class="indent3">
+              <a class="source" href="redux\Store.html">
+                Store.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+                  <h4 class="indent1">helpers/</h4>
+                
+              
+              
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\helpers\Logger.html">
+                Logger.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+                  <h4 class="indent1">notifications/</h4>
+                
+              
+              
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\notifications\GeneralPushNotificationHandler.html">
+                GeneralPushNotificationHandler.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\notifications\LocalNotificationsHandler.html">
+                LocalNotificationsHandler.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\notifications\PushNotificationListenerInterface.html">
+                PushNotificationListenerInterface.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+                  <h4 class="indent1">permissions/</h4>
+                
+              
+              
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\permissions\PermissionsHandler.html">
+                PermissionsHandler.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+                  <h4 class="indent1">redux/</h4>
+                
+              
+                
+                  <h4 class="indent2">general/</h4>
+                
+              
+              
+            
+            
+            <li class="indent3">
+              <a class="source" href="..\redux\general\GlobalActions.html">
+                GlobalActions.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent3">
+              <a class="source" href="..\redux\general\GlobalConstants.html">
+                GlobalConstants.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent3">
+              <a class="source" href="..\redux\general\GlobalReducer.html">
+                GlobalReducer.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent3">
+              <a class="source" href="..\redux\general\GlobalSaga.html">
+                GlobalSaga.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent3">
+              <a class="source" href="..\redux\general\GlobalSelectors.html">
+                GlobalSelectors.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+                  <h4 class="indent1">resources/</h4>
+                
+              
+              
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\resources\Animations.html">
+                Animations.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\resources\Colors.html">
+                Colors.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\resources\Images.html">
+                Images.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\resources\R.html">
+                R.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\resources\Strings.html">
+                Strings.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+                  <h4 class="indent1">routes/</h4>
+                
+              
+              
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\routes\AppNavigator.html">
+                AppNavigator.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\routes\Routes.html">
+                Routes.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+                  <h4 class="indent1">services/</h4>
+                
+              
+              
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\services\GeneralService.html">
+                GeneralService.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+              
+                
+                  <h4 class="indent1">socket/</h4>
+                
+              
+              
+            
+            
+            <li class="indent2">
+              <a class="source" href="..\socket\SocketListener.html">
+                SocketListener.js
+              </a>
+            </li>
+          
+            
+            
+            
+              
+              
+                
+                  <h4 class="indent0">test/</h4>
+                
+              
+              
+            
+            
+            <li class="indent1">
+              <a class="source" href="..\..\test\App.test.html">
+                App.test.js
+              </a>
+            </li>
+          
+            
+            
+            
+            
+            <li class="indent1">
+              <a class="source" href="..\..\test\HOWTO.html">
+                HOWTO.md
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+    <div class="page">
+      <div class="header">
+        
+          <h1>PushNotifications.js</h1>
+        
+      </div>
+
+      
+        
+        <p>Configuration file for listening to push notifications , every thing will be handled here since there is no need to another handler</p>
+
+        
+          <div class='highlight'><pre>
+<span class="hljs-keyword">import</span> firebase, { Firebase, Notification, RNFirebase } <span class="hljs-keyword">from</span> <span class="hljs-string">'react-native-firebase'</span>;
+<span class="hljs-keyword">import</span> AsyncStorage <span class="hljs-keyword">from</span> <span class="hljs-string">'@react-native-community/async-storage'</span>;
+<span class="hljs-keyword">import</span> type { PushNotificationListenerInterface } <span class="hljs-keyword">from</span> <span class="hljs-string">'../notifications/PushNotificationListenerInterface'</span>;
+<span class="hljs-keyword">import</span> GeneralPushNotificationHandler <span class="hljs-keyword">from</span> <span class="hljs-string">'../notifications/GeneralPushNotificationHandler'</span>;</pre></div>
+        
+      
+        
+        <p>eslint-disable-next-line import/no-duplicates</p>
+
+        
+          <div class='highlight'><pre>
+<span class="hljs-keyword">const</span> mFireBase : Firebase = firebase;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PushNotifications</span> </span>{</pre></div>
+        
+      
+        
+        <p>Notification-only messages:            These are display messages that are automatically handled by Firebase SDK. Notifications are thrown to device tray.</p>
+<p>Notification + optional data messages: These are also handled by Firebase SDK. Only difference here is when user taps on notification, your app receives payload associated with that notification.</p>
+<p>Data only messages:                    These types of notifications are handled exclusively by app. No notification is thrown on device tray unless app explicitly does so. In iOS, these types of notifications are also termed as ‘Silent Push Notifications’.</p>
+
+        
+      
+        
+        <p>notice :</p>
+<p>In Android, if you tap on notification when app is killed, this library won’t be able to catch title and body of notification. Therefore these attributes will be undefined in showAlert function. As a solution, you should also send title and body in data payload of notification.
+To this date, Silent Push Notifications on iOS are not supported by this library. I have already opened an issue on their repository.
+To listen for data message notifications while the app is in background or killed in Android, you need to implement Headless JS functionality. For details, please refer to this link.</p>
+
+        
+          <div class='highlight'><pre>
+  <span class="hljs-keyword">static</span> notificationListener;
+
+  <span class="hljs-keyword">static</span> notificationOpenedListener;
+
+  <span class="hljs-keyword">static</span> messageListener;</pre></div>
+        
+      
+        
+        <p>checkout @<a href="https://rnfirebase.io/docs/v5.x.x/notifications/android">https://rnfirebase.io/docs/v5.x.x/notifications/android</a>
+also checkout @<a href="https://medium.com/@anum.amin/react-native-integrating-push-notifications-using-fcm-349fff071591">https://medium.com/@anum.amin/react-native-integrating-push-notifications-using-fcm-349fff071591</a>
+even checkout @<a href="https://medium.com/@yangnana11/how-to-set-up-firebase-notification-in-react-native-app-android-only-4920eb875eae">https://medium.com/@yangnana11/how-to-set-up-firebase-notification-in-react-native-app-android-only-4920eb875eae</a></p>
+
+        
+          <div class='highlight'><pre>  <span class="hljs-keyword">static</span> initialize() {
+    <span class="hljs-keyword">this</span>.checkPermission();
+    <span class="hljs-keyword">this</span>.createNotificationListeners();
+  }
+
+  <span class="hljs-keyword">static</span> <span class="hljs-keyword">async</span> checkPermission() {
+    <span class="hljs-keyword">const</span> enabled = <span class="hljs-keyword">await</span> mFireBase.messaging().hasPermission();
+    <span class="hljs-keyword">if</span> (enabled) {
+      <span class="hljs-keyword">this</span>.getToken();
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-keyword">this</span>.requestPermission();
+    }
+  }
+
+  <span class="hljs-keyword">static</span> <span class="hljs-keyword">async</span> getToken() {
+    <span class="hljs-keyword">let</span> fcmToken = <span class="hljs-keyword">await</span> AsyncStorage.getItem(<span class="hljs-string">'fcmToken'</span>);
+    <span class="hljs-keyword">if</span> (!fcmToken) {
+      fcmToken = <span class="hljs-keyword">await</span> mFireBase.messaging().getToken();
+      <span class="hljs-keyword">if</span> (fcmToken) {</pre></div>
+        
+      
+        
+        <p>user has a device token</p>
+
+        
+          <div class='highlight'><pre>        <span class="hljs-keyword">await</span> AsyncStorage.setItem(<span class="hljs-string">'fcmToken'</span>, fcmToken);
+      }
+    }
+  }
+
+  <span class="hljs-keyword">static</span> <span class="hljs-keyword">async</span> requestPermission() {
+    <span class="hljs-keyword">try</span> {
+      <span class="hljs-keyword">await</span> mFireBase.messaging().requestPermission();</pre></div>
+        
+      
+        
+        <p>User has authorised</p>
+
+        
+          <div class='highlight'><pre>      <span class="hljs-keyword">this</span>.getToken();
+    } <span class="hljs-keyword">catch</span> (error) {</pre></div>
+        
+      
+        
+        <p>User has rejected permissions</p>
+
+        
+          <div class='highlight'><pre>      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'permission rejected'</span>);
+    }
+  }
+
+
+  <span class="hljs-keyword">static</span> <span class="hljs-keyword">async</span> createNotificationListeners() {</pre></div>
+        
+      
+        
+        <p>Triggered when a particular notification has been received in foreground</p>
+
+        
+          <div class='highlight'><pre>    <span class="hljs-keyword">this</span>.notificationListener = mFireBase.notifications().onNotification(<span class="hljs-function">(<span class="hljs-params">notification : Notification</span>) =&gt;</span> {
+      <span class="hljs-keyword">this</span>.getNotificationHandler(notification).onNotification(notification);
+    });</pre></div>
+        
+      
+        
+        <p>If your app is in background, you can listen for when a notification is clicked / tapped / opened as follows:</p>
+
+        
+          <div class='highlight'><pre>    <span class="hljs-keyword">this</span>.notificationOpenedListener = mFireBase.notifications().onNotificationOpened(<span class="hljs-function">(<span class="hljs-params">notificationOpen : RNFirebase.notifications.NotificationOpen</span>) =&gt;</span> {
+      <span class="hljs-keyword">this</span>.getNotificationHandler(notificationOpen.notification).onNotificationOpened(notificationOpen);
+    });</pre></div>
+        
+      
+        
+        <p>If your app is closed, you can check if it was opened by a notification being clicked / tapped / opened as follows:</p>
+
+        
+          <div class='highlight'><pre>    <span class="hljs-keyword">const</span> notificationOpen = <span class="hljs-keyword">await</span> mFireBase.notifications().getInitialNotification();
+    <span class="hljs-keyword">if</span> (notificationOpen) {
+      <span class="hljs-keyword">this</span>.getNotificationHandler(notificationOpen.notification).onInitialNotification(notificationOpen);
+    }</pre></div>
+        
+      
+        
+        <p>Triggered for data only payload in foreground</p>
+
+        
+          <div class='highlight'><pre>    <span class="hljs-keyword">this</span>.messageListener = mFireBase.messaging().onMessage(<span class="hljs-function">(<span class="hljs-params">message</span>) =&gt;</span> {</pre></div>
+        
+      
+        
+        <p>process data message</p>
+
+        
+          <div class='highlight'><pre>      GeneralPushNotificationHandler.onMessage(message);
+    });
+  }
+
+  release() {
+    <span class="hljs-keyword">this</span>.notificationListener();
+    <span class="hljs-keyword">this</span>.notificationOpenedListener();
+  }
+
+
+  <span class="hljs-keyword">static</span> getNotificationHandler(notification : Notification) : PushNotificationListenerInterface {</pre></div>
+        
+      
+        
+        <p>switch later</p>
+
+        
+          <div class='highlight'><pre>    <span class="hljs-keyword">return</span> GeneralPushNotificationHandler;
+  }
+}</pre></div>
+        
+      
+      <div class="fleur">h</div>
+    </div>
+  </div>
+</body>
+</html>
